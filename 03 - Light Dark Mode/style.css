@@ -1,0 +1,145 @@
+:root {
+  --base-color: #ffffff;
+  --base-variant: #f8f9fc;
+  --text-color: #1a1f36;
+  --secondary-text: #4a5578;
+  --primary-color: #5850ec;
+  --accent-color: #4f46e5;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.darkmode {
+  --base-color: #0f172a;
+  --base-variant: #1e293b;
+  --text-color: #f1f5f9;
+  --secondary-text: #94a3b8;
+  --primary-color: #6366f1;
+  --accent-color: #818cf8;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header, section {
+  padding: 100px min(120px, 7%);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: start;
+}
+
+section {
+  background-color: var(--base-variant);
+  transition: background-color 0.3s;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--text-color), var(--primary-color));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin: 10px 0 30px 0;
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+  max-width: 65ch;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  padding: 1em 2em;
+  font: inherit;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.secondary-button {
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-text);
+}
+
+#theme-switch {
+  height: 48px;
+  width: 48px;
+  padding: 0.7rem;
+  border-radius: 12px;
+  background-color: var(--base-variant);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+#theme-switch svg {
+  fill: var(--text-color);
+  width: 100%;
+  height: 100%;
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  header, section {
+      padding: 60px min(40px, 5%);
+  }
+}
