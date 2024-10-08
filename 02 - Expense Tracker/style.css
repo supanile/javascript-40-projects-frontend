@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --bg-color: #f6f8fa;
+  --text-color: #1d1f27;
+  --main-color: #3a3dbe;
+  --border-radius: 8px;
+  --shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  --scrollbar-bg: #f0f0f0;
+  --scrollbar-thumb: #3a3dbe;
+  --scrollbar-thumb-hover: #2a2d8e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+h3 {
+  margin-bottom: 0.75rem;
+  color: var(--main-color);
+  font-size: 1.1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+header {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+header div {
+  padding: 5px 0;
+}
+
+header div:first-child {
+  margin-bottom: 0.5rem;
+}
+
+header div:nth-child(n + 2) {
+  margin: 0.25rem 0;
+}
+
+header span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+header h5 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.transaction-container {
+  margin-bottom: 1rem;
+}
+
+.transaction-list-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  padding-right: 5px; /* Add some padding to prevent content overlap with scrollbar */
+}
+
+/* Webkit browsers (Chrome, Safari, newer versions of Edge) */
+.transaction-list-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transaction-list-wrapper::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+  border-radius: 4px;
+}
+
+.transaction-list-wrapper::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-list-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox */
+.transaction-list-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input:not(#type),
+form button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(58, 61, 190, 0.1);
+}
+
+form button {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 8px;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+}
+
+form label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #666;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+form div {
+  flex-basis: 100%;
+}
+
+form div:nth-child(3),
+form div:nth-child(4) {
+  flex-basis: calc(50% - 5px);
+}
+
+input#type {
+  appearance: none;
+  position: absolute;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #f5f5f5;
+  border-radius: var(--border-radius);
+  position: relative;
+  cursor: pointer;
+}
+
+.option span {
+  width: 50%;
+  text-align: center;
+  z-index: 2;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.option::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #fff;
+  height: calc(100% - 8px);
+  width: calc(50% - 4px);
+  border-radius: calc(var(--border-radius) - 2px);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+input#type:checked ~ .option::before {
+  transform: translateX(calc(100% - 4px));
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 6px;
+  background: #fff;
+  border-radius: var(--border-radius);
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+ul li:hover {
+  transform: translateX(-5px);
+  border-color: var(--main-color);
+}
+
+.name {
+  flex: 1;
+}
+
+.name h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.name p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: right;
+  min-width: 120px;
+  margin: 0 8px;
+}
+
+.amount.income {
+  color: #2ecc71;
+}
+
+.amount.expense {
+  color: #e74c3c;
+}
+
+.action {
+  opacity: 0;
+  width: 20px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+ul li:hover .action {
+  opacity: 1;
+}
+
+.action svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+#status {
+  text-align: center;
+  color: #666;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+header .income {
+  color: #2ecc71;  /* Green color for income in header */
+}
+
+header .expense {
+  color: #e74c3c;  /* Red color for expense in header */
+}
