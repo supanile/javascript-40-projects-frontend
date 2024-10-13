@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+   <html lang="th">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>แผนผังการทำงาน</title>
+       <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+       <h1 class="main-title">แผนผังการทำงาน</h1>
+       
+       <button id="addNewItemBtn" class="add-item-button">+ เพิ่มรายการ</button>
+
+       <div class="drag-container">
+           <div class="drag-list">
+               <div class="drag-column backlog-column">
+                   <div class="header">
+                       <h1>งานค้าง</h1>
+                   </div>
+                   <ul id="backlog-content" class="drag-item-list custom-scroll">
+                       <li class="drag-item" draggable="true">ออกแบบ Animation</li>
+                       <li class="drag-item" draggable="true">ส่งงานลูกค้า</li>
+                       <li class="drag-item" draggable="true">เสนองบประมาณ</li>
+                   </ul>
+               </div>
+               <div class="drag-column progress-column">
+                   <div class="header">
+                       <h1>ดำเนินการ</h1>
+                   </div>
+                   <ul id="progress-content" class="drag-item-list custom-scroll">
+                       <li class="drag-item" draggable="true">ออกแบบโลโก้</li>
+                       <li class="drag-item" draggable="true">ตัดต่อและเรนเดอร์</li>
+                   </ul>
+               </div>
+               <div class="drag-column complete-column">
+                   <div class="header">
+                       <h1>เสร็จสมบูรณ์</h1>
+                   </div>
+                   <ul id="complete-content" class="drag-item-list custom-scroll">
+                   </ul>
+               </div>
+               <div class="drag-column reject-column">
+                   <div class="header">
+                       <h1>ไม่ผ่าน</h1>
+                   </div>
+                   <ul id="reject-content" class="drag-item-list custom-scroll">
+                   </ul>
+               </div>
+           </div>
+       </div>
+
+       <div id="addItemModal" class="modal">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h2>เพิ่มรายการใหม่</h2>
+                   <span class="close">&times;</span>
+               </div>
+               <div class="modal-body">
+                   <input type="text" id="newItemInput" placeholder="ใส่รายการใหม่ที่นี่">
+               </div>
+               <div class="modal-footer">
+                   <button id="addItemButton">เพิ่มรายการ</button>
+               </div>
+           </div>
+       </div>
+
+       <script src="script.js"></script>
+   </body>
+   </html>
