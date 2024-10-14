@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจองที่นั่งภาพยนตร์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="text-3xl font-bold mb-8">ระบบจองที่นั่งภาพยนตร์</h1>
+
+    <div class="movie-container mb-6">
+        <label>เลือกภาพยนตร์:</label>
+        <select id="movie">
+            <option value="150">Avengers: Secret Wars (฿150)</option>
+            <option value="200">JOKER ติดกี (฿200)</option>
+            <option value="300">ธี่หยด 4 (฿300)</option>
+        </select>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>ว่าง (ราคาตามภาพยนตร์)</small>
+        </li>
+        <li>
+            <div class="seat vip"></div>
+            <small>VIP (+50 บาท)</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>ที่นั่งของเรา</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>ไม่ว่าง</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+        <div class="seat-layout"></div>
+    </div>
+
+    <p class="text">
+        คุณได้เลือก <span id="count">0</span> ที่นั่ง ยอดชำระเงิน <span id="total">0</span> บาท
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
