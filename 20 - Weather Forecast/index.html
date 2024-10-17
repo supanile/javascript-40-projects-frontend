@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="main-title">Weather Forecast</h1>
+            
+            <form id="form" class="search-form">
+                <input type="text" id="search" placeholder="Search city..." required>
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="weather-card">
+                <div id="location" class="location-container">
+                    <h2 id="city">Bangkok</h2>
+                    <p id="state">TH</p>
+                </div>
+
+                <div id="weather" class="weather-container">
+                    <h2>35°C</h2>
+                    <p class="temp-range">max: 37°C, min: 21°C</p>
+                </div>
+
+                <div id="info" class="weather-details">
+                    <div class="detail-item">
+                        <img src="icons/weather-icon.png" alt="Weather status" class="weather-icon">
+                        <p id="status">Hot</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <img src="icons/humidity-icon.png" alt="Humidity" class="weather-icon">
+                        <p id="humidity">100%</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <img src="icons/wind-icon.png" alt="Wind speed" class="weather-icon">
+                        <p id="wind">4.0 m/s</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
