@@ -1,0 +1,111 @@
+:root {
+    --left-color: orangered;
+    --right-color: #28a745;
+    --overlay-color: rgba(0, 0, 0, 0.7);
+    --transition-speed: 1s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;  
+}
+
+.content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: width var(--transition-speed) ease-in-out;
+}
+
+.content.left {
+    left: 0;
+    background: url("https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+
+.content.right {
+    right: 0;
+    background: url("https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+.content::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    transition: background-color var(--transition-speed);
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all var(--transition-speed);
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.content.left .btn:hover {
+    background-color: var(--left-color);
+    border-color: var(--left-color);
+}
+
+.content.right .btn:hover {
+    background-color: var(--right-color);
+    border-color: var(--right-color);
+}
+
+.hover-left .left { width: 75%; }
+.hover-left .right { width: 25%; }
+.hover-right .right { width: 75%; }
+.hover-right .left { width: 25%; }
+
+.hover-left .left::before { background-color: rgba(var(--left-color), 0.7); }
+.hover-right .right::before { background-color: rgba(var(--right-color), 0.7); }
+
+@media(max-width: 800px) {
+    h1 { font-size: 2rem; }
+    .btn { padding: 1.2rem; font-size: 1rem; }
+}
+
+@media(max-height: 700px) {
+    .btn {
+        top: 70%;
+    }
+}
