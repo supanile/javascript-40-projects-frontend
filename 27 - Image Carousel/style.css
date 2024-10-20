@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Kanit', sans-serif; 
+}
+
+.carousel {
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+img {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Kanit', sans-serif; 
+    font-weight: 300;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 60vh;
+        width: 95%;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .button-container {
+        bottom: 70px;
+    }
+
+    .dots-container {
+        bottom: 10px;
+    }
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
