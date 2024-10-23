@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณระยะห่างระหว่างวัน</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">คำนวณระยะห่างระหว่างวัน</h1>
+            
+            <div class="date-inputs">
+                <div class="input-group">
+                    <label for="date1">วันที่เริ่มต้น</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="date1" required>
+                    </div>
+                </div>
+
+                <div class="separator">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="input-group">
+                    <label for="date2">วันที่สิ้นสุด</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="date2" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="calculate-btn">
+                <i class="fas fa-calculator"></i>
+                คำนวณ
+            </button>
+
+            <div class="result-container">
+                <h2 id="result" class="result">กรุณาเลือกวันที่</h2>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
