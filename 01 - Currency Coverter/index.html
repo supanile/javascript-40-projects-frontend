@@ -14,35 +14,50 @@
     <main>
       <h1>Currency Converter</h1>
 
+      <!-- Currency input controls container -->
+       
       <div class="controls" id="controls">
+        <!-- Base currency input group -->
         <div class="control">
           <button id="base" data-drawer>USD</button>
           <input type="number" id="base-input" value="0" min="0" step="0.01" />
         </div>
+
+        <!-- Target currency input group -->
         <div class="control">
           <button id="target" data-drawer>EUR</button>
           <input type="number" id="target-input" value="0" readonly />
         </div>
+
+        <!-- Currency swap button -->
         <button class="swap-btn" id="swap-btn">
           <span class="material-symbols-outlined"> sync_alt </span>
         </button>
       </div>
 
+      <!-- Exchange rate display section -->
       <div class="exchange-rate">
         <h5>Exchange Rate</h5>
         <span id="exchange-rate"></span>
       </div>
 
+      <!-- Currency selection drawer (hidden by default) -->
       <div class="drawer" id="drawer">
         <div class="title">
+
+          <!-- Back button -->
           <button id="dismiss-btn">
             <span class="material-symbols-outlined"> west </span>
           </button>
           <h3>Select Currency</h3>
         </div>
+
+        <!-- Currency search input -->
         <div class="search">
           <input type="search" id="search" placeholder="Search" />
         </div>
+        
+         <!-- Currency list container -->
         <ul class="currency-list" id="currency-list"></ul>
       </div>
     </main>

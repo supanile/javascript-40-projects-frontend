@@ -1,17 +1,20 @@
+/* Import Google Font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/* Global CSS Variables */
 :root {
-  --primary: #2c3e50;
-  --secondary: #3498db;
-  --accent: #e74c3c;
-  --background: #ecf0f1;
-  --text: #34495e;
-  --white: #ffffff;
-  --input-bg: rgba(52, 152, 219, 0.1);
-  --input-border: rgba(52, 152, 219, 0.3);
-  --shadow: rgba(0, 0, 0, 0.1);
+  --primary: #2c3e50;    /* Dark blue - primary color */
+  --secondary: #3498db;  /* Light blue - secondary color */
+  --accent: #e74c3c;     /* Red - accent color */
+  --background: #ecf0f1; /* Light gray - background color */
+  --text: #34495e;       /* Dark gray - text color */
+  --white: #ffffff;      /* White */
+  --input-bg: rgba(52, 152, 219, 0.1);     /* Semi-transparent blue for inputs */
+  --input-border: rgba(52, 152, 219, 0.3);  /* Border color for inputs */
+  --shadow: rgba(0, 0, 0, 0.1);             /* Shadow color */
 }
 
+/* Reset default styles */
 * {
   padding: 0;
   margin: 0;
@@ -19,6 +22,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Body styles - Center content with gradient background */
 body {
   display: flex;
   justify-content: center;
@@ -28,6 +32,7 @@ body {
   padding: 20px;
 }
 
+/* Main container styles */
 main {
   background: var(--white);
   padding: 40px;
@@ -55,12 +60,14 @@ button {
   transition: all 0.3s ease;
 }
 
+/* Currency control styles */
 .controls {
   display: grid;
   gap: 25px;
   position: relative;
 }
 
+/* Individual currency input container */
 .control {
   display: flex;
   background: var(--input-bg);
@@ -75,6 +82,7 @@ button {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
+/* Currency selection button styles */
 .control button {
   --image: url(https://wise.com/public-resources/assets/flags/rectangle/usd.png);
   font-weight: 600;
@@ -102,6 +110,7 @@ button {
   color: var(--secondary);
 }
 
+/* Currency input field styles */
 .control input {
   font-size: 2rem;
   text-align: end;
@@ -113,6 +122,7 @@ button {
   color: var(--text);
 }
 
+/* Currency swap button styles */
 .swap-btn {
   width: 50px;
   height: 50px;
@@ -166,6 +176,7 @@ button {
   font-weight: 500;
 }
 
+/* Currency drawer styles */
 .drawer {
   position: absolute;
   inset: 0;
@@ -300,12 +311,14 @@ button {
   content: '';
 }
 
+/* Loading skeleton animation */
 @keyframes shimmer {
   100% {
     transform: translateX(100%);
   }
 }
 
+/* Responsive styles */
 @media (max-width: 480px) {
   main {
     padding: 30px 20px;

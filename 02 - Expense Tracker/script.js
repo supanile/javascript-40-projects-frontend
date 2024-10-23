@@ -1,11 +1,14 @@
+// Retrieve transactions from local storage or initialize an empty array
 const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
+// Initialize currency formatter
 const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
   signDisplay: "always",
 });
 
+// Get DOM elements
 const list = document.getElementById("transactionList");
 const form = document.getElementById("transactionForm");
 const status = document.getElementById("status");
@@ -13,8 +16,10 @@ const balance = document.getElementById("balance");
 const income = document.getElementById("income");
 const expense = document.getElementById("expense");
 
+// Add event listener for form submission
 form.addEventListener("submit", addTransaction);
 
+// Calculate and update total balance, income, and expenses
 function updateTotal() {
   const incomeTotal = transactions
     .filter((trx) => trx.type === "income")
@@ -26,11 +31,13 @@ function updateTotal() {
 
   const balanceTotal = incomeTotal - expenseTotal;
 
+  // Update DOM elements with formatted values
   balance.textContent = formatter.format(balanceTotal).substring(1);
   income.textContent = formatter.format(incomeTotal);
   expense.textContent = formatter.format(expenseTotal * -1);
 }
 
+// Render the list of transactions
 function renderList() {
   list.innerHTML = "";
 
@@ -45,6 +52,7 @@ function renderList() {
 
     const li = document.createElement("li");
 
+    // Create HTML structure for each transaction
     li.innerHTML = `
       <div class="name">
         <h4>${name}</h4>
@@ -66,9 +74,11 @@ function renderList() {
   });
 }
 
+// Initial render and total update
 renderList();
 updateTotal();
 
+// Delete a transaction by ID
 function deleteTransaction(id) {
   const index = transactions.findIndex((trx) => trx.id === id);
   transactions.splice(index, 1);
@@ -78,11 +88,13 @@ function deleteTransaction(id) {
   renderList();
 }
 
+// Add a new transaction
 function addTransaction(e) {
   e.preventDefault();
 
   const formData = new FormData(this);
 
+  // Create new transaction object
   transactions.push({
     id: transactions.length + 1,
     name: formData.get("name"),
@@ -98,7 +110,9 @@ function addTransaction(e) {
   renderList();
 }
 
+// Save transactions to local storage
 function saveTransactions() {
+  // Sort transactions by date (newest first)
   transactions.sort((a, b) => new Date(b.date) - new Date(a.date));
   localStorage.setItem("transactions", JSON.stringify(transactions));
 }

@@ -10,8 +10,7 @@ const state = {
   baseValue: 1,
 };
 
-//* selectors
-
+// DOM element selectors
 const ui = {
   controls: document.getElementById("controls"),
   drawer: document.getElementById("drawer"),
@@ -26,8 +25,7 @@ const ui = {
   swapBtn: document.getElementById("swap-btn"),
 };
 
-//* event listeners
-
+// Event listener setup
 const setupEventListeners = () => {
   document.addEventListener("DOMContentLoaded", initApp);
   ui.controls.addEventListener("click", showDrawer);
@@ -38,13 +36,15 @@ const setupEventListeners = () => {
   ui.swapBtn.addEventListener("click", switchPair);
 };
 
-//* event handlers
+// Event handlers
 
+// Initialize application
 const initApp = () => {
   fetchCurrencies();
   fetchExchangeRate();
 };
 
+// Show currency selection drawer
 const showDrawer = (e) => {
   if (e.target.hasAttribute("data-drawer")) {
     state.openedDrawer = e.target.id;
@@ -52,12 +52,14 @@ const showDrawer = (e) => {
   }
 };
 
+// Hide currency selection drawer
 const hideDrawer = () => {
   clearSearchInput();
   state.openedDrawer = null;
   ui.drawer.classList.remove("show");
 };
 
+// Filter currencies based on search input
 const filterCurrency = () => {
   const keyword = ui.searchInput.value.trim().toLowerCase();
 
@@ -178,6 +180,9 @@ const clearSearchInput = () => {
   ui.searchInput.dispatchEvent(new Event("input"));
 };
 
+// Helper functions
+
+// Get currency flag image URL
 const getImageURL = (code) => {
   const flag =
     "https://wise.com/public-resources/assets/flags/rectangle/{code}.png";
@@ -185,6 +190,7 @@ const getImageURL = (code) => {
   return flag.replace("{code}", code.toLowerCase());
 };
 
+// Load exchange rate from cache or fetch new
 const loadExchangeRate = () => {
   const { base, rates } = state;
   if (typeof rates[base] !== "undefined") {
@@ -196,8 +202,9 @@ const loadExchangeRate = () => {
   }
 };
 
-//* api functions
+// API functions
 
+// Fetch available currencies
 const fetchCurrencies = () => {
   fetch(`https://api.freecurrencyapi.com/v1/currencies?apikey=${key}`)
     .then((response) => response.json())
@@ -209,6 +216,7 @@ const fetchCurrencies = () => {
     .catch(console.error);
 };
 
+// Fetch exchange rates
 const fetchExchangeRate = () => {
   const { base } = state;
 
@@ -226,6 +234,5 @@ const fetchExchangeRate = () => {
     .finally(hideLoading);
 };
 
-//* initialization
-
+// Initialize application
 setupEventListeners();

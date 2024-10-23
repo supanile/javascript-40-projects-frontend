@@ -1,5 +1,7 @@
+/* Import Poppins font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/* Define CSS variables for use throughout the document */
 :root {
   --bg-color: #f6f8fa;
   --text-color: #1d1f27;
@@ -11,12 +13,14 @@
   --scrollbar-thumb-hover: #2a2d8e;
 }
 
+/* Reset default styles for all elements */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Styles for the body */
 body {
   padding: 1rem;
   font-family: "Poppins", sans-serif;
@@ -28,6 +32,7 @@ body {
   align-items: center;
 }
 
+/* Styles for main heading */
 h1 {
   text-align: center;
   font-size: 1.5rem;
@@ -35,12 +40,14 @@ h1 {
   color: var(--main-color);
 }
 
+/* Styles for subheadings */
 h3 {
   margin-bottom: 0.75rem;
   color: var(--main-color);
   font-size: 1.1rem;
 }
 
+/* Styles for the main content area */
 main {
   width: 100%;
   max-width: 450px;
@@ -50,6 +57,7 @@ main {
   box-shadow: var(--shadow);
 }
 
+/* Styles for the app header */
 header {
   background-color: var(--main-color);
   color: #fff;
@@ -59,6 +67,7 @@ header {
   text-align: center;
 }
 
+/* Styles for divs within the header */
 header div {
   padding: 5px 0;
 }
@@ -71,6 +80,7 @@ header div:nth-child(n + 2) {
   margin: 0.25rem 0;
 }
 
+/* Styles for spans within the header */
 header span {
   display: block;
   font-size: 1.25rem;
@@ -78,6 +88,7 @@ header span {
   margin-top: 0.15rem;
 }
 
+/* Styles for h5 within the header */
 header h5 {
   font-size: 0.8rem;
   font-weight: 500;
@@ -85,19 +96,21 @@ header h5 {
   opacity: 0.9;
 }
 
+/* Styles for the transaction container */
 .transaction-container {
   margin-bottom: 1rem;
 }
 
+/* Styles for the transaction list wrapper */
 .transaction-list-wrapper {
   max-height: 300px;
   overflow-y: auto;
   border: 1px solid #eee;
   border-radius: var(--border-radius);
-  padding-right: 5px; /* Add some padding to prevent content overlap with scrollbar */
+  padding-right: 5px; /* Add padding to prevent content overlap with scrollbar */
 }
 
-/* Webkit browsers (Chrome, Safari, newer versions of Edge) */
+/* Styles for scrollbar on Webkit browsers (Chrome, Safari, newer versions of Edge) */
 .transaction-list-wrapper::-webkit-scrollbar {
   width: 8px;
 }
@@ -117,18 +130,20 @@ header h5 {
   background: var(--scrollbar-thumb-hover);
 }
 
-/* Firefox */
+/* Styles for scrollbar on Firefox */
 .transaction-list-wrapper {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
 }
 
+/* Styles for the form */
 form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
+/* Styles for inputs and buttons in the form */
 form input:not(#type),
 form button {
   width: 100%;
@@ -140,12 +155,14 @@ form button {
   transition: all 0.3s ease;
 }
 
+/* Styles for focused inputs */
 form input:focus {
   outline: none;
   border-color: var(--main-color);
   box-shadow: 0 0 0 3px rgba(58, 61, 190, 0.1);
 }
 
+/* Styles for buttons in the form */
 form button {
   background-color: var(--main-color);
   color: #fff;
@@ -161,6 +178,7 @@ form button:hover {
   transform: translateY(-2px);
 }
 
+/* Styles for labels in the form */
 form label {
   font-size: 0.8rem;
   font-weight: 500;
@@ -169,6 +187,7 @@ form label {
   margin-bottom: 0.25rem;
 }
 
+/* Styles for divs in the form */
 form div {
   flex-basis: 100%;
 }
@@ -178,11 +197,13 @@ form div:nth-child(4) {
   flex-basis: calc(50% - 5px);
 }
 
+/* Styles for radio input */
 input#type {
   appearance: none;
   position: absolute;
 }
 
+/* Styles for transaction type options */
 .option {
   display: flex;
   align-items: center;
@@ -220,6 +241,7 @@ input#type:checked ~ .option::before {
   transform: translateX(calc(100% - 4px));
 }
 
+/* Styles for transaction list */
 ul {
   list-style-type: none;
 }
@@ -245,6 +267,7 @@ ul li:hover {
   border-color: var(--main-color);
 }
 
+/* Styles for transaction name */
 .name {
   flex: 1;
 }
@@ -260,6 +283,7 @@ ul li:hover {
   color: #666;
 }
 
+/* Styles for transaction amount */
 .amount {
   font-weight: 600;
   font-size: 0.9rem;
@@ -276,6 +300,7 @@ ul li:hover {
   color: #e74c3c;
 }
 
+/* Styles for delete transaction button */
 .action {
   opacity: 0;
   width: 20px;
@@ -294,6 +319,7 @@ ul li:hover .action {
   color: #e74c3c;
 }
 
+/* Styles for status message */
 #status {
   text-align: center;
   color: #666;
@@ -301,10 +327,12 @@ ul li:hover .action {
   font-size: 0.9rem;
 }
 
+/* Styles for sections */
 section {
   margin-bottom: 1rem;
 }
 
+/* Styles for income and expense colors in header */
 header .income {
   color: #2ecc71;  /* Green color for income in header */
 }
