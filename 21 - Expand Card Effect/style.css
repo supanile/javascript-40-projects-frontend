@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    max-width: 1400px;
+    gap: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.item {
+    position: relative;
+    height: 75vh;
+    border-radius: 2rem;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 0;
+    overflow: hidden;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.8);
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover {
+    filter: brightness(1);
+}
+
+.item.active {
+    flex: 4;
+    filter: brightness(1);
+}
+
+.item.active::before {
+    opacity: 1;
+}
+
+.item h3 {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.item.active h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .container {
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .item {
+        border-radius: 1.5rem;
+    }
+
+    .item:nth-of-type(6),
+    .item:nth-of-type(7) {
+        display: none;
+    }
+
+    .item h3 {
+        font-size: 1.4rem;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .container {
+        margin-top: 3rem;
+    }
+}

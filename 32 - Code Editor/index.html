@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <div class="editor-container">
+                <div class="editor-section">
+                    <label>HTML</label>
+                    <textarea id="html" placeholder="Enter HTML code here..."></textarea>
+                </div>
+                <div class="editor-section">
+                    <label>CSS</label>
+                    <textarea id="css" placeholder="Enter CSS code here..."></textarea>
+                </div>
+                <div class="editor-section">
+                    <label>JavaScript</label>
+                    <textarea id="js" placeholder="Enter JavaScript code here..."></textarea>
+                </div>
+            </div>
+            <button class="run-btn" onclick="displayResult()">Run Code</button>
+        </div>
+        <div class="output">
+            <label>Output</label>
+            <iframe id="result"></iframe>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

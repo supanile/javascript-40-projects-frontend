@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.category {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 500px;  /* เพิ่มความสูงจาก 300px เป็น 500px */
+    margin: 3rem 0;  /* เพิ่ม margin ระหว่างแต่ละ category */
+    border-radius: 25px;  /* เพิ่มความโค้งของมุม */
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);  /* เพิ่ม shadow ให้ดูมีมิติมากขึ้น */
+    transform: translateX(300%);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);  /* เพิ่มเวลา animation */
+}
+
+.category:nth-of-type(even) {
+    transform: translateX(-300%);
+}
+
+.category.active {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.7)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background-color 0.4s ease;  /* เพิ่มเวลา transition */
+}
+
+.category:hover .overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(99, 102, 241, 0.6),
+        rgba(139, 92, 246, 0.8)
+    );
+}
+
+.overlay i {
+    font-size: 4rem;  /* เพิ่มขนาดไอคอน */
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.category:hover .overlay i {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay h2 {
+    font-size: 3rem;  /* เพิ่มขนาดตัวอักษร */
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.category:hover .overlay h2 {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .category {
+        height: 300px;  /* ปรับขนาดสำหรับมือถือ */
+    }
+    
+    .overlay h2 {
+        font-size: 2rem;
+    }
+    
+    .overlay i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;  /* เพิ่ม gap ระหว่าง grid */
+    }
+    
+    .category {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);  /* แก้เป็น 2 คอลัมน์เพื่อให้ภาพใหญ่ขึ้น */
+        gap: 3rem;  /* เพิ่ม gap ให้มากขึ้น */
+    }
+}
