@@ -1,4 +1,5 @@
 :root {
+  /* กำหนดสีพื้นฐานและเงาสำหรับโหมดปกติ */
   --base-color: #ffffff;
   --base-variant: #f8f9fc;
   --text-color: #1a1f36;
@@ -9,6 +10,7 @@
 }
 
 .darkmode {
+  /* กำหนดสีพื้นฐานและเงาสำหรับโหมดมืด */
   --base-color: #0f172a;
   --base-variant: #1e293b;
   --text-color: #f1f5f9;
@@ -19,16 +21,19 @@
 }
 
 * {
+  /* รีเซ็ต margin และ padding ของทุก element */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
+  /* กำหนดฟอนต์หลักของเว็บไซต์ */
   font-family: 'Inter', sans-serif;
 }
 
 body {
+  /* กำหนดความสูงขั้นต่ำ สีพื้นหลัง และสีตัวอักษรของ body */
   min-height: 100vh;
   background-color: var(--base-color);
   color: var(--text-color);
@@ -37,10 +42,12 @@ body {
 }
 
 header, section {
+  /* กำหนด padding สำหรับ header และ section */
   padding: 100px min(120px, 7%);
 }
 
 header {
+  /* จัด layout ของ header */
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -48,11 +55,13 @@ header {
 }
 
 section {
+  /* กำหนดสีพื้นหลังของ section */
   background-color: var(--base-variant);
   transition: background-color 0.3s;
 }
 
 h1 {
+  /* กำหนดขนาดฟอนต์และการจัดรูปแบบของ h1 */
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 1.2;
@@ -63,12 +72,14 @@ h1 {
 }
 
 h2 {
+  /* กำหนดขนาดฟอนต์และการจัดรูปแบบของ h2 */
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 p {
+  /* กำหนด margin สีตัวอักษร และขนาดฟอนต์ของ p */
   margin: 10px 0 30px 0;
   color: var(--secondary-text);
   font-size: 1.1rem;
@@ -76,12 +87,14 @@ p {
 }
 
 .button-group {
+  /* จัด layout ของกลุ่มปุ่ม */
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
 button {
+  /* กำหนดรูปแบบของปุ่ม */
   border: none;
   padding: 1em 2em;
   font: inherit;
@@ -92,22 +105,26 @@ button {
 }
 
 button:hover {
+  /* กำหนดเอฟเฟกต์เมื่อ hover บนปุ่ม */
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
 
 .cta-button {
+  /* กำหนดสีพื้นหลังและสีตัวอักษรของปุ่ม CTA */
   background-color: var(--accent-color);
   color: white;
 }
 
 .secondary-button {
+  /* กำหนดสีพื้นหลัง สีตัวอักษร และเส้นขอบของปุ่มรอง */
   background-color: var(--base-variant);
   color: var(--text-color);
   border: 1px solid var(--secondary-text);
 }
 
 #theme-switch {
+  /* กำหนดรูปแบบของปุ่มสลับธีม */
   height: 48px;
   width: 48px;
   padding: 0.7rem;
@@ -121,24 +138,29 @@ button:hover {
 }
 
 #theme-switch svg {
+  /* กำหนดรูปแบบของไอคอนในปุ่มสลับธีม */
   fill: var(--text-color);
   width: 100%;
   height: 100%;
 }
 
 #theme-switch svg:last-child {
+  /* ซ่อนไอคอนสุดท้ายในปุ่มสลับธีม */
   display: none;
 }
 
 .darkmode #theme-switch svg:first-child {
+  /* ซ่อนไอคอนแรกในปุ่มสลับธีมเมื่ออยู่ในโหมดมืด */
   display: none;
 }
 
 .darkmode #theme-switch svg:last-child {
+  /* แสดงไอคอนสุดท้ายในปุ่มสลับธีมเมื่ออยู่ในโหมดมืด */
   display: block;
 }
 
 @media (max-width: 768px) {
+  /* ปรับ padding ของ header และ section สำหรับหน้าจอขนาดเล็ก */
   header, section {
       padding: 60px min(40px, 5%);
   }

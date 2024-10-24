@@ -1,161 +1,162 @@
 :root {
-    --primary-color: #ff6b6b;
-    --secondary-color: #4ecdc4;
-    --background-color: #f7f7f7;
-    --text-color: #333;
-    --card-background: #fff;
+    --primary-color: #ff6b6b; /* สีหลักที่ใช้ในปุ่มและองค์ประกอบอื่นๆ */
+    --secondary-color: #4ecdc4; /* สีรองที่ใช้ในปุ่มและองค์ประกอบอื่นๆ */
+    --background-color: #f7f7f7; /* สีพื้นหลังของหน้า */
+    --text-color: #333; /* สีของข้อความ */
+    --card-background: #fff; /* สีพื้นหลังของการ์ด */
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* ทำให้ padding และ border รวมอยู่ในขนาดขององค์ประกอบ */
+    margin: 0; /* ตั้งค่า margin เริ่มต้นเป็น 0 */
+    padding: 0; /* ตั้งค่า padding เริ่มต้นเป็น 0 */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
+    background-color: var(--background-color); /* ใช้สีพื้นหลังจากตัวแปร */
+    color: var(--text-color); /* ใช้สีข้อความจากตัวแปร */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
 }
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
+    /* ใช้ภาพพื้นหลังพร้อม gradient */
+    background-position: center center; /* จัดตำแหน่งภาพพื้นหลังให้อยู่ตรงกลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพพื้นหลังซ้ำ */
+    background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุม */
+    color: #fff; /* สีข้อความใน header */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    padding: 100px 20px; /* ระยะห่างภายใน header */
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3rem; /* ขนาดฟอนต์ของหัวข้อ */
+    margin-bottom: 30px; /* ระยะห่างด้านล่างของหัวข้อ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* เงาของข้อความ */
 }
 
 form {
-    max-width: 500px;
-    margin: 0 auto;
-    position: relative;
+    max-width: 500px; /* ความกว้างสูงสุดของฟอร์ม */
+    margin: 0 auto; /* จัดฟอร์มให้อยู่ตรงกลาง */
+    position: relative; /* ใช้สำหรับจัดตำแหน่งปุ่ม */
 }
 
 form input {
-    width: 100%;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* ความกว้างเต็มของ input */
+    padding: 15px 20px; /* ระยะห่างภายใน input */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 50px; /* มุมโค้งของ input */
+    font-size: 1rem; /* ขนาดฟอนต์ของ input */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาของ input */
 }
 
 form button {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    position: absolute; /* จัดตำแหน่งปุ่มให้ลอยอยู่ในฟอร์ม */
+    right: 5px; /* ระยะห่างจากขอบขวา */
+    top: 5px; /* ระยะห่างจากขอบบน */
+    background-color: var(--primary-color); /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีข้อความของปุ่ม */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 50px; /* มุมโค้งของปุ่ม */
+    padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
+    font-size: 1rem; /* ขนาดฟอนต์ของปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    transition: background-color 0.3s ease; /* การเปลี่ยนสีพื้นหลังเมื่อ hover */
 }
 
 form button:hover {
-    background-color: #ff4757;
+    background-color: #ff4757; /* สีพื้นหลังของปุ่มเมื่อ hover */
 }
 
 main {
-    padding: 40px 20px;
+    padding: 40px 20px; /* ระยะห่างภายใน main */
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* ความกว้างสูงสุดของ container */
+    margin: 0 auto; /* จัด container ให้อยู่ตรงกลาง */
 }
 
 ul.songs {
-    list-style-type: none;
+    list-style-type: none; /* ไม่มีสัญลักษณ์หน้ารายการ */
 }
 
 ul.songs li {
-    background-color: var(--card-background);
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: var(--card-background); /* สีพื้นหลังของรายการ */
+    border-radius: 8px; /* มุมโค้งของรายการ */
+    margin-bottom: 15px; /* ระยะห่างด้านล่างของรายการ */
+    padding: 15px 20px; /* ระยะห่างภายในรายการ */
+    display: flex; /* ใช้ flexbox สำหรับจัดตำแหน่ง */
+    justify-content: space-between; /* จัดตำแหน่งภายใน flex */
+    align-items: center; /* จัดตำแหน่งแนวตั้งภายใน flex */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เงาของรายการ */
+    transition: transform 0.3s ease; /* การเปลี่ยนแปลงเมื่อ hover */
 }
 
 ul.songs li:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* ยกขึ้นเมื่อ hover */
 }
 
 .btn {
-    background-color: var(--secondary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: var(--secondary-color); /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีข้อความของปุ่ม */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 5px; /* มุมโค้งของปุ่ม */
+    padding: 8px 15px; /* ระยะห่างภายในปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    transition: background-color 0.3s ease; /* การเปลี่ยนสีพื้นหลังเมื่อ hover */
 }
 
 .btn:hover {
-    background-color: #45b7aa;
+    background-color: #45b7aa; /* สีพื้นหลังของปุ่มเมื่อ hover */
 }
 
 .more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    display: flex; /* ใช้ flexbox สำหรับจัดตำแหน่ง */
+    justify-content: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+    align-items: center; /* จัดตำแหน่งแนวตั้งให้อยู่ตรงกลาง */
+    margin-top: 30px; /* ระยะห่างด้านบน */
 }
 
 .more .btn {
-    margin: 0 10px;
-    padding: 8px 15px;
-    background-color: var(--secondary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin: 0 10px; /* ระยะห่างระหว่างปุ่ม */
+    padding: 8px 15px; /* ระยะห่างภายในปุ่ม */
+    background-color: var(--secondary-color); /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีข้อความของปุ่ม */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 5px; /* มุมโค้งของปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    transition: background-color 0.3s ease; /* การเปลี่ยนสีพื้นหลังเมื่อ hover */
 }
 
 .more .btn:hover {
-    background-color: #45b7aa;
+    background-color: #45b7aa; /* สีพื้นหลังของปุ่มเมื่อ hover */
 }
 
 .more .btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    background-color: #ccc; /* สีพื้นหลังของปุ่มเมื่อ disabled */
+    cursor: not-allowed; /* เปลี่ยนเคอร์เซอร์เมื่อ disabled */
 }
 
 .more span {
-    margin: 0 10px;
-    font-weight: bold;
+    margin: 0 10px; /* ระยะห่างระหว่างข้อความ */
+    font-weight: bold; /* น้ำหนักฟอนต์ */
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    padding: 20px; /* ระยะห่างภายใน footer */
+    background-color: #333; /* สีพื้นหลังของ footer */
+    color: #fff; /* สีข้อความของ footer */
 }
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* ขนาดฟอนต์ของหัวข้อเมื่อหน้าจอเล็ก */
     }
 
     form {
-        width: 100%;
+        width: 100%; /* ความกว้างเต็มของฟอร์มเมื่อหน้าจอเล็ก */
     }
 }
