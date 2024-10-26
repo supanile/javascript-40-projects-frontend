@@ -1,126 +1,143 @@
+/* รีเซ็ตค่าเริ่มต้นสำหรับทุก Element */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* กำหนดสไตล์พื้นฐานสำหรับ body */
 body {
-    font-family: 'Kanit', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit หรือฟอนต์ sans-serif ทั่วไป */
+    line-height: 1.6; /* กำหนดระยะห่างระหว่างบรรทัด */
+    color: #333; /* สีตัวอักษรหลัก */
+    background-color: #f4f4f4; /* สีพื้นหลังของหน้าเว็บ */
 }
 
+/* กำหนดความกว้างสูงสุดและจัดวางตำแหน่งของคอนเทนเนอร์หลัก */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1200px; /* ความกว้างสูงสุดของ Container */
+    margin: 0 auto; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    padding: 20px; /* เพิ่มระยะห่างภายใน Container */
 }
 
+/* จัดรูปแบบส่วนหัวของหน้าเว็บ */
 header {
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+    margin-bottom: 40px; /* เพิ่มระยะห่างด้านล่างของส่วนหัว */
 }
 
+/* กำหนดสไตล์สำหรับหัวข้อหลัก */
 h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* ขนาดตัวอักษร */
+    color: #2c3e50; /* สีของหัวข้อ */
+    margin-bottom: 10px; /* ระยะห่างด้านล่างของหัวข้อ */
 }
 
+/* สไตล์สำหรับกล่องเนื้อหา */
 .content {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-bottom: 40px;
-    transition: transform 0.3s ease;
+    background-color: #fff; /* พื้นหลังสีขาว */
+    border-radius: 8px; /* มุมโค้งของกล่อง */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาของกล่อง */
+    overflow: hidden; /* ซ่อนเนื้อหาที่ล้นออกนอกกล่อง */
+    margin-bottom: 40px; /* ระยะห่างด้านล่างระหว่างกล่อง */
+    transition: transform 0.3s ease; /* เอฟเฟกต์การเคลื่อนไหวเมื่อ hover */
 }
 
+/* เอฟเฟกต์เมื่อ hover บนกล่องเนื้อหา */
 .content:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* ยกกล่องขึ้นเล็กน้อยเมื่อ hover */
 }
 
+/* กำหนดสไตล์สำหรับคอนเทนเนอร์ของรูปภาพ */
 .image-container {
-    overflow: hidden;
-    max-height: 300px; /* Add this line to limit the height of the image container */
+    overflow: hidden; /* ซ่อนส่วนของรูปภาพที่ล้นออกมา */
+    max-height: 300px; /* จำกัดความสูงสูงสุดของคอนเทนเนอร์รูปภาพ */
 }
 
+/* สไตล์สำหรับรูปภาพ */
 img {
-    width: 100%;
-    height: 300px; /* Change this from 'auto' to a fixed height */
-    object-fit: cover; /* Add this line to maintain aspect ratio while covering the container */
-    display: block;
-    transition: transform 0.3s ease;
+    width: 100%; /* ให้รูปภาพกว้างเต็ม Container */
+    height: 300px; /* กำหนดความสูงคงที่ */
+    object-fit: cover; /* ปรับขนาดรูปภาพให้พอดีกับคอนเทนเนอร์โดยรักษาสัดส่วน */
+    display: block; /* แสดงเป็นบล็อกเพื่อป้องกันช่องว่างใต้รูปภาพ */
+    transition: transform 0.3s ease; /* เอฟเฟกต์การเคลื่อนไหวเมื่อ hover */
 }
 
+/* เอฟเฟกต์ zoom เมื่อ hover บนรูปภาพ */
 .content:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* ขยายรูปภาพเล็กน้อยเมื่อ hover */
 }
 
+/* สไตล์สำหรับส่วนข้อความ */
 .text {
-    padding: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 20px; /* เพิ่มระยะห่างภายในส่วนข้อความ */
+    opacity: 0; /* ซ่อนข้อความเริ่มต้น */
+    transform: translateY(20px); /* เลื่อนข้อความลงเล็กน้อย */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* เอฟเฟกต์การแสดงข้อความ */
 }
 
+/* สไตล์เมื่อข้อความถูกเปิดเผย */
 .text.show-reveal {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* แสดงข้อความ */
+    transform: translateY(0); /* เลื่อนข้อความกลับตำแหน่งเดิม */
 }
 
+/* สไตล์สำหรับหัวข้อรอง */
 h2 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    font-size: 1.8rem; /* ขนาดตัวอักษร */
+    color: #2c3e50; /* สีของหัวข้อ */
+    margin-bottom: 10px; /* ระยะห่างด้านล่างของหัวข้อ */
+    opacity: 0; /* ซ่อนหัวข้อเริ่มต้น */
+    transform: translateY(20px); /* เลื่อนหัวข้อลงเล็กน้อย */
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s; /* เอฟเฟกต์การแสดงหัวข้อ พร้อมดีเลย์ */
 }
 
+/* สไตล์สำหรับย่อหน้า */
 p {
-    font-size: 1rem;
-    color: #7f8c8d;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+    font-size: 1rem; /* ขนาดตัวอักษร */
+    color: #7f8c8d; /* สีของข้อความ */
+    opacity: 0; /* ซ่อนข้อความเริ่มต้น */
+    transform: translateY(20px); /* เลื่อนข้อความลงเล็กน้อย */
+    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s; /* เอฟเฟกต์การแสดงข้อความ พร้อมดีเลย์ */
 }
 
+/* แสดงหัวข้อและย่อหน้าเมื่อถูกเปิดเผย */
 .text.show-reveal h2,
 .text.show-reveal p {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* แสดงข้อความ */
+    transform: translateY(0); /* เลื่อนข้อความกลับตำแหน่งเดิม */
 }
 
+/* สไตล์สำหรับส่วนท้ายของหน้าเว็บ */
 footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #7f8c8d;
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+    margin-top: 40px; /* เพิ่มระยะห่างด้านบนของส่วนท้าย */
+    color: #7f8c8d; /* สีของข้อความในส่วนท้าย */
 }
 
+/* Media query สำหรับหน้าจอขนาดเล็ก (Phone) */
 @media (max-width: 768px) {
     .container {
-        padding: 10px;
+        padding: 10px; /* ลดระยะห่างภายในคอนเทนเนอร์ */
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* ลดขนาดหัวข้อหลัก */
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* ลดขนาดหัวข้อรอง */
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* ลดขนาดข้อความ */
     }
 
     .image-container {
-        max-height: 200px; /* Reduce the max-height for smaller screens */
+        max-height: 200px; /* ลดความสูงสูงสุดของคอนเทนเนอร์รูปภาพ */
     }
 
     img {
-        height: 200px; /* Adjust the height for smaller screens */
+        height: 200px; /* ปรับความสูงของรูปภาพ */
     }
 }

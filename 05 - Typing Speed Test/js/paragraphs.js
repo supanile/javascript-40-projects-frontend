@@ -1,4 +1,6 @@
+// Array of paragraphs used for typing speed test
 const paragraphs = [
+    // Each string in the array is a paragraph that can be used for typing practice
     "The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the English alphabet in a single, concise sentence that has been used by typists for generations to practice their skills.",
     "Rainbows appear after a storm, bringing a vibrant array of colors to the sky and reminding us that even in the darkest times, there is always hope for a brighter future if we persevere through the challenges.",
     "Scientists recently discovered a new species of butterfly in the depths of the Amazon rainforest, highlighting the incredible biodiversity of this unique ecosystem and the importance of conservation efforts to protect undiscovered species.",
