@@ -1,77 +1,89 @@
+/* นำเข้าฟอนต์ Kanit จาก Google Fonts เพื่อใช้ในแอพพลิเคชัน */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400&display=swap');
 
+/* กำหนดให้ทุกอีลีเมนต์ใช้ box-sizing แบบ border-box เพื่อให้ขนาดรวมพื้นที่ขอบและ padding */
 html {
     box-sizing: border-box;
 }
 
+/* จัดการสไตล์หลักของ body */
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: whitesmoke;
-    font-family: 'Kanit', sans-serif;
+    margin: 0; /* ลบ margin ทั้งหมดของ body */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำให้เท่ากับความสูงของ viewport */
+    display: flex; /* ใช้ Flexbox สำหรับการจัดวาง */
+    justify-content: center; /* จัดให้เนื้อหาอยู่กึ่งกลางแนวนอน */
+    align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลางแนวตั้ง */
+    background-color: whitesmoke; /* กำหนดสีพื้นหลังเป็นสีเทาอ่อน */
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit เป็นฟอนต์หลัก */
 }
 
+/* สไตล์สำหรับกล่องเครื่องคิดเลข */
 .calculator {
-    background: white;
-    width: 400px;
-    border-radius: 12px;
+    background: white; /* พื้นหลังสีขาว */
+    width: 400px; /* กำหนดความกว้างของเครื่องคิดเลข */
+    border-radius: 12px; /* ทำให้มุมมน */
+    /* เพิ่มเงาให้กล่องคิดเลข: เยื้อง 0px แนวนอน, 5px แนวตั้ง, กระจาย 30px, ขนาด -5px, สีดำโปร่งใส 60% */
     box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
 }
 
+/* สไตล์สำหรับส่วนแสดงผลของเครื่องคิดเลข */
 .calculator-display {
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-radius: 10px 10px 0 0;
+    background-color: black; /* พื้นหลังสีดำ */
+    color: white; /* ตัวอักษรสีขาว */
+    display: flex; /* ใช้ Flexbox */
+    align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลางแนวตั้ง */
+    justify-content: flex-end; /* จัดให้เนื้อหาชิดขวา */
+    border-radius: 10px 10px 0 0; /* ทำให้มุมบนมน */
 }
 
+/* สไตล์สำหรับตัวเลขที่แสดงในส่วนแสดงผล */
 .calculator-display h1 {
-    margin: 0;
-    font-size: 45px;
-    padding: 25px;
-    font-weight: 500;
-    overflow-x: auto;
-    font-family: 'Kanit', sans-serif; 
+    margin: 0; /* ลบ margin */
+    font-size: 45px; /* กำหนดขนาดตัวอักษร */
+    padding: 25px; /* เพิ่มระยะห่างรอบข้อความ */
+    font-weight: 500; /* กำหนดความหนาของตัวอักษร */
+    overflow-x: auto; /* ให้สามารถเลื่อนแนวนอนได้ถ้าเนื้อหาเกิน */
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
 }
 
+/* จัดการเลย์เอาต์ของปุ่มต่างๆ ด้วย CSS Grid */
 .calculator-button {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 10px;
-    padding: 10px;
+    display: grid; /* ใช้ Grid Layout */
+    grid-template-columns: repeat(4,1fr); /* กำหนดให้มี 4 คอลัมน์ที่มีขนาดเท่ากัน */
+    grid-gap: 10px; /* กำหนดระยะห่างระหว่างปุ่ม */
+    padding: 10px; /* เพิ่มระยะห่างรอบกลุ่มปุ่ม */
 }
 
+/* กำหนดตำแหน่งและขนาดของปุ่มเท่ากับ */
 .equal {
-    grid-column: -2;
-    grid-row: 2/span 4;
+    grid-column: -2; /* วางปุ่มในคอลัมน์ที่สองจากขวา */
+    grid-row: 2/span 4; /* กำหนดให้ปุ่มเท่ากับครอบคลุม 4 แถว เริ่มจากแถวที่ 2 */
 }
 
+/* สไตล์พื้นฐานสำหรับทุกปุ่ม */
 button {
-    min-height: 50px;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    background-color: rgb(199, 199, 199);
-    font-family: 'Kanit', sans-serif;
+    min-height: 50px; /* กำหนดความสูงขั้นต่ำของปุ่ม */
+    font-size: 20px; /* กำหนดขนาดตัวอักษร */
+    font-weight: 500; /* กำหนดความหนาของตัวอักษร */
+    border: none; /* ลบเส้นขอบ */
+    border-radius: 5px; /* ทำให้มุมปุ่มมน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ที่ปุ่ม */
+    outline: none; /* ลบเส้น outline */
+    background-color: rgb(199, 199, 199); /* กำหนดสีพื้นหลังปุ่ม */
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
 }
 
+/* สไตล์เฉพาะสำหรับปุ่มตัวดำเนินการและปุ่มเท่ากับ */
 .operator, .equal {
-    background: orange;
-    color: white;
-    font-size: 30px;
-    font-family: 'Kanit', sans-serif; 
+    background: orange; /* พื้นหลังสีส้ม */
+    color: white; /* ตัวอักษรสีขาว */
+    font-size: 30px; /* ขนาดตัวอักษรใหญ่กว่าปุ่มทั่วไป */
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
 }
 
+/* Media query สำหรับการแสดงผลบนหน้าจอขนาดเล็ก */
 @media screen and (max-width:600px) {
     .calculator {
-        width: 95%;
+        width: 95%; /* ปรับความกว้างของเครื่องคิดเลขให้เหมาะกับหน้าจอขนาดเล็ก */
     }
 }

@@ -4,30 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โปรแกรมเล่นเพลง (Music Player)</title>
+    <!-- เชื่อมต่อไฟล์ CSS สำหรับไอคอน Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- คอนเทนเนอร์หลักสำหรับแอพพลิเคชัน -->
     <div class="container">
         <h1>โปรแกรมเล่นเพลง (Music Player)</h1>
+        <!-- ส่วนแสดงผลหลักของเครื่องเล่นเพลง -->
         <div class="music-container" id="music-container">
+            <!-- ส่วนแสดงข้อมูลเพลง -->
             <div class="music-info">
                 <h4 id="title"></h4>
+                <!-- แถบแสดงความคืบหน้าของเพลง -->
                 <div class="progress-container" id="progress-container">
                     <div class="progress" id="progress"></div>
                 </div>
             </div>
+            <!-- องค์ประกอบ audio สำหรับเล่นเพลง -->
             <audio src="" id="audio"></audio>
+            <!-- ส่วนแสดงรูปภาพปกอัลบั้ม -->
             <div class="img-container">
                 <img src="" alt="music-cover" id="cover">
             </div>
+            <!-- ปุ่มควบคุมการเล่นเพลง -->
             <div class="navigation">
+                <!-- ปุ่มย้อนกลับ -->
                 <button id="prev" class="action-btn">
                     <i class="fas fa-backward"></i>
                 </button>
+                <!-- ปุ่มเล่น/หยุด -->
                 <button id="play" class="action-btn action-btn-big">
                     <i class="fas fa-play"></i>
                 </button>
+                <!-- ปุ่มไปข้างหน้า -->
                 <button id="next" class="action-btn">
                     <i class="fas fa-forward"></i>
                 </button>

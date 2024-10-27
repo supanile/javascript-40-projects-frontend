@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- คอนเทนเนอร์หลักสำหรับเครื่องคิดเลข -->
     <div class="calculator">
+        <!-- ส่วนแสดงผลของเครื่องคิดเลข -->
         <div class="calculator-display">
-            <h1>0</h1>
+            <h1>0</h1> <!-- ค่าเริ่มต้นที่แสดงบนหน้าจอ -->
         </div>
+        <!-- ส่วนของปุ่มต่างๆ ในเครื่องคิดเลข -->
         <div class="calculator-button">
+            <!-- ปุ่มสำหรับการดำเนินการทางคณิตศาสตร์ -->
             <button class="operator" value="+">+</button>
             <button class="operator" value="-">-</button>
             <button class="operator" value="*">x</button>
             <button class="operator" value="/">÷</button>
+            <!-- ปุ่มตัวเลข 0-9 -->
             <button value="7">7</button>
             <button value="8">8</button>
             <button value="9">9</button>
@@ -26,9 +31,12 @@
             <button value="1">1</button>
             <button value="2">2</button>
             <button value="3">3</button>
+            <!-- ปุ่มจุดทศนิยม -->
             <button value="." class="decimal">.</button>
             <button value="0">0</button>
+            <!-- ปุ่มล้างค่า (Clear) -->
             <button value="c" class="clear-btn" id="clear-btn">C</button>
+            <!-- ปุ่มเท่ากับ สำหรับคำนวณผลลัพธ์ -->
             <button value="=" class="equal operator">=</button>
         </div>
     </div>
