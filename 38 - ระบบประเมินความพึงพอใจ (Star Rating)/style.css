@@ -1,117 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap'); /* นำเข้าแบบอักษร Kanit จาก Google Fonts */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* ตั้งค่าการคำนวณขนาดขององค์ประกอบให้รวม padding และ border */
+    font-family: 'Kanit', sans-serif; /* กำหนดแบบอักษรให้เป็น Kanit */
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มหน้าจอ */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้ตรงกลาง */
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* กำหนดพื้นหลังเป็นการไล่สีแบบเชิงมุม */
 }
 
 .container {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
+    width: 100%; /* กำหนดความกว้างของ container ให้เต็มที่ */
+    max-width: 400px; /* กำหนดความกว้างสูงสุดของ container เป็น 400px */
+    padding: 20px; /* กำหนดระยะภายใน (padding) ของ container */
 }
 
 .card {
-    background: rgba(30, 35, 50, 0.95);
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(30, 35, 50, 0.95); /* กำหนดพื้นหลังของ card เป็นสีโปร่งใส */
+    padding: 40px 30px; /* กำหนดระยะภายใน (padding) ของ card */
+    border-radius: 20px; /* ทำมุมของ card ให้กลมมน */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กับ card */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง card */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* กำหนดกรอบให้กับ card */
 }
 
 .title {
-    color: #fff;
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff; /* กำหนดสีข้อความของ title เป็นสีขาว */
+    font-size: 28px; /* กำหนดขนาดฟอนต์ของ title */
+    margin-bottom: 10px; /* กำหนดระยะขอบด้านล่างของ title */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับข้อความ title */
 }
 
 .subtitle {
-    color: #a0a0a0;
-    font-size: 16px;
-    margin-bottom: 25px;
+    color: #a0a0a0; /* กำหนดสีข้อความของ subtitle */
+    font-size: 16px; /* กำหนดขนาดฟอนต์ของ subtitle */
+    margin-bottom: 25px; /* กำหนดระยะขอบด้านล่างของ subtitle */
 }
 
 .rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงดาว */
+    align-items: center; /* จัดแนวดาวในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวดาวในแนวนอนให้ตรงกลาง */
+    gap: 15px; /* กำหนดระยะห่างระหว่างดาว */
+    margin: 20px 0; /* กำหนดระยะขอบด้านบนและด้านล่างของ rating */
 }
 
 .rating i {
-    font-size: 35px;
-    color: #2a2a3a;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 35px; /* กำหนดขนาดฟอนต์ของไอคอนดาว */
+    color: #2a2a3a; /* กำหนดสีของไอคอนดาว */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ไปที่ดาว */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบง่ายเมื่อมีการโต้ตอบ */
 }
 
 .rating i:hover {
-    transform: scale(1.1);
-    color: #ffd700;
+    transform: scale(1.1); /* ขยายขนาดดาวเมื่อชี้เมาส์ไปที่มัน */
+    color: #ffd700; /* เปลี่ยนสีของดาวเป็นสีทองเมื่อชี้เมาส์ */
 }
 
 .rating i.active {
-    color: #ffd700;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    color: #ffd700; /* กำหนดสีของดาวที่ถูกเลือกเป็นสีทอง */
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* เพิ่มเงาให้กับดาวที่ถูกเลือก */
 }
 
 .result {
-    margin-top: 20px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 15px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px; /* กำหนดระยะขอบด้านบนของผลลัพธ์ */
+    color: #fff; /* กำหนดสีข้อความของผลลัพธ์เป็นสีขาว */
+    font-size: 20px; /* กำหนดขนาดฟอนต์ของผลลัพธ์ */
+    font-weight: 500; /* กำหนดน้ำหนักฟอนต์ของผลลัพธ์ */
+    padding: 15px; /* กำหนดระยะภายใน (padding) ของผลลัพธ์ */
+    border-radius: 10px; /* ทำมุมของผลลัพธ์ให้กลมมน */
+    background: rgba(255, 255, 255, 0.05); /* กำหนดพื้นหลังของผลลัพธ์เป็นสีโปร่งใส */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* กำหนดกรอบให้กับผลลัพธ์ */
 }
 
 /* Neon Glow Effect on Hover */
 .card:hover {
-    box-shadow: 0 0 30px rgba(66, 99, 235, 0.2);
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 30px rgba(66, 99, 235, 0.2); /* เพิ่มเงาให้กับ card เมื่อชี้เมาส์ */
+    transition: box-shadow 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบง่ายเมื่อมีการโต้ตอบ */
 }
 
 /* Responsive Design */
 @media (max-width: 480px) {
     .container {
-        padding: 15px;
+        padding: 15px; /* กำหนดระยะภายใน (padding) ของ container สำหรับหน้าจอเล็ก */
     }
     
     .card {
-        padding: 30px 20px;
+        padding: 30px 20px; /* กำหนดระยะภายใน (padding) ของ card สำหรับหน้าจอเล็ก */
     }
     
     .title {
-        font-size: 24px;
+        font-size: 24px; /* กำหนดขนาดฟอนต์ของ title สำหรับหน้าจอเล็ก */
     }
     
     .rating i {
-        font-size: 30px;
+        font-size: 30px; /* กำหนดขนาดฟอนต์ของไอคอนดาวสำหรับหน้าจอเล็ก */
     }
 }
 
 /* Animation for Star Rating */
 @keyframes starPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1); } /* เริ่มต้นที่ขนาดปกติ */
+    50% { transform: scale(1.1); } /* ขยายขนาดเป็น 1.1 เท่า */
+    100% { transform: scale(1); } /* กลับไปที่ขนาดปกติ */
 }
 
 .rating i.active {
-    animation: starPulse 0.5s ease;
+    animation: starPulse 0.5s ease; /* เพิ่มการเคลื่อนไหวให้กับดาวที่ถูกเลือก */
 }

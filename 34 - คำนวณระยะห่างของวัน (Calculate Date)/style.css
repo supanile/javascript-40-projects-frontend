@@ -1,157 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap'); /* นำเข้าแบบอักษร Kanit จาก Google Fonts */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
+    margin: 0; /* ตั้งค่าระยะขอบเป็น 0 สำหรับทุกองค์ประกอบ */
+    padding: 0; /* ตั้งค่าระยะห่างภายในเป็น 0 สำหรับทุกองค์ประกอบ */
+    box-sizing: border-box; /* ใช้การคำนวณขนาดขององค์ประกอบรวมถึง padding และ border */
+    font-family: 'Kanit', sans-serif; /* ตั้งค่าแบบอักษรเป็น Kanit */
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body เป็น 100% ของความสูงหน้าจอ */
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้ตรงกลาง */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* ตั้งค่าพื้นหลังเป็นการไล่สี */
+    padding: 20px; /* กำหนดระยะห่างภายในเป็น 20px */
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
+    width: 100%; /* กำหนดความกว้างของ container เป็น 100% */
+    max-width: 600px; /* กำหนดความกว้างสูงสุดเป็น 600px */
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95); /* ตั้งค่าพื้นหลังของการ์ดเป็นสีขาวโปร่งใส */
+    padding: 2rem; /* กำหนดระยะห่างภายในเป็น 2rem */
+    border-radius: 20px; /* ทำมุมของการ์ดให้กลมมน */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับการ์ด */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอ */
 }
 
 .title {
-    color: #2d3748;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+    color: #2d3748; /* กำหนดสีของข้อความเป็นสีเทาเข้ม */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-bottom: 2rem; /* กำหนดระยะห่างด้านล่างเป็น 2rem */
+    font-size: 1.8rem; /* กำหนดขนาดตัวอักษรเป็น 1.8rem */
 }
 
 .date-inputs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    position: relative;
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้ตรงกลาง */
+    gap: 1rem; /* กำหนดระยะห่างระหว่างองค์ประกอบ */
+    flex-wrap: wrap; /* อนุญาตให้มีการห่อหุ้มองค์ประกอบ */
+    margin-bottom: 2rem; /* กำหนดระยะห่างด้านล่างเป็น 2rem */
+    position: relative; /* ตั้งค่าตำแหน่งเป็น relative เพื่อใช้กับตำแหน่ง absolute ของลูก */
 }
 
 .input-group {
-    flex: 1;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
+    flex: 1; /* อนุญาตให้กลุ่ม input ขยายเต็มที่ */
+    min-width: 200px; /* กำหนดความกว้างขั้นต่ำเป็น 200px */
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
 }
 
 .input-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #4a5568;
-    font-size: 0.95rem;
+    display: block; /* แสดง label เป็นบล็อก */
+    margin-bottom: 0.5rem; /* กำหนดระยะห่างด้านล่างเป็น 0.5rem */
+    color: #4a5568; /* กำหนดสีของข้อความเป็นสีเทา */
+    font-size: 0.95rem; /* กำหนดขนาดตัวอักษรเป็น 0.95rem */
 }
 
 .input-wrapper {
-    position: relative;
+    position: relative; /* ตั้งค่าตำแหน่งเป็น relative เพื่อใช้กับตำแหน่ง absolute ของลูก */
 }
 
 .input-wrapper i {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #4a5568;
+    position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute */
+    left: 12px; /* กำหนดระยะห่างจากซ้ายเป็น 12px */
+    top: 50%; /* จัดตำแหน่งในแนวตั้งที่กลาง */
+    transform: translateY(-50%); /* ปรับตำแหน่งให้ตรงกลางในแนวตั้ง */
+    color: #4a5568; /* กำหนดสีของไอคอนเป็นสีเทา */
 }
 
 .input-wrapper input {
-    width: 100%;
-    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    width: 100%; /* กำหนดความกว้างเป็น 100% */
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem; /* กำหนดระยะห่างภายใน */
+    border: 2px solid #e2e8f0; /* กำหนดกรอบเป็นสีเทาอ่อน */
+    border-radius: 10px; /* ทำมุมของ input ให้กลมมน */
+    font-size: 1rem; /* กำหนดขนาดตัวอักษรเป็น 1rem */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
 }
 
 .input-wrapper input:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none; /* ไม่แสดงกรอบเมื่อ input ถูกเลือก */
+    border-color: #667eea; /* เปลี่ยนสีกรอบเมื่อ input ถูกเลือก */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* เพิ่มเงาเมื่อ input ถูกเลือก */
 }
 
 .separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #4a5568;
-    font-size: 1.2rem;
-    width: 40px;
-    height: 40px;
-    margin-top: 28px; /* ปรับให้อยู่ในระดับเดียวกับ input */
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้ตรงกลาง */
+    color: #4a5568; /* กำหนดสีของข้อความเป็นสีเทา */
+    font-size: 1.2rem; /* กำหนดขนาดตัวอักษรเป็น 1.2rem */
+    width: 40px; /* กำหนดความกว้างเป็น 40px */
+    height: 40px; /* กำหนดความสูงเป็น 40px */
+    margin-top: 28px; /* กำหนดระยะห่างด้านบนเป็น 28px */
 }
 
 .calculate-btn {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    display: block; /* แสดงปุ่มเป็นบล็อก */
+    width: 100%; /* กำหนดความกว้างเป็น 100% */
+    max-width: 200px; /* กำหนดความกว้างสูงสุดเป็น 200px */
+    margin: 0 auto; /* จัดกลางในแนวนอน */
+    padding: 0.75rem 1.5rem; /* กำหนดระยะห่างภายใน */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* ตั้งค่าพื้นหลังเป็นการไล่สี */
+    color: white; /* กำหนดสีข้อความเป็นสีขาว */
+    border: none; /* ไม่แสดงกรอบ */
+    border-radius: 10px; /* ทำมุมของปุ่มให้กลมมน */
+    font-size: 1.1rem; /* กำหนดขนาดตัวอักษรเป็น 1.1rem */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ที่ปุ่ม */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
 }
 
 .calculate-btn i {
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* กำหนดระยะห่างด้านขวาของไอคอน */
 }
 
 .calculate-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); /* ยกปุ่มขึ้นเมื่อชี้ */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเมื่อชี้ */
 }
 
 .result-container {
-    margin-top: 2rem;
-    text-align: center;
+    margin-top: 2rem; /* กำหนดระยะห่างด้านบนเป็น 2rem */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
 }
 
 .result {
-    color: #2d3748;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding: 1rem;
-    border-radius: 10px;
-    background: rgba(102, 126, 234, 0.1);
+    color: #2d3748; /* กำหนดสีของข้อความเป็นสีเทาเข้ม */
+    font-size: 1.5rem; /* กำหนดขนาดตัวอักษรเป็น 1.5rem */
+    font-weight: 500; /* กำหนดน้ำหนักตัวอักษร */
+    padding: 1rem; /* กำหนดระยะห่างภายในเป็น 1rem */
+    border-radius: 10px; /* ทำมุมของผลลัพธ์ให้กลมมน */
+    background: rgba(102, 126, 234, 0.1); /* ตั้งค่าพื้นหลังเป็นสีโปร่งใส */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) { /* ตั้งค่าการตอบสนองสำหรับหน้าจอที่มีความกว้างสูงสุด 600px */
     .card {
-        padding: 1.5rem;
+        padding: 1.5rem; /* กำหนดระยะห่างภายในเป็น 1.5rem */
     }
     
     .date-inputs {
-        flex-direction: column;
+        flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
     }
     
     .input-group {
-        width: 100%;
+        width: 100%; /* กำหนดความกว้างเป็น 100% */
     }
     
     .separator {
-        transform: rotate(90deg);
-        margin: 1rem 0;
-        margin-top: 0;  
+        transform: rotate(90deg); /* หมุนเส้นแบ่ง 90 องศา */
+        margin: 1rem 0; /* กำหนดระยะห่างด้านบนและล่าง */
+        margin-top: 0; /* ตั้งค่าระยะห่างด้านบนเป็น 0 */
     }
 }

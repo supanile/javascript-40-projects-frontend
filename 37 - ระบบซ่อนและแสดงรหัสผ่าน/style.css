@@ -1,115 +1,115 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* รวมขนาดของ border และ padding ในการคำนวณขนาดขององค์ประกอบ */
+    font-family: 'Kanit', sans-serif; /* ตั้งค่าฟอนต์เป็น 'Kanit' และใช้ฟอนต์ sans-serif เป็นทางเลือก */
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh; /* ตั้งค่าความสูงขั้นต่ำของ body เป็น 100% ของความสูงหน้าจอ */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้อยู่กลาง */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); /* ตั้งค่าพื้นหลังเป็นการไล่สีแบบเชิงมุม */
 }
 
 .container {
-    width: 100%;
-    padding: 20px;
+    width: 100%; /* ตั้งค่าความกว้างของ container เป็น 100% */
+    padding: 20px; /* ตั้งค่าระยะภายใน (padding) เป็น 20px */
 }
 
 .login-box {
-    background: rgba(30, 41, 59, 0.95);
-    padding: 40px 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur(4px);
-    max-width: 400px;
-    margin: 0 auto;
+    background: rgba(30, 41, 59, 0.95); /* ตั้งค่าพื้นหลังของกล่องล็อกอินเป็นสีโปร่งใส */
+    padding: 40px 30px; /* ตั้งค่าระยะภายใน (padding) เป็น 40px ด้านบน-ล่าง และ 30px ด้านซ้าย-ขวา */
+    border-radius: 15px; /* ทำมุมของกล่องให้โค้งมน */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* ตั้งค่าขอบของกล่องเป็นสีขาวโปร่งใส */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* เพิ่มเงาให้กับกล่องล็อกอิน */
+    backdrop-filter: blur(4px); /* ทำให้พื้นหลังเบลอ */
+    max-width: 400px; /* ตั้งค่าความกว้างสูงสุดของกล่องล็อกอินเป็น 400px */
+    margin: 0 auto; /* จัดให้อยู่กลางโดยตั้งค่าระยะขอบด้านซ้ายและขวาเป็นอัตโนมัติ */
 }
 
 h2 {
-    color: #e2e8f0;
-    margin-bottom: 30px;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 500;
+    color: #e2e8f0; /* ตั้งค่าสีของข้อความ h2 เป็นสีเทาอ่อน */
+    margin-bottom: 30px; /* ตั้งค่าระยะขอบด้านล่างของ h2 เป็น 30px */
+    font-size: 24px; /* ตั้งค่าขนาดฟอนต์ของ h2 เป็น 24px */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    font-weight: 500; /* ตั้งค่าความหนาของฟอนต์ */
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* ตั้งค่าระยะขอบด้านล่างของกลุ่ม input เป็น 20px */
 }
 
 input {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    background: rgba(15, 23, 42, 0.9);
-    border: 2px solid rgba(148, 163, 184, 0.2);
-    border-radius: 8px;
-    margin-bottom: 15px;
-    color: #e2e8f0;
-    transition: all 0.3s ease;
+    width: 100%; /* ตั้งค่าความกว้างของ input เป็น 100% */
+    padding: 15px; /* ตั้งค่าระยะภายใน (padding) เป็น 15px */
+    font-size: 16px; /* ตั้งค่าขนาดฟอนต์ของ input เป็น 16px */
+    background: rgba(15, 23, 42, 0.9); /* ตั้งค่าพื้นหลังของ input เป็นสีโปร่งใส */
+    border: 2px solid rgba(148, 163, 184, 0.2); /* ตั้งค่าขอบของ input เป็นสีโปร่งใส */
+    border-radius: 8px; /* ทำมุมของ input ให้โค้งมน */
+    margin-bottom: 15px; /* ตั้งค่าระยะขอบด้านล่างของ input เป็น 15px */
+    color: #e2e8f0; /* ตั้งค่าสีของข้อความใน input เป็นสีเทาอ่อน */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวลเมื่อมีการเปลี่ยนแปลง */
 }
 
 input::placeholder {
-    color: #64748b;
+    color: #64748b; /* ตั้งค่าสีของ placeholder ใน input เป็นสีเทา */
 }
 
 input:focus {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
-    outline: none;
+    border-color: #7c3aed; /* เปลี่ยนสีขอบของ input เมื่อมีการโฟกัส */
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2); /* เพิ่มเงาเมื่อ input ถูกโฟกัส */
+    outline: none; /* ไม่แสดงเส้นขอบเมื่อ input ถูกโฟกัส */
 }
 
 button {
-    width: 100%;
-    padding: 15px;
-    background: #7c3aed;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    width: 100%; /* ตั้งค่าความกว้างของปุ่มเป็น 100% */
+    padding: 15px; /* ตั้งค่าระยะภายใน (padding) เป็น 15px */
+    background: #7c3aed; /* ตั้งค่าพื้นหลังของปุ่มเป็นสีม่วง */
+    color: white; /* ตั้งค่าสีข้อความในปุ่มเป็นสีขาว */
+    border: none; /* ไม่แสดงขอบของปุ่ม */
+    border-radius: 8px; /* ทำมุมของปุ่มให้โค้งมน */
+    font-size: 16px; /* ตั้งค่าขนาดฟอนต์ของปุ่มเป็น 16px */
+    font-weight: 500; /* ตั้งค่าความหนาของฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ไปที่ปุ่ม */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวลเมื่อมีการเปลี่ยนแปลง */
 }
 
 button:hover {
-    background: #6d28d9;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+    background: #6d28d9; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อชี้ไปที่ปุ่ม */
+    transform: translateY(-1px); /* ยกปุ่มขึ้นเล็กน้อยเมื่อชี้ไปที่ปุ่ม */
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4); /* เพิ่มเงาให้กับปุ่มเมื่อชี้ไปที่ปุ่ม */
 }
 
 button:active {
-    transform: translateY(1px);
-    box-shadow: none;
+    transform: translateY(1px); /* ลดตำแหน่งของปุ่มลงเมื่อคลิก */
+    box-shadow: none; /* ลบเงาเมื่อปุ่มถูกคลิก */
 }
 
 /* สำหรับการแสดงผลบนมือถือ */
 @media (max-width: 480px) {
     .login-box {
-        padding: 30px 20px;
+        padding: 30px 20px; /* ลดระยะภายในของกล่องล็อกอินเมื่อหน้าจอเล็ก */
     }
     
     input, button {
-        font-size: 14px;
+        font-size: 14px; /* ลดขนาดฟอนต์ของ input และปุ่มเมื่อหน้าจอเล็ก */
     }
 }
 
 /* เพิ่ม animation เมื่อโหลดหน้า */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-10px);
+        opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+        transform: translateY(-10px); /* เริ่มต้นที่ตำแหน่งสูงขึ้น 10px */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* สิ้นสุดที่ความโปร่งใส 1 */
+        transform: translateY(0); /* สิ้นสุดที่ตำแหน่งเดิม */
     }
 }
 
 .login-box {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.6s ease-out; /* เพิ่ม animation fadeIn ให้กับกล่องล็อกอินเมื่อโหลดหน้า */
 }

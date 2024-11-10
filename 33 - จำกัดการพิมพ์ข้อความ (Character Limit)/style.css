@@ -1,117 +1,117 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    margin: 0; /* กำหนดระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* กำหนดระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* กำหนดให้การคำนวณขนาดขององค์ประกอบรวมระยะขอบและระยะภายใน */
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์ที่ใช้ในเอกสาร */
+    -webkit-font-smoothing: antialiased; /* ปรับการแสดงผลฟอนต์ใน WebKit ให้เรียบเนียน */
+    -moz-osx-font-smoothing: grayscale; /* ปรับการแสดงผลฟอนต์ใน Firefox ให้เรียบเนียน */
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มความสูงของ viewport */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้อยู่กลาง */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* กำหนดพื้นหลังเป็นการไล่สีแบบเชิงมุม */
 }
 
 .container {
-    position: relative;
-    height: 200px;
-    max-width: 600px;
-    width: 90%;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    position: relative; /* กำหนดตำแหน่งของ container เป็น relative เพื่อให้สามารถใช้ตำแหน่ง absolute ภายในได้ */
+    height: 200px; /* กำหนดความสูงของ container */
+    max-width: 600px; /* กำหนดความกว้างสูงสุดของ container */
+    width: 90%; /* กำหนดความกว้างของ container เป็น 90% ของพื้นที่ที่มีอยู่ */
+    background: rgba(255, 255, 255, 0.95); /* กำหนดพื้นหลังเป็นสีขาวโปร่งใส */
+    padding: 30px; /* กำหนดระยะภายใน (padding) ของ container */
+    border-radius: 16px; /* กำหนดมุมโค้งของ container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* กำหนดเงาให้กับ container */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอ */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบง่ายเมื่อมีการเปลี่ยนแปลง */
 }
 
 .container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* เมื่อชี้เมาส์ไปที่ container จะเลื่อนขึ้น 5px */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* เพิ่มความเข้มของเงาเมื่อชี้เมาส์ */
 }
 
 textarea {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    resize: none;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 15px 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    transition: all 0.3s ease;
-    color: #333;
-    background: transparent;
-    font-weight: 300;
+    width: 100%; /* กำหนดความกว้างของ textarea ให้เต็มพื้นที่ */
+    height: 100%; /* กำหนดความสูงของ textarea ให้เต็มพื้นที่ */
+    outline: none; /* ไม่แสดงกรอบเมื่อ textarea ถูกเลือก */
+    resize: none; /* ไม่อนุญาตให้ปรับขนาด textarea */
+    border: 2px solid #e0e0e0; /* กำหนดกรอบของ textarea */
+    border-radius: 12px; /* กำหนดมุมโค้งของ textarea */
+    padding: 15px 20px; /* กำหนดระยะภายใน (padding) ของ textarea */
+    font-size: 16px; /* กำหนดขนาดฟอนต์ใน textarea */
+    line-height: 1.5; /* กำหนดระยะห่างระหว่างบรรทัด */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบง่ายเมื่อมีการเปลี่ยนแปลง */
+    color: #333; /* กำหนดสีฟอนต์ใน textarea */
+    background: transparent; /* กำหนดพื้นหลังของ textarea เป็นโปร่งใส */
+    font-weight: 300; /* กำหนดน้ำหนักฟอนต์ใน textarea */
 }
 
 textarea::placeholder {
-    color: #999;
-    font-weight: 300;
+    color: #999; /* กำหนดสีของ placeholder ใน textarea */
+    font-weight: 300; /* กำหนดน้ำหนักฟอนต์ของ placeholder */
 }
 
 textarea:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    border-color: #667eea; /* เปลี่ยนสีกรอบเมื่อ textarea ถูกเลือก */
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1); /* เพิ่มเงาเมื่อ textarea ถูกเลือก */
 }
 
 .limit {
-    position: absolute;
-    bottom: 45px;
-    right: 45px;
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #666;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    font-weight: 400;
+    position: absolute; /* กำหนดตำแหน่งของ limit เป็น absolute */
+    bottom: 45px; /* กำหนดระยะห่างจากด้านล่าง */
+    right: 45px; /* กำหนดระยะห่างจากด้านขวา */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้อยู่กลาง */
+    background: rgba(255, 255, 255, 0.9); /* กำหนดพื้นหลังเป็นสีขาวโปร่งใส */
+    padding: 6px 12px; /* กำหนดระยะภายใน (padding) ของ limit */
+    border-radius: 20px; /* กำหนดมุมโค้งของ limit */
+    font-size: 14px; /* กำหนดขนาดฟอนต์ใน limit */
+    color: #666; /* กำหนดสีฟอนต์ใน limit */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบง่ายเมื่อมีการเปลี่ยนแปลง */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* กำหนดเงาให้กับ limit */
+    font-weight: 400; /* กำหนดน้ำหนักฟอนต์ใน limit */
 }
 
 .limit.active {
-    color: #ef4444;
-    background: rgba(239, 68, 68, 0.1);
-    animation: pulse 1.5s infinite;
+    color: #ef4444; /* เปลี่ยนสีฟอนต์เมื่อ limit มีสถานะ active */
+    background: rgba(239, 68, 68, 0.1); /* เปลี่ยนพื้นหลังเมื่อ limit มีสถานะ active */
+    animation: pulse 1.5s infinite; /* เพิ่มการเคลื่อนไหวแบบ pulse เมื่อ limit มีสถานะ active */
 }
 
 .amount {
-    font-weight: 600;
-    margin-right: 2px;
+    font-weight: 600; /* กำหนดน้ำหนักฟอนต์ใน amount */
+    margin-right: 2px; /* กำหนดระยะขอบด้านขวาของ amount */
 }
 
 .max {
-    color: #999;
-    font-weight: 400;
+    color: #999; /* กำหนดสีฟอนต์ใน max */
+    font-weight: 400; /* กำหนดน้ำหนักฟอนต์ใน max */
 }
 
 @keyframes pulse {
     0% {
-        transform: scale(1);
+        transform: scale(1); /* เริ่มต้นที่ขนาดปกติ */
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.05); /* ขยายขนาดขึ้น 5% */
     }
     100% {
-        transform: scale(1);
+        transform: scale(1); /* กลับสู่ขนาดปกติ */
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        height: 180px;
-        padding: 20px;
+        height: 180px; /* กำหนดความสูงของ container สำหรับหน้าจอเล็ก */
+        padding: 20px; /* กำหนดระยะภายใน (padding) ของ container สำหรับหน้าจอเล็ก */
     }
     
     .limit {
-        bottom: 35px;
-        right: 35px;
-        font-size: 12px;
+        bottom: 35px; /* กำหนดระยะห่างจากด้านล่างสำหรับ limit ในหน้าจอเล็ก */
+        right: 35px; /* กำหนดระยะห่างจากด้านขวาสำหรับ limit ในหน้าจอเล็ก */
+        font-size: 12px; /* กำหนดขนาดฟอนต์ใน limit สำหรับหน้าจอเล็ก */
     }
 }

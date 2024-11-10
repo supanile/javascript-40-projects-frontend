@@ -1,147 +1,147 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Kanit, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0; /* ตั้งค่าระยะขอบด้านนอกเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะขอบด้านในเป็น 0 */
+    box-sizing: border-box; /* รวม padding และ border ในการคำนวณขนาดของ element */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Kanit, 'Helvetica Neue', Arial, sans-serif; /* กำหนดฟอนต์ที่ใช้ในเอกสาร */
 }
 
 body {
-    background: #f0f2f5;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #f0f2f5; /* ตั้งค่าสีพื้นหลังของ body */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำให้เต็มหน้าจอ */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง layout */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวนอนให้อยู่กลาง */
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
-    background: white;
-    margin: 20px auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
+    width: 90%; /* กำหนดความกว้างของ container เป็น 90% ของหน้าจอ */
+    max-width: 600px; /* กำหนดความกว้างสูงสุดเป็น 600px */
+    background: white; /* ตั้งค่าสีพื้นหลังเป็นสีขาว */
+    margin: 20px auto; /* ตั้งค่าระยะห่างด้านบนและล่างเป็น 20px และจัดกลางในแนวนอน */
+    border-radius: 16px; /* ทำมุมของ container ให้กลมมน */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), /* สร้างเงาให้กับ container */
+                0 2px 4px -1px rgba(0, 0, 0, 0.06); /* สร้างเงาเพิ่มเติม */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ container */
 }
 
 .search-box {
-    display: flex;
-    align-items: center;
-    padding: 16px 24px;
-    border-bottom: 1px solid #e5e7eb;
-    background: white;
-    position: relative;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงภายใน search box */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    padding: 16px 24px; /* ตั้งค่าระยะห่างภายในเป็น 16px ด้านบนและล่าง, 24px ด้านซ้ายและขวา */
+    border-bottom: 1px solid #e5e7eb; /* สร้างเส้นขอบด้านล่าง */
+    background: white; /* ตั้งค่าสีพื้นหลังเป็นสีขาว */
+    position: relative; /* ตั้งค่าตำแหน่งเป็น relative เพื่อให้สามารถใช้ตำแหน่ง absolute ภายในได้ */
 }
 
 .search-icon {
-    color: #6b7280;
-    font-size: 1.2rem;
+    color: #6b7280; /* ตั้งค่าสีของไอคอนค้นหา */
+    font-size: 1.2rem; /* กำหนดขนาดฟอนต์ */
 }
 
 .clear-icon {
-    color: #6b7280;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 50%;
-    transition: background-color 0.2s;
+    color: #6b7280; /* ตั้งค่าสีของไอคอนลบ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ไอคอน */
+    padding: 8px; /* ตั้งค่าระยะห่างภายในเป็น 8px */
+    border-radius: 50%; /* ทำให้ไอคอนลบเป็นวงกลม */
+    transition: background-color 0.2s; /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังเมื่อมีการ hover */
 }
 
 .clear-icon:hover {
-    background-color: #f3f4f6;
+    background-color: #f3f4f6; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
 }
 
 input {
-    flex: 1;
-    height: 48px;
-    font-size: 1rem;
-    color: #374151;
-    outline: none;
-    border: none;
-    padding: 0 16px;
-    background: transparent;
+    flex: 1; /* ให้ input ขยายเต็มพื้นที่ที่เหลือ */
+    height: 48px; /* กำหนดความสูงของ input */
+    font-size: 1rem; /* กำหนดขนาดฟอนต์ */
+    color: #374151; /* ตั้งค่าสีของข้อความใน input */
+    outline: none; /* ไม่แสดงกรอบเมื่อ input ถูกเลือก */
+    border: none; /* ไม่แสดงเส้นขอบ */
+    padding: 0 16px; /* ตั้งค่าระยะห่างภายในเป็น 0 ด้านบนและล่าง, 16px ด้านซ้ายและขวา */
+    background: transparent; /* ตั้งค่าสีพื้นหลังเป็นโปร่งใส */
 }
 
 input::placeholder {
-    color: #9ca3af;
+    color: #9ca3af; /* ตั้งค่าสีของ placeholder */
 }
 
 .output {
-    max-height: 400px;
-    overflow-y: auto;
-    background: white;
+    max-height: 400px; /* กำหนดความสูงสูงสุดของ output */
+    overflow-y: auto; /* เพิ่ม scroll bar แนวตั้งเมื่อเนื้อหามากเกินไป */
+    background: white; /* ตั้งค่าสีพื้นหลังเป็นสีขาว */
 }
 
 ul {
-    border-top: 1px solid #e5e7eb;
-    padding: 8px 0;
-    margin: 0;
+    border-top: 1px solid #e5e7eb; /* สร้างเส้นขอบด้านบน */
+    padding: 8px 0; /* ตั้งค่าระยะห่างด้านบนและล่างเป็น 8px */
+    margin: 0; /* ตั้งค่าระยะห่างด้านนอกเป็น 0 */
 }
 
 li {
-    list-style: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    color: #374151;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    transition: all 0.2s ease;
+    list-style: none; /* ไม่แสดงสัญลักษณ์ของรายการ */
+    padding: 12px 24px; /* ตั้งค่าระยะห่างภายในเป็น 12px ด้านบนและล่าง, 24px ด้านซ้ายและขวา */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่รายการ */
+    color: #374151; /* ตั้งค่าสีของข้อความในรายการ */
+    font-size: 0.95rem; /* กำหนดขนาดฟอนต์ */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงภายในรายการ */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    transition: all 0.2s ease; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการ hover */
 }
 
 li::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: #d1d5db;
-    border-radius: 50%;
-    margin-right: 12px;
-    transition: all 0.2s ease;
+    content: ""; /* สร้างเนื้อหาก่อนรายการ */
+    width: 6px; /* กำหนดความกว้าง */
+    height: 6px; /* กำหนดความสูง */
+    background: #d1d5db; /* ตั้งค่าสีพื้นหลัง */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    margin-right: 12px; /* ตั้งค่าระยะห่างด้านขวา */
+    transition: all 0.2s ease; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการ hover */
 }
 
 li:hover {
-    background: #f8fafc;
-    color: #f97316;
+    background: #f8fafc; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    color: #f97316; /* เปลี่ยนสีข้อความเมื่อ hover */
 }
 
 li:hover::before {
-    background: #f97316;
+    background: #f97316; /* เปลี่ยนสีพื้นหลังของเนื้อหาก่อนรายการเมื่อ hover */
 }
 
 /* Custom Scrollbar */
 .output::-webkit-scrollbar {
-    width: 8px;
+    width: 8px; /* กำหนดความกว้างของ scrollbar */
 }
 
 .output::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #f1f1f1; /* ตั้งค่าสีพื้นหลังของ scrollbar track */
 }
 
 .output::-webkit-scrollbar-thumb {
-    background: #d1d5db;
-    border-radius: 4px;
+    background: #d1d5db; /* ตั้งค่าสีของ scrollbar thumb */
+    border-radius: 4px; /* ทำให้มุมของ scrollbar thumb กลมมน */
 }
 
 .output::-webkit-scrollbar-thumb:hover {
-    background: #9ca3af;
+    background: #9ca3af; /* เปลี่ยนสี scrollbar thumb เมื่อ hover */
 }
 
 /* Responsive Design */
 @media (max-width: 640px) {
     .container {
-        width: 95%;
-        margin: 10px;
+        width: 95%; /* กำหนดความกว้างของ container เป็น 95% เมื่อหน้าจอเล็กกว่า 640px */
+        margin: 10px; /* ตั้งค่าระยะห่างเป็น 10px */
     }
     
     .search-box {
-        padding: 12px 16px;
+        padding: 12px 16px; /* ตั้งค่าระยะห่างภายในเป็น 12px ด้านบนและล่าง, 16px ด้านซ้ายและขวา */
     }
     
     input {
-        height: 40px;
-        font-size: 0.95rem;
+        height: 40px; /* กำหนดความสูงของ input เป็น 40px */
+        font-size: 0.95rem; /* กำหนดขนาดฟอนต์เป็น 0.95rem */
     }
     
     li {
-        padding: 10px 16px;
+        padding: 10px 16px; /* ตั้งค่าระยะห่างภายในของรายการเป็น 10px ด้านบนและล่าง, 16px ด้านซ้ายและขวา */
     }
 }

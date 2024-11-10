@@ -1,93 +1,93 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) เป็น 0 เพื่อไม่ให้มีระยะขอบรอบๆ */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) เป็น 0 เพื่อไม่ให้มีระยะภายในรอบๆ */
+    box-sizing: border-box; /* ตั้งค่าให้การคำนวณขนาดของกล่องรวมระยะขอบและระยะภายใน */
+    font-family: 'Segoe UI', system-ui, sans-serif; /* กำหนดฟอนต์ที่ใช้ในเอกสาร */
 }
 
 body {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
+    margin: 0; /* ตั้งค่าระยะขอบของ body เป็น 0 */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงเนื้อหา */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวนอนให้อยู่กลาง */
+    height: 100vh; /* กำหนดความสูงของ body ให้เต็มหน้าจอ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
 }
 
 .theme-container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    width: 300px;
+    background: #ffffff; /* กำหนดสีพื้นหลังเป็นสีขาว */
+    padding: 2rem; /* กำหนดระยะภายในเป็น 2rem */
+    border-radius: 20px; /* ทำมุมของกล่องให้โค้งมน */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* เพิ่มเงาให้กับกล่อง */
+    width: 300px; /* กำหนดความกว้างของกล่อง */
 }
 
 .theme-text {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: #333;
+    font-size: 1.5rem; /* กำหนดขนาดฟอนต์เป็น 1.5rem */
+    font-weight: 600; /* กำหนดน้ำหนักฟอนต์ให้หนา */
+    margin-bottom: 1.5rem; /* กำหนดระยะขอบด้านล่างเป็น 1.5rem */
+    color: #333; /* กำหนดสีฟอนต์เป็นสีเทาเข้ม */
 }
 
 /* สไตล์สำหรับ Toggle Switch */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-bottom: 1.5rem;
+    position: relative; /* ตั้งค่าตำแหน่งเป็น relative เพื่อให้สามารถจัดตำแหน่งลูกเล่นได้ */
+    display: inline-block; /* แสดงเป็นบล็อกในแนวนอน */
+    width: 60px; /* กำหนดความกว้างของ Toggle Switch */
+    height: 34px; /* กำหนดความสูงของ Toggle Switch */
+    margin-bottom: 1.5rem; /* กำหนดระยะขอบด้านล่างเป็น 1.5rem */
 }
 
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+    opacity: 0; /* ทำให้ input ไม่แสดงผล */
+    width: 0; /* กำหนดความกว้างเป็น 0 */
+    height: 0; /* กำหนดความสูงเป็น 0 */
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+    position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute เพื่อให้สามารถจัดตำแหน่งได้ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ slider */
+    top: 0; /* ตั้งค่าตำแหน่งด้านบนเป็น 0 */
+    left: 0; /* ตั้งค่าตำแหน่งด้านซ้ายเป็น 0 */
+    right: 0; /* ตั้งค่าตำแหน่งด้านขวาเป็น 0 */
+    bottom: 0; /* ตั้งค่าตำแหน่งด้านล่างเป็น 0 */
+    background-color: #ccc; /* กำหนดสีพื้นหลังเป็นสีเทา */
+    transition: .4s; /* กำหนดการเปลี่ยนแปลงให้มีความนุ่มนวลในเวลา 0.4 วินาที */
+    border-radius: 34px; /* ทำมุมของ slider ให้โค้งมน */
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+    position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute */
+    content: ""; /* กำหนดเนื้อหาว่าง */
+    height: 26px; /* กำหนดความสูงของลูกเล่นเป็น 26px */
+    width: 26px; /* กำหนดความกว้างของลูกเล่นเป็น 26px */
+    left: 4px; /* ตั้งค่าตำแหน่งด้านซ้ายเป็น 4px */
+    bottom: 4px; /* ตั้งค่าตำแหน่งด้านล่างเป็น 4px */
+    background-color: white; /* กำหนดสีพื้นหลังของลูกเล่นเป็นสีขาว */
+    transition: .4s; /* กำหนดการเปลี่ยนแปลงให้มีความนุ่มนวลในเวลา 0.4 วินาที */
+    border-radius: 50%; /* ทำให้ลูกเล่นเป็นวงกลม */
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #2196F3; /* เปลี่ยนสีพื้นหลังของ slider เมื่อ input ถูกเลือก */
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(26px); /* เลื่อนลูกเล่นไปทางขวาเมื่อ input ถูกเลือก */
 }
 
 /* สไตล์สำหรับปุ่มรีเซ็ต */
 .reset-button {
-    background: #f44336;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
+    background: #f44336; /* กำหนดสีพื้นหลังของปุ่มเป็นสีแดง */
+    color: white; /* กำหนดสีฟอนต์ของปุ่มเป็นสีขาว */
+    border: none; /* ไม่แสดงกรอบของปุ่ม */
+    padding: 0.8rem 1.5rem; /* กำหนดระยะภายในของปุ่ม */
+    border-radius: 8px; /* ทำมุมของปุ่มให้โค้งมน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ปุ่ม */
+    font-size: 1rem; /* กำหนดขนาดฟอนต์ของปุ่ม */
+    transition: background 0.3s ease; /* กำหนดการเปลี่ยนแปลงสีพื้นหลังให้มีความนุ่มนวลในเวลา 0.3 วินาที */
 }
 
 .reset-button:hover {
-    background: #d32f2f;
+    background: #d32f2f; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อชี้ไปที่ปุ่ม */
 }

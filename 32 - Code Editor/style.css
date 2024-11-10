@@ -1,113 +1,113 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* ตั้งค่าการคำนวณขนาดขององค์ประกอบรวมถึง padding และ border */
 }
 
 body {
-    background: #1e1e1e;
-    color: #fff;
-    min-height: 100vh;
-    font-family: 'Kanit', sans-serif;
+    background: #1e1e1e; /* ตั้งค่าสีพื้นหลังของ body */
+    color: #fff; /* ตั้งค่าสีตัวอักษรเป็นสีขาว */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body เป็น 100% ของความสูงหน้าจอ */
+    font-family: 'Kanit', sans-serif; /* ตั้งค่าฟอนต์ของ body */
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    gap: 20px;
-    padding: 15px;
+    width: 100%; /* กำหนดความกว้างของ container เป็น 100% */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ container เป็น 100% ของความสูงหน้าจอ */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    gap: 20px; /* กำหนดระยะห่างระหว่างองค์ประกอบภายใน container */
+    padding: 15px; /* กำหนดระยะภายใน (padding) ของ container */
 }
 
 .input, .output {
-    flex-basis: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-basis: 50%; /* กำหนดขนาดพื้นฐานของ input และ output เป็น 50% */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
+    gap: 10px; /* กำหนดระยะห่างระหว่างองค์ประกอบภายใน */
 }
 
 .editor-section {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
+    gap: 5px; /* กำหนดระยะห่างระหว่างองค์ประกอบภายใน */
 }
 
 label {
-    font-size: 1em;
-    font-weight: 500;
-    color: #9cdcfe;
-    padding: 0 5px;
+    font-size: 1em; /* กำหนดขนาดฟอนต์ของ label */
+    font-weight: 500; /* กำหนดน้ำหนักฟอนต์ของ label */
+    color: #9cdcfe; /* ตั้งค่าสีตัวอักษรของ label */
+    padding: 0 5px; /* กำหนดระยะภายใน (padding) ของ label */
 }
 
 textarea {
-    width: 100%;
-    min-height: 120px;
-    padding: 10px;
-    background: #2d2d2d;
-    color: #d4d4d4;
-    border: 1px solid #404040;
-    border-radius: 4px;
-    font-family: 'Kanit', monospace;
-    font-size: 14px;
-    line-height: 1.4;
-    resize: vertical;
+    width: 100%; /* กำหนดความกว้างของ textarea เป็น 100% */
+    min-height: 120px; /* กำหนดความสูงขั้นต่ำของ textarea */
+    padding: 10px; /* กำหนดระยะภายใน (padding) ของ textarea */
+    background: #2d2d2d; /* ตั้งค่าสีพื้นหลังของ textarea */
+    color: #d4d4d4; /* ตั้งค่าสีตัวอักษรของ textarea */
+    border: 1px solid #404040; /* กำหนดกรอบของ textarea */
+    border-radius: 4px; /* กำหนดมุมโค้งของกรอบ textarea */
+    font-family: 'Kanit', monospace; /* ตั้งค่าฟอนต์ของ textarea */
+    font-size: 14px; /* กำหนดขนาดฟอนต์ของ textarea */
+    line-height: 1.4; /* กำหนดระยะห่างระหว่างบรรทัดใน textarea */
+    resize: vertical; /* อนุญาตให้ปรับขนาด textarea ในแนวตั้งเท่านั้น */
 }
 
 textarea::placeholder {
-    font-family: 'Kanit', sans-serif;
-    opacity: 0.6;
+    font-family: 'Kanit', sans-serif; /* ตั้งค่าฟอนต์ของ placeholder ใน textarea */
+    opacity: 0.6; /* กำหนดความโปร่งใสของ placeholder */
 }
 
 textarea:focus {
-    outline: none;
-    border-color: #007acc;
+    outline: none; /* ไม่แสดงกรอบเมื่อ textarea ถูกเลือก */
+    border-color: #007acc; /* เปลี่ยนสีกรอบเมื่อ textarea ถูกเลือก */
 }
 
 iframe {
-    flex: 1;
-    min-height: 400px;
-    background: #fff;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    flex: 1; /* ให้ iframe ขยายเต็มพื้นที่ที่เหลือ */
+    min-height: 400px; /* กำหนดความสูงขั้นต่ำของ iframe */
+    background: #fff; /* ตั้งค่าสีพื้นหลังของ iframe */
+    border: none; /* ไม่แสดงกรอบของ iframe */
+    border-radius: 4px; /* กำหนดมุมโค้งของ iframe */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับ iframe */
 }
 
 .run-btn {
-    padding: 8px 20px;
-    margin: 10px 0;
-    background: #0078d4;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    font-family: 'Kanit', sans-serif;
-    font-weight: 400;
-    cursor: pointer;
-    transition: background 0.2s;
+    padding: 8px 20px; /* กำหนดระยะภายใน (padding) ของปุ่ม */
+    margin: 10px 0; /* กำหนดระยะขอบ (margin) ของปุ่ม */
+    background: #0078d4; /* ตั้งค่าสีพื้นหลังของปุ่ม */
+    color: white; /* ตั้งค่าสีตัวอักษรของปุ่มเป็นสีขาว */
+    border: none; /* ไม่แสดงกรอบของปุ่ม */
+    border-radius: 4px; /* กำหนดมุมโค้งของปุ่ม */
+    font-size: 1em; /* กำหนดขนาดฟอนต์ของปุ่ม */
+    font-family: 'Kanit', sans-serif; /* ตั้งค่าฟอนต์ของปุ่ม */
+    font-weight: 400; /* กำหนดน้ำหนักฟอนต์ของปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ที่ปุ่ม */
+    transition: background 0.2s; /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังเมื่อมีการโต้ตอบ */
 }
 
 .run-btn:hover {
-    background: #005a9e;
+    background: #005a9e; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อชี้เมาส์ */
 }
 
 .run-btn:active {
-    transform: translateY(1px);
+    transform: translateY(1px); /* ทำให้ปุ่มเคลื่อนที่ลงเมื่อถูกคลิก */
 }
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* เปลี่ยนการจัดเรียงของ container เป็นแนวตั้งเมื่อหน้าจอเล็ก */
     }
     
     .input, .output {
-        flex-basis: auto;
+        flex-basis: auto; /* ปรับขนาดพื้นฐานของ input และ output เป็นอัตโนมัติ */
     }
     
     textarea {
-        min-height: 100px;
+        min-height: 100px; /* กำหนดความสูงขั้นต่ำของ textarea เป็น 100px เมื่อหน้าจอเล็ก */
     }
     
     iframe {
-        min-height: 300px;
+        min-height: 300px; /* กำหนดความสูงขั้นต่ำของ iframe เป็น 300px เมื่อหน้าจอเล็ก */
     }
 }

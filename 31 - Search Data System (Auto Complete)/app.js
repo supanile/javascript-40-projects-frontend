@@ -1,3 +1,4 @@
+// สร้างอาเรย์ที่เก็บข้อมูลคำที่ใช้ในการค้นหา
 const data = [
     "Angular",
     "Bootstrap",
@@ -26,26 +27,45 @@ const data = [
     "Yarn",
     "Zend Framework"
 ];
+
+// ดึง element ที่มี id เป็น "search" จาก DOM
 const search = document.getElementById("search")
+// ดึง element ที่มี id เป็น "output" จาก DOM
 const output = document.getElementById("output")
 
-search.onkeyup=function(){
+// ตั้งค่า event listener สำหรับการกดปุ่มบนคีย์บอร์ดใน input "search"
+search.onkeyup = function() {
+    // เก็บค่าที่พิมพ์ใน input "search"
     let word = search.value 
-    let result=[]
-    if(word.length){
-        result = data.filter((value)=>{
+    // สร้างอาเรย์ว่างสำหรับเก็บผลลัพธ์
+    let result = []
+    
+    // ตรวจสอบว่าความยาวของคำที่พิมพ์มีมากกว่า 0 หรือไม่
+    if (word.length) {
+        // กรองข้อมูลในอาเรย์ "data" โดยใช้คำที่พิมพ์
+        result = data.filter((value) => {
+            // คืนค่าความจริงถ้าคำในอาเรย์มีคำที่พิมพ์อยู่
             return value.toLowerCase().includes(word.toLowerCase())
         })
     }
-    if(result.length>0){
-        const content = result.map((value)=>{
-            return "<li onclick=selectChoice(this)>"+value+"</li>"
+    
+    // ตรวจสอบว่ามีผลลัพธ์หรือไม่
+    if (result.length > 0) {
+        // สร้าง HTML สำหรับแสดงผลลัพธ์
+        const content = result.map((value) => {
+            // สร้างรายการ <li> สำหรับแต่ละคำในผลลัพธ์
+            return "<li onclick=selectChoice(this)>" + value + "</li>"
         })
-        output.innerHTML="<ul>"+content.join("")+"</ul>"
-    }else{
-        output.innerHTML=""
+        // แสดงผลลัพธ์ใน element "output" โดยใช้ <ul>
+        output.innerHTML = "<ul>" + content.join("") + "</ul>"
+    } else {
+        // ถ้าไม่มีผลลัพธ์ให้ล้างเนื้อหาใน element "output"
+        output.innerHTML = ""
     }
 }
-function selectChoice(word){
+
+// ฟังก์ชันสำหรับเลือกคำจากผลลัพธ์
+function selectChoice(word) {
+    // ตั้งค่า input "search" ให้เป็นคำที่เลือก
     search.value = word.innerHTML;
 }

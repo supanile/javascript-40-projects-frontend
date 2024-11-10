@@ -1,84 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Kanit, Helvetica, Arial, sans-serif;
+    margin: 0; /* กำหนดระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* กำหนดระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* กำหนดให้การคำนวณขนาดขององค์ประกอบรวมระยะขอบและระยะภายใน */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Kanit, Helvetica, Arial, sans-serif; /* กำหนดฟอนต์ที่ใช้ในเว็บไซต์ */
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: #fafafa; 
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มหน้าจอ */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้อยู่กลาง */
+    background-color: #fafafa; /* กำหนดสีพื้นหลังของ body */
 }
 
 .container {
-    width: 400px;
-    background: white;
-    border-radius: 3px; 
-    border: 1px solid #dbdbdb; 
-    overflow: hidden;
+    width: 400px; /* กำหนดความกว้างของ container */
+    background: white; /* กำหนดสีพื้นหลังของ container เป็นสีขาว */
+    border-radius: 3px; /* ทำมุมของ container ให้โค้งมน */
+    border: 1px solid #dbdbdb; /* กำหนดกรอบของ container เป็นเส้นสีเทาอ่อน */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ container */
 }
 
 .image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    cursor: pointer;
+    position: relative; /* กำหนดตำแหน่งของ image-wrapper เป็น relative เพื่อใช้กับตำแหน่ง absolute ของลูก */
+    width: 100%; /* กำหนดความกว้างของ image-wrapper ให้เต็มที่ */
+    height: 600px; /* กำหนดความสูงของ image-wrapper */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ image-wrapper */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ image-wrapper */
 }
 
 .image-wrapper::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("girl.jpg");
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease;
+    content: ""; /* สร้าง pseudo-element ก่อนเนื้อหาของ image-wrapper */
+    position: absolute; /* กำหนดตำแหน่งของ pseudo-element เป็น absolute */
+    width: 100%; /* กำหนดความกว้างของ pseudo-element ให้เต็มที่ */
+    height: 100%; /* กำหนดความสูงของ pseudo-element ให้เต็มที่ */
+    background-image: url("girl.jpg"); /* กำหนดภาพพื้นหลังของ pseudo-element */
+    background-size: cover; /* ทำให้ภาพพื้นหลังครอบคลุมพื้นที่ทั้งหมด */
+    background-position: center; /* จัดตำแหน่งภาพพื้นหลังให้อยู่กลาง */
+    transition: transform 0.3s ease; /* กำหนดการเปลี่ยนแปลงของ transform ใช้เวลา 0.3 วินาที */
 }
 
 .heart-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+    position: absolute; /* กำหนดตำแหน่งของ heart-icon เป็น absolute */
+    top: 50%; /* จัดตำแหน่งให้ heart-icon อยู่กลางในแนวตั้ง */
+    left: 50%; /* จัดตำแหน่งให้ heart-icon อยู่กลางในแนวนอน */
+    transform: translate(-50%, -50%); /* ปรับตำแหน่ง heart-icon ให้อยู่กลาง */
+    z-index: 2; /* กำหนดลำดับการแสดงผลให้ heart-icon อยู่เหนือองค์ประกอบอื่น */
 }
 
 .heart-icon i {
-    font-size: 80px;
-    color: white;
-    opacity: 0;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
-    transition: all 0.3s ease;
+    font-size: 80px; /* กำหนดขนาดฟอนต์ของไอคอนหัวใจ */
+    color: white; /* กำหนดสีของไอคอนหัวใจเป็นสีขาว */
+    opacity: 0; /* กำหนดความโปร่งใสของไอคอนหัวใจเป็น 0 (ซ่อน) */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3)); /* เพิ่มเงาให้กับไอคอนหัวใจ */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงทั้งหมดใช้เวลา 0.3 วินาที */
 }
 
 .image-info {
-    padding: 12px;  
-    background: white;
+    padding: 12px; /* กำหนดระยะภายใน (padding) ของ image-info */
+    background: white; /* กำหนดสีพื้นหลังของ image-info เป็นสีขาว */
 }
 
 .stats {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้อยู่กลาง */
+    gap: 8px; /* กำหนดระยะห่างระหว่างองค์ประกอบ */
 }
 
 .stats i {
-    font-size: 24px;
-    color: #262626; 
-    cursor: pointer;
+    font-size: 24px; /* กำหนดขนาดฟอนต์ของไอคอนใน stats */
+    color: #262626; /* กำหนดสีของไอคอนใน stats */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ไอคอน */
 }
 
 .stats i.fas {
-    color: #ed4956; 
+    color: #ed4956; /* กำหนดสีของไอคอนที่มีคลาส fas เป็นสีแดง */
 }
 
 .stats span {
-    font-size: 14px; 
-    color: #262626; 
-    font-weight: 600;
+    font-size: 14px; /* กำหนดขนาดฟอนต์ของข้อความใน stats */
+    color: #262626; /* กำหนดสีของข้อความใน stats */
+    font-weight: 600; /* กำหนดน้ำหนักฟอนต์ให้หนา */
 }

@@ -1,145 +1,145 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* ตั้งค่าการคำนวณขนาดขององค์ประกอบให้รวม padding และ border */
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Kanit, sans-serif;
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มหน้าจอ */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงองค์ประกอบภายใน */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้ตรงกลาง */
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d); /* กำหนดพื้นหลังเป็นการไล่สีแบบเชิงมุม */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Kanit, sans-serif; /* กำหนดฟอนต์ที่ใช้ใน body */
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 90%;
-    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05); /* กำหนดพื้นหลังของการ์ดเป็นสีขาวโปร่งใส */
+    backdrop-filter: blur(10px); /* ใช้ฟิลเตอร์เบลอพื้นหลัง */
+    border-radius: 20px; /* กำหนดมุมโค้งให้กับการ์ด */
+    padding: 2rem; /* กำหนดระยะภายใน (padding) ของการ์ด */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* กำหนดเงาให้กับการ์ด */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* กำหนดกรอบให้กับการ์ด */
+    width: 90%; /* กำหนดความกว้างของการ์ดเป็น 90% ของพื้นที่ */
+    max-width: 400px; /* กำหนดความกว้างสูงสุดของการ์ด */
 }
 
 .profile-container {
-    text-align: center;
-    color: #fff;
+    text-align: center; /* จัดข้อความใน container ให้ตรงกลาง */
+    color: #fff; /* กำหนดสีข้อความเป็นสีขาว */
 }
 
 .img-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 1.5rem;
+    position: relative; /* กำหนดตำแหน่งของ container เป็น relative เพื่อใช้กับ overlay */
+    width: 150px; /* กำหนดความกว้างของ container */
+    height: 150px; /* กำหนดความสูงของ container */
+    margin: 0 auto 1.5rem; /* กำหนดระยะขอบด้านบนและล่าง */
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    width: 100%; /* กำหนดความกว้างของภาพให้เต็ม container */
+    height: 100%; /* กำหนดความสูงของภาพให้เต็ม container */
+    border-radius: 50%; /* ทำให้ภาพเป็นวงกลม */
+    object-fit: cover; /* ปรับขนาดภาพให้พอดีกับ container โดยไม่ทำให้ภาพผิดสัดส่วน */
+    border: 4px solid rgba(255, 255, 255, 0.2); /* กำหนดกรอบให้กับภาพ */
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
+    position: absolute; /* กำหนดตำแหน่งของ overlay เป็น absolute เพื่อให้ทับซ้อนกับภาพ */
+    top: 0; /* กำหนดตำแหน่งด้านบนของ overlay */
+    left: 0; /* กำหนดตำแหน่งด้านซ้ายของ overlay */
+    width: 100%; /* กำหนดความกว้างของ overlay ให้เต็ม container */
+    height: 100%; /* กำหนดความสูงของ overlay ให้เต็ม container */
+    border-radius: 50%; /* ทำให้ overlay เป็นวงกลม */
+    background: rgba(0, 0, 0, 0.5); /* กำหนดพื้นหลังของ overlay เป็นสีดำโปร่งใส */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงองค์ประกอบภายใน overlay */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวองค์ประกอบในแนวนอนให้ตรงกลาง */
+    opacity: 0; /* กำหนดความโปร่งใสของ overlay เป็น 0 (ซ่อน) */
+    transition: opacity 0.3s; /* กำหนดการเปลี่ยนแปลงความโปร่งใสเมื่อมีการโฮเวอร์ */
 }
 
 .img-container:hover .overlay {
-    opacity: 1;
+    opacity: 1; /* เมื่อมีการโฮเวอร์ที่ img-container ให้ overlay แสดง */
 }
 
 .upload-label {
-    color: white;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    font-size: 0.9rem;
+    color: white; /* กำหนดสีข้อความของ label เป็นสีขาว */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ label */
+    padding: 0.5rem 1rem; /* กำหนดระยะภายใน (padding) ของ label */
+    border-radius: 20px; /* กำหนดมุมโค้งให้กับ label */
+    background: rgba(255, 255, 255, 0.2); /* กำหนดพื้นหลังของ label เป็นสีขาวโปร่งใส */
+    font-size: 0.9rem; /* กำหนดขนาดฟอนต์ของ label */
 }
 
 input[type="file"] {
-    display: none;
+    display: none; /* ซ่อน input file */
 }
 
 h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem; /* กำหนดขนาดฟอนต์ของ h2 */
+    margin-bottom: 0.5rem; /* กำหนดระยะขอบด้านล่างของ h2 */
 }
 
 .title {
-    color: #9e9e9e;
-    margin-bottom: 1.5rem;
+    color: #9e9e9e; /* กำหนดสีข้อความของ title */
+    margin-bottom: 1.5rem; /* กำหนดระยะขอบด้านล่างของ title */
 }
 
 .stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 1.5rem 0;
-    padding: 1rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid; /* ใช้ Grid Layout เพื่อจัดเรียงสถิติ */
+    grid-template-columns: repeat(3, 1fr); /* กำหนดให้มี 3 คอลัมน์ที่มีขนาดเท่ากัน */
+    gap: 10px; /* กำหนดระยะห่างระหว่างคอลัมน์ */
+    margin: 1.5rem 0; /* กำหนดระยะขอบด้านบนและล่าง */
+    padding: 1rem 0; /* กำหนดระยะภายใน (padding) ด้านบนและล่าง */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* กำหนดกรอบด้านบน */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* กำหนดกรอบด้านล่าง */
 }
 
 .stat {
-    text-align: center;
+    text-align: center; /* จัดข้อความใน stat ให้ตรงกลาง */
 }
 
 .number {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-    display: block;
+    font-size: 1.2rem; /* กำหนดขนาดฟอนต์ของหมายเลข */
+    font-weight: bold; /* ทำให้หมายเลขหนา */
+    margin-bottom: 0.3rem; /* กำหนดระยะขอบด้านล่างของหมายเลข */
+    display: block; /* แสดงหมายเลขเป็นบล็อก */
 }
 
 .label {
-    font-size: 0.9rem;
-    color: #9e9e9e;
-    display: block;
+    font-size: 0.9rem; /* กำหนดขนาดฟอนต์ของ label */
+    color: #9e9e9e; /* กำหนดสีข้อความของ label */
+    display: block; /* แสดง label เป็นบล็อก */
 }
 
 .edit-btn {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    margin-top: 1rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6); /* กำหนดพื้นหลังของปุ่มเป็นการไล่สี */
+    color: white; /* กำหนดสีข้อความของปุ่มเป็นสีขาว */
+    border: none; /* ไม่มีกำหนดกรอบให้กับปุ่ม */
+    padding: 0.8rem 2rem; /* กำหนดระยะภายใน (padding) ของปุ่ม */
+    border-radius: 25px; /* กำหนดมุมโค้งให้กับปุ่ม */
+    font-size: 1rem; /* กำหนดขนาดฟอนต์ของปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ปุ่ม */
+    transition: transform 0.2s, box-shadow 0.2s; /* กำหนดการเปลี่ยนแปลงเมื่อมีการโฮเวอร์ */
+    margin-top: 1rem; /* กำหนดระยะขอบด้านบนของปุ่ม */
 }
 
 .edit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px); /* เมื่อมีการโฮเวอร์ให้ปุ่มเลื่อนขึ้น */
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4); /* กำหนดเงาให้กับปุ่มเมื่อมีการโฮเวอร์ */
 }
 
 @media (max-width: 480px) {
     .card {
-        padding: 1.5rem;
+        padding: 1.5rem; /* กำหนดระยะภายใน (padding) ของการ์ดเมื่อหน้าจอเล็ก */
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* กำหนดขนาดฟอนต์ของ h2 เมื่อหน้าจอเล็ก */
     }
     
     .stats {
-        padding: 0.8rem 0;
+        padding: 0.8rem 0; /* กำหนดระยะภายใน (padding) ของ stats เมื่อหน้าจอเล็ก */
     }
 }

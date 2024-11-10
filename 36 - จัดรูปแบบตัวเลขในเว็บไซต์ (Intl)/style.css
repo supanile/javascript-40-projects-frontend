@@ -1,135 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap'); /* นำเข้าแบบอักษรจาก Google Fonts */
 
+/* กำหนดสไตล์ทั่วไปสำหรับทุกองค์ประกอบ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Prompt', sans-serif;
+    margin: 0; /* ตั้งค่าระยะขอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะห่างภายในเป็น 0 */
+    box-sizing: border-box; /* ใช้การคำนวณขนาดกล่องรวมระยะขอบและระยะห่างภายใน */
+    font-family: 'Prompt', sans-serif; /* กำหนดแบบอักษรเป็น 'Prompt' */
 }
 
 body {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* กำหนดพื้นหลังเป็นการไล่สี */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body เป็น 100% ของความสูงหน้าจอ */
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวนอนให้อยู่กลาง */
+    padding: 20px; /* กำหนดระยะห่างภายในเป็น 20px */
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 30px;
-    width: 100%;
-    max-width: 800px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1); /* กำหนดพื้นหลังเป็นสีขาวโปร่งใส */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอ */
+    border-radius: 20px; /* มุมของกล่องมีความโค้ง 20px */
+    padding: 30px; /* กำหนดระยะห่างภายในเป็น 30px */
+    width: 100%; /* กำหนดความกว้างเป็น 100% */
+    max-width: 800px; /* กำหนดความกว้างสูงสุดเป็น 800px */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับกล่อง */
 }
 
 .title {
-    color: white;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    font-weight: 600;
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-bottom: 30px; /* กำหนดระยะห่างด้านล่างเป็น 30px */
+    font-size: 2.5rem; /* กำหนดขนาดตัวอักษรเป็น 2.5rem */
+    font-weight: 600; /* กำหนดความหนาของตัวอักษร */
 }
 
 .input-container {
-    position: relative;
-    margin-bottom: 30px;
+    position: relative; /* กำหนดตำแหน่งเป็น relative เพื่อใช้กับ input-icon */
+    margin-bottom: 30px; /* กำหนดระยะห่างด้านล่างเป็น 30px */
 }
 
 .input-icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #666;
-    font-size: 1.2rem;
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute */
+    left: 15px; /* กำหนดระยะห่างจากซ้ายเป็น 15px */
+    top: 50%; /* กำหนดตำแหน่งแนวตั้งอยู่กลาง */
+    transform: translateY(-50%); /* ปรับตำแหน่งให้อยู่กลางแนวตั้ง */
+    color: #666; /* กำหนดสีตัวอักษร */
+    font-size: 1.2rem; /* กำหนดขนาดตัวอักษร */
 }
 
 input {
-    width: 100%;
-    padding: 15px 15px 15px 45px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    width: 100%; /* กำหนดความกว้างเป็น 100% */
+    padding: 15px 15px 15px 45px; /* กำหนดระยะห่างภายใน */
+    font-size: 1.2rem; /* กำหนดขนาดตัวอักษร */
+    border: none; /* ไม่แสดงกรอบ */
+    border-radius: 10px; /* มุมของ input มีความโค้ง 10px */
+    background: white; /* กำหนดพื้นหลังเป็นสีขาว */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ input */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้มีความนุ่มนวล */
 }
 
 input:focus {
-    outline: none;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    outline: none; /* ไม่แสดงกรอบเมื่อ input ถูกเลือก */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ input ถูกเลือก */
 }
 
 .output-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: grid; /* ใช้ Grid Layout สำหรับจัดเรียงการ์ด */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* กำหนดจำนวนคอลัมน์อัตโนมัติ */
+    gap: 20px; /* กำหนดระยะห่างระหว่างการ์ด */
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1); /* กำหนดพื้นหลังเป็นสีขาวโปร่งใส */
+    border-radius: 15px; /* มุมของการ์ดมีความโค้ง 15px */
+    padding: 20px; /* กำหนดระยะห่างภายในเป็น 20px */
+    transition: transform 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้มีความนุ่มนวล */
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* ยกการ์ดขึ้นเมื่อชี้เมาส์ */
 }
 
 .card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    color: white;
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงหัวการ์ด */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    margin-bottom: 15px; /* กำหนดระยะห่างด้านล่างเป็น 15px */
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
 }
 
 .card-header i {
-    margin-right: 10px;
-    font-size: 1.2rem;
+    margin-right: 10px; /* กำหนดระยะห่างด้านขวาเป็น 10px */
+    font-size: 1.2rem; /* กำหนดขนาดตัวอักษร */
 }
 
 .card-header span {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.1rem; /* กำหนดขนาดตัวอักษร */
+    font-weight: 500; /* กำหนดความหนาของตัวอักษร */
 }
 
 h1 {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 600;
-    word-break: break-all;
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    font-size: 2.5rem; /* กำหนดขนาดตัวอักษรเป็น 2.5rem */
+    font-weight: 600; /* กำหนดความหนาของตัวอักษร */
+    word-break: break-all; /* แบ่งคำเมื่อจำเป็น */
 }
 
+/* สไตล์สำหรับหน้าจอที่มีความกว้างไม่เกิน 768px */
 @media (max-width: 768px) {
     .container {
-        padding: 20px;
+        padding: 20px; /* กำหนดระยะห่างภายในเป็น 20px */
     }
     
     .title {
-        font-size: 2rem;
+        font-size: 2rem; /* กำหนดขนาดตัวอักษรเป็น 2rem */
     }
     
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* กำหนดขนาดตัวอักษรเป็น 2rem */
     }
 }
 
+/* สไตล์สำหรับหน้าจอที่มีความกว้างไม่เกิน 480px */
 @media (max-width: 480px) {
     .title {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* กำหนดขนาดตัวอักษรเป็น 1.8rem */
     }
     
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* กำหนดขนาดตัวอักษรเป็น 1.5rem */
     }
     
     input {
-        font-size: 1rem;
-        padding: 12px 12px 12px 40px;
+        font-size: 1rem; /* กำหนดขนาดตัวอักษรเป็น 1rem */
+        padding: 12px 12px 12px 40px; /* กำหนดระยะห่างภายใน */
     }
 }
