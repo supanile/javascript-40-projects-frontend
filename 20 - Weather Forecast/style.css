@@ -1,166 +1,166 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* ตั้งค่าการคำนวณขนาดขององค์ประกอบให้รวม padding และ border */
 }
 
 body {
-    font-family: 'Prompt', sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #00B4DB, #0083B0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #2d3436;
-    padding: 20px;
+    font-family: 'Prompt', sans-serif; /* กำหนดฟอนต์ของ body เป็น 'Prompt' */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มหน้าจอ */
+    background: linear-gradient(135deg, #00B4DB, #0083B0); /* กำหนดพื้นหลังเป็นการไล่สี */
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center; /* จัดกลางแนวตั้ง */
+    color: #2d3436; /* กำหนดสีตัวอักษร */
+    padding: 20px; /* กำหนดระยะภายใน (padding) ของ body */
 }
 
 .container {
-    width: 100%;
-    max-width: 400px;
+    width: 100%; /* กำหนดความกว้างของ container ให้เต็มที่ */
+    max-width: 400px; /* กำหนดความกว้างสูงสุดของ container เป็น 400px */
 }
 
 .main-title {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    color: #fff; /* กำหนดสีตัวอักษรของ main title เป็นสีขาว */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-bottom: 30px; /* กำหนดระยะขอบด้านล่างเป็น 30px */
+    font-weight: 600; /* กำหนดความหนาของตัวอักษร */
+    font-size: 2.5rem; /* กำหนดขนาดตัวอักษร */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* เพิ่มเงาให้กับตัวอักษร */
 }
 
 .search-form {
-    display: flex;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-radius: 15px;
-    overflow: hidden;
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบในฟอร์มค้นหา */
+    margin-bottom: 30px; /* กำหนดระยะขอบด้านล่างเป็น 30px */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* เพิ่มเงาให้กับฟอร์มค้นหา */
+    border-radius: 15px; /* ทำมุมของฟอร์มค้นหาให้โค้งมน */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขต */
 }
 
 .search-form input {
-    flex-grow: 1;
-    padding: 15px 20px;
-    border: none;
-    font-size: 1rem;
-    background: rgba(255,255,255,0.95);
-    color: #2d3436;
+    flex-grow: 1; /* ทำให้ input ขยายเต็มที่ในฟอร์มค้นหา */
+    padding: 15px 20px; /* กำหนดระยะภายใน (padding) ของ input */
+    border: none; /* ไม่แสดงกรอบของ input */
+    font-size: 1rem; /* กำหนดขนาดตัวอักษร */
+    background: rgba(255,255,255,0.95); /* กำหนดพื้นหลังของ input */
+    color: #2d3436; /* กำหนดสีตัวอักษรใน input */
 }
 
 .search-form input::placeholder {
-    color: #b2bec3;
+    color: #b2bec3; /* กำหนดสีของ placeholder ใน input */
 }
 
 .search-form input:focus {
-    outline: none;
-    background: #fff;
+    outline: none; /* ไม่แสดงกรอบเมื่อ input ถูกเลือก */
+    background: #fff; /* เปลี่ยนพื้นหลังเป็นสีขาวเมื่อ input ถูกเลือก */
 }
 
 .search-form button {
-    padding: 15px 30px;
-    border: none;
-    background-color: #0984e3;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 15px 30px; /* กำหนดระยะภายใน (padding) ของปุ่ม */
+    border: none; /* ไม่แสดงกรอบของปุ่ม */
+    background-color: #0984e3; /* กำหนดสีพื้นหลังของปุ่ม */
+    color: white; /* กำหนดสีตัวอักษรของปุ่มเป็นสีขาว */
+    font-weight: 500; /* กำหนดความหนาของตัวอักษร */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ที่ปุ่ม */
+    transition: background-color 0.3s; /* เพิ่มการเปลี่ยนสีพื้นหลังเมื่อมีการโฮเวอร์ */
 }
 
 .search-form button:hover {
-    background-color: #0870c0;
+    background-color: #0870c0; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อมีการโฮเวอร์ */
 }
 
 #weather-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.95); /* กำหนดพื้นหลังของการ์ดสภาพอากาศ */
+    backdrop-filter: blur(10px); /* เพิ่มเอฟเฟกต์เบลอพื้นหลัง */
+    border-radius: 20px; /* ทำมุมของการ์ดให้โค้งมน */
+    padding: 30px; /* กำหนดระยะภายใน (padding) ของการ์ด */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* เพิ่มเงาให้กับการ์ด */
 }
 
 .location-container {
-    text-align: center;
-    margin-bottom: 25px;
+    text-align: center; /* จัดข้อความใน container ของสถานที่ให้อยู่กลาง */
+    margin-bottom: 25px; /* กำหนดระยะขอบด้านล่างเป็น 25px */
 }
 
 #city {
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: #2d3436;
-    margin-bottom: 5px;
+    font-size: 2.2rem; /* กำหนดขนาดตัวอักษรของชื่อเมือง */
+    font-weight: 600; /* กำหนดความหนาของตัวอักษร */
+    color: #2d3436; /* กำหนดสีตัวอักษร */
+    margin-bottom: 5px; /* กำหนดระยะขอบด้านล่างเป็น 5px */
 }
 
 #state {
-    color: #636e72;
-    font-size: 1.1rem;
-    font-weight: 400;
+    color: #636e72; /* กำหนดสีตัวอักษรของสถานะ */
+    font-size: 1.1rem; /* กำหนดขนาดตัวอักษร */
+    font-weight: 400; /* กำหนดความหนาของตัวอักษร */
 }
 
 .weather-container {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    text-align: center; /* จัดข้อความใน container ของสภาพอากาศให้อยู่กลาง */
+    margin-bottom: 30px; /* กำหนดระยะขอบด้านล่างเป็น 30px */
+    padding: 20px 0; /* กำหนดระยะภายใน (padding) ด้านบนและล่าง */
+    border-bottom: 1px solid rgba(0,0,0,0.1); /* เพิ่มเส้นขอบด้านล่าง */
 }
 
 .weather-container h2 {
-    font-size: 3.5rem;
-    font-weight: 600;
-    color: #0984e3;
-    margin-bottom: 10px;
+    font-size: 3.5rem; /* กำหนดขนาดตัวอักษรของหัวข้อสภาพอากาศ */
+    font-weight: 600; /* กำหนดความหนาของตัวอักษร */
+    color: #0984e3; /* กำหนดสีตัวอักษร */
+    margin-bottom: 10px; /* กำหนดระยะขอบด้านล่างเป็น 10px */
 }
 
 .temp-range {
-    color: #636e72;
-    font-size: 1rem;
+    color: #636e72; /* กำหนดสีตัวอักษรของช่วงอุณหภูมิ */
+    font-size: 1rem; /* กำหนดขนาดตัวอักษร */
 }
 
 .weather-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    text-align: center;
+    display: grid; /* ใช้ Grid Layout สำหรับจัดเรียงรายละเอียดสภาพอากาศ */
+    grid-template-columns: repeat(3, 1fr); /* กำหนดให้มี 3 คอลัมน์ที่มีขนาดเท่ากัน */
+    gap: 20px; /* กำหนดระยะห่างระหว่างคอลัมน์ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
 }
 
 .detail-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงรายละเอียด */
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+    align-items: center; /* จัดกลางในแนวนอน */
+    gap: 10px; /* กำหนดระยะห่างระหว่างองค์ประกอบ */
 }
 
 .weather-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+    width: 40px; /* กำหนดความกว้างของไอคอนสภาพอากาศ */
+    height: 40px; /* กำหนดความสูงของไอคอนสภาพอากาศ */
+    object-fit: contain; /* ทำให้ไอคอนไม่เสียสัดส่วน */
 }
 
 .detail-item p {
-    font-size: 0.9rem;
-    color: #2d3436;
+    font-size: 0.9rem; /* กำหนดขนาดตัวอักษรของรายละเอียด */
+    color: #2d3436; /* กำหนดสีตัวอักษร */
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* กำหนดสไตล์สำหรับหน้าจอที่มีความกว้างไม่เกิน 480px */
     .container {
-        padding: 10px;
+        padding: 10px; /* กำหนดระยะภายใน (padding) ของ container */
     }
     
     .main-title {
-        font-size: 2rem;
+        font-size: 2rem; /* กำหนดขนาดตัวอักษรของ main title */
     }
     
     #weather-card {
-        padding: 20px;
+        padding: 20px; /* กำหนดระยะภายใน (padding) ของการ์ด */
     }
     
     #city {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* กำหนดขนาดตัวอักษรของชื่อเมือง */
     }
     
     .weather-container h2 {
-        font-size: 2.8rem;
+        font-size: 2.8rem; /* กำหนดขนาดตัวอักษรของหัวข้อสภาพอากาศ */
     }
     
     .weather-details {
-        gap: 15px;
+        gap: 15px; /* กำหนดระยะห่างระหว่างคอลัมน์ในรายละเอียดสภาพอากาศ */
     }
 }

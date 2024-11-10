@@ -1,3 +1,4 @@
+/* กำหนดตัวแปร CSS สำหรับสีพื้นหลัง, สีข้อความ, สีพื้นหลังการ์ด, สีขอบการ์ด, สีพื้นหลังปุ่ม, สีข้อความปุ่ม, สีพื้นหลังปุ่มเมื่อชี้, และสีเน้น */
 :root {
   --bg-color: #1a1a1a;
   --text-color: #f0f0f0;
@@ -9,12 +10,14 @@
   --accent-color: #61dafb;
 }
 
+/* ตั้งค่าการจัดการขนาดของกล่องให้เป็น border-box และลบ margin และ padding ของทุกองค์ประกอบ */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* กำหนดพื้นหลัง, สีข้อความ, ฟอนต์, การจัดเรียง, ขนาดขั้นต่ำ, และการซ่อนการเลื่อนในแนวนอน */
 body {
   background: var(--bg-color);
   color: var(--text-color);
@@ -28,12 +31,14 @@ body {
   padding: 20px;
 }
 
+/* กำหนดระยะห่างด้านล่าง, ขนาดฟอนต์, และการจัดตำแหน่งของ h1 */
 h1 {
   margin-bottom: 30px;
   font-size: 2.5rem;
   text-align: center;
 }
 
+/* กำหนดการจัดตำแหน่ง, ฟอนต์, ขนาดฟอนต์, สีข้อความ และระยะห่างด้านล่างของ h2 */
 h2 {
   text-align: center;
   font-family: "Kanit", sans-serif;
@@ -43,6 +48,7 @@ h2 {
   color: var(--text-color);
 }
 
+/* กำหนดพื้นหลัง, สีข้อความ, ขอบ, รัศมี, ฟอนต์, ขนาดฟอนต์, การจัดการการคลิก, ระยะห่างด้านล่าง และการเปลี่ยนแปลงพื้นหลังเมื่อชี้ */
 .btn {
   background-color: var(--accent-color);
   color: var(--bg-color);
@@ -56,21 +62,25 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
+/* เปลี่ยนพื้นหลังของปุ่มเมื่อชี้ */
 .btn:hover {
   background-color: #4fa8d5;
 }
 
+/* กำหนดขนาดฟอนต์และการ padding สำหรับปุ่มขนาดเล็ก */
 .btn-small {
   font-size: 0.9rem;
   padding: 5px 10px;
 }
 
+/* กำหนดตำแหน่งของปุ่มล้างให้คงที่ที่มุมล่างซ้าย */
 .clear {
   position: fixed;
   bottom: 30px;
   left: 30px;
 }
 
+/* กำหนดมุมมอง 3D, ขนาด, ตำแหน่ง, และการซ่อนการเลื่อนสำหรับการ์ด */
 .cards {
   perspective: 1000px;
   width: 500px;
@@ -81,6 +91,7 @@ h2 {
   overflow: hidden;
 }
 
+/* กำหนดตำแหน่ง, ขนาด, การเปลี่ยนแปลง, และการคลิกสำหรับการ์ด */
 .card {
   position: absolute;
   width: 100%;
@@ -89,6 +100,7 @@ h2 {
   cursor: pointer;
 }
 
+/* กำหนดตำแหน่ง, ขนาดฟอนต์, สี, ความโปร่งใส, การเปลี่ยนแปลง, และการหมุนสำหรับปุ่มลบ */
 .delete-btn {
   position: absolute;
   bottom: 10px;
@@ -101,24 +113,29 @@ h2 {
   z-index: 20;
   transform: rotateY(180deg);
 }
+/* หมุนปุ่มลบให้แสดงในสถานะปกติ */
 
 .card .delete-btn {
   transform: rotateY(0);
 }
+/* หมุนปุ่มลบเมื่อแสดงคำตอบ */
 
 .card.show-answer .delete-btn {
   transform: rotateY(180deg);
 }
+/* เพิ่มความโปร่งใสของปุ่มลบเมื่อชี้ที่การ์ด */
 
 .card:hover .delete-btn {
   opacity: 1;
 }
+/* กำหนดสถานะการ์ดที่ใช้งานอยู่ให้มองเห็นและแสดงในตำแหน่งที่ถูกต้อง */
 
 .card.active {
   opacity: 1;
   transform: translateX(0) rotateY(0);
   z-index: 10;
 }
+/* กำหนดตำแหน่ง, ขนาด, และการเปลี่ยนแปลงสำหรับการ์ดภายใน */
 
 .inner-card {
   position: relative;
@@ -128,6 +145,7 @@ h2 {
   transition: transform 0.5s ease;
 }
 
+/* กำหนดตำแหน่ง, ขนาด, การซ่อนด้านหลัง, การจัดตำแหน่ง, พื้นหลัง, รัศมี, เงา, การ padding, ขนาดฟอนต์, และการจัดตำแหน่งข้อความสำหรับการ์ดด้านหน้าและด้านหลัง */
 .inner-card-front,
 .inner-card-back {
   position: absolute;
@@ -143,14 +161,17 @@ h2 {
   padding: 20px;
   font-size: 1.2rem;
   text-align: center;
+  /* หมุนการ์ดด้านหลังให้หันไปทางด้านหลัง */
 }
 
 .inner-card-back {
   transform: rotateX(180deg);
+  /* หมุนการ์ดภายในเมื่อแสดงคำตอบ */
 }
 
 .card.show-answer .inner-card {
   transform: rotateX(180deg);
+  /* กำหนดการจัดเรียงสำหรับการนำทาง */
 }
 
 .navigation {
@@ -158,6 +179,7 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  /* กำหนดพื้นหลัง, ขอบ, ขนาดฟอนต์, สี, การคลิก, และระยะห่างสำหรับปุ่มนำทาง */
 }
 
 .nav-button {
@@ -167,15 +189,18 @@ h2 {
   color: var(--accent-color);
   cursor: pointer;
   margin: 0 15px;
+  /* เปลี่ยนสีของปุ่มนำทางเมื่อชี้ */
 }
 
 .nav-button:hover {
   color: var(--text-color);
+  /* กำหนดขนาดฟอนต์และระยะห่างสำหรับแสดงสถานะปัจจุบัน */
 }
 
 #current {
   font-size: 1.2rem;
   margin: 0 20px;
+  /* กำหนดพื้นหลัง, รัศมี, การ padding, ตำแหน่ง, ขนาด, ความโปร่งใส, และเงาสำหรับกล่องเพิ่มการ์ด */
 }
 
 .add-container {
@@ -192,12 +217,14 @@ h2 {
   z-index: -1;
   transition: 0.3s ease;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  /* แสดงกล่องเพิ่มการ์ดเมื่อมีการเรียกใช้ */
 }
 
 .add-container.show {
   opacity: 1;
   z-index: 2;
   transform: translate(-50%, -50%) scale(1);
+  /* กำหนดตำแหน่ง, ขนาดฟอนต์, พื้นหลัง, ขอบ, สี, การคลิก, การ padding, และการเปลี่ยนแปลงสีเมื่อชี้สำหรับปุ่มปิด */
 }
 
 .btn-close {
@@ -211,24 +238,29 @@ h2 {
   cursor: pointer;
   padding: 5px 10px;
   transition: color 0.3s ease;
+  /* เปลี่ยนสีของปุ่มปิดเมื่อชี้ */
 }
 
 .btn-close:hover {
   color: var(--accent-color);
+  /* กำหนดระยะห่างด้านบนสำหรับหัวข้อในกล่องเพิ่มการ์ด */
 }
 
 .add-container h2 {
   padding-top: 20px;
+  /* กำหนดระยะห่างด้านล่างสำหรับกลุ่มฟอร์ม */
 }
 
 .form-group {
   margin-bottom: 20px;
+  /* กำหนดการแสดงผล, ระยะห่างด้านล่าง, และน้ำหนักฟอนต์สำหรับป้ายของฟอร์ม */
 }
 
 .form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  /* กำหนดขนาด, การ padding, ขอบ, รัศมี, พื้นหลัง, สีข้อความ, ขนาดฟอนต์, และการปรับขนาดสำหรับ textarea */
 }
 
 .form-group textarea {
@@ -242,6 +274,7 @@ h2 {
   resize: vertical;
 }
 
+/* กำหนดการแสดงผล, ขนาด, พื้นหลัง, สีข้อความ, ขอบ, รัศมี, ขนาดฟอนต์, ฟอนต์, การคลิก, และการเปลี่ยนแปลงพื้นหลังเมื่อชี้สำหรับปุ่มเพิ่มการ์ด */
 #add-card {
   display: block;
   width: 100%;
@@ -256,19 +289,23 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
+/* เปลี่ยนพื้นหลังของปุ่มเพิ่มการ์ดเมื่อชี้ */
 #add-card:hover {
   background-color: #4fa8d5;
 }
 
+/* กำหนดพื้นหลังและสีข้อความสำหรับปุ่มล้าง */
 #clear {
   background-color: var(--accent-color);
   color: var(--bg-color);
 }
 
+/* เปลี่ยนพื้นหลังของปุ่มล้างเมื่อชี้ */
 #clear:hover {
   background-color: #4fa8d5;
 }
 
+/* กำหนดตำแหน่ง, ขนาดฟอนต์, สี, ความโปร่งใส, และการเปลี่ยนแปลงสำหรับไอคอนพลิก */
 .flip-icon {
   position: absolute;
   top: 10px;
@@ -279,38 +316,47 @@ h2 {
   transition: opacity 0.3s ease;
 }
 
+/* เพิ่มความโปร่งใสของไอคอนพลิกเมื่อชี้ที่การ์ด */
 .card:hover .flip-icon {
   opacity: 1;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำถาม */
 #question::-webkit-input-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำถาม */
 #question:-ms-input-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำถาม */
 #question:-moz-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำถาม */
 #question::-moz-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำตอบ */
 #answer::-webkit-input-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำตอบ */
 #answer:-ms-input-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำตอบ */
 #answer:-moz-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }
 
+/* กำหนดฟอนต์สำหรับ placeholder ของ input คำตอบ */
 #answer::-moz-placeholder {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
 }

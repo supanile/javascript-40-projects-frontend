@@ -1,90 +1,90 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* ตั้งค่าการคำนวณขนาดขององค์ประกอบให้รวม padding และ border */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์ของเนื้อหาในหน้าเป็น 'Kanit' */
+    background-color: #121212; /* ตั้งค่าสีพื้นหลังของหน้าเป็นสีเทาเข้ม */
+    color: #e0e0e0; /* ตั้งค่าสีตัวอักษรเป็นสีเทาอ่อน */
 }
 
 header {
-    background-color: #1f1f1f;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: #1f1f1f; /* ตั้งค่าสีพื้นหลังของ header เป็นสีเทาเข้ม */
+    color: #ffffff; /* ตั้งค่าสีตัวอักษรใน header เป็นสีขาว */
+    padding: 20px; /* กำหนดระยะภายใน (padding) ของ header เป็น 20px */
+    text-align: center; /* จัดตำแหน่งข้อความใน header ให้อยู่กลาง */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* เพิ่มเงาให้กับ header */
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-weight: 300;
-    letter-spacing: 1px;
+    margin-bottom: 20px; /* ตั้งค่าระยะขอบด้านล่างของ h1 เป็น 20px */
+    font-weight: 300; /* กำหนดน้ำหนักตัวอักษรของ h1 เป็น 300 (บาง) */
+    letter-spacing: 1px; /* กำหนดระยะห่างระหว่างตัวอักษรใน h1 เป็น 1px */
 }
 
 select {
-    padding: 10px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    background-color: #2c2c2c;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 10px; /* กำหนดระยะภายใน (padding) ของ select เป็น 10px */
+    font-size: 1em; /* กำหนดขนาดฟอนต์ของ select เป็น 1em */
+    border: none; /* ไม่แสดงกรอบ (border) ของ select */
+    border-radius: 5px; /* ทำมุมของ select ให้โค้งมน 5px */
+    background-color: #2c2c2c; /* ตั้งค่าสีพื้นหลังของ select เป็นสีเทาเข้ม */
+    color: #ffffff; /* ตั้งค่าสีตัวอักษรใน select เป็นสีขาว */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปมือเมื่อชี้ไปที่ select */
+    transition: background-color 0.3s; /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังเมื่อ hover ภายใน 0.3 วินาที */
 }
 
 select:hover {
-    background-color: #3a3a3a;
+    background-color: #3a3a3a; /* เปลี่ยนสีพื้นหลังของ select เป็นสีเทาเข้มเมื่อ hover */
 }
 
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    display: flex; /* ใช้ flexbox ในการจัดเรียงองค์ประกอบภายใน .content */
+    flex-wrap: wrap; /* อนุญาตให้องค์ประกอบใน .content ห่อหุ้มเมื่อพื้นที่ไม่พอ */
+    justify-content: center; /* จัดตำแหน่งองค์ประกอบใน .content ให้อยู่กลาง */
+    padding: 20px; /* กำหนดระยะภายใน (padding) ของ .content เป็น 20px */
 }
 
 .movie {
-    width: 250px;
-    margin: 15px;
-    background: #1f1f1f;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px; /* กำหนดความกว้างของ .movie เป็น 250px */
+    margin: 15px; /* ตั้งค่าระยะขอบ (margin) รอบๆ .movie เป็น 15px */
+    background: #1f1f1f; /* ตั้งค่าสีพื้นหลังของ .movie เป็นสีเทาเข้ม */
+    border-radius: 10px; /* ทำมุมของ .movie ให้โค้งมน 10px */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ .movie */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* เพิ่มเงาให้กับ .movie */
+    transition: transform 0.3s, box-shadow 0.3s; /* เพิ่มการเปลี่ยนแปลงเมื่อ hover ภายใน 0.3 วินาที */
 }
 
 .movie:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transform: translateY(-5px); /* เลื่อน .movie ขึ้น 5px เมื่อ hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4); /* เพิ่มเงาให้กับ .movie เมื่อ hover */
 }
 
 .movie img {
-    width: 100%;
-    height: 375px;
-    object-fit: cover;
+    width: 100%; /* กำหนดความกว้างของภาพใน .movie ให้เต็มพื้นที่ */
+    height: 375px; /* กำหนดความสูงของภาพใน .movie เป็น 375px */
+    object-fit: cover; /* ทำให้ภาพครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
 }
 
 .movie h2 {
-    padding: 15px;
-    font-size: 1.1em;
-    text-align: center;
-    color: #ffffff;
-    font-weight: 300;
+    padding: 15px; /* กำหนดระยะภายใน (padding) ของ h2 ใน .movie เป็น 15px */
+    font-size: 1.1em; /* กำหนดขนาดฟอนต์ของ h2 เป็น 1.1em */
+    text-align: center; /* จัดตำแหน่งข้อความใน h2 ให้อยู่กลาง */
+    color: #ffffff; /* ตั้งค่าสีตัวอักษรใน h2 เป็นสีขาว */
+    font-weight: 300; /* กำหนดน้ำหนักตัวอักษรของ h2 เป็น 300 (บาง) */
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1f1f1f;
-    color: #ffffff;
-    font-size: 0.9em;
+    text-align: center; /* จัดตำแหน่งข้อความใน footer ให้อยู่กลาง */
+    padding: 20px; /* กำหนดระยะภายใน (padding) ของ footer เป็น 20px */
+    background-color: #1f1f1f; /* ตั้งค่าสีพื้นหลังของ footer เป็นสีเทาเข้ม */
+    color: #ffffff; /* ตั้งค่าสีตัวอักษรใน footer เป็นสีขาว */
+    font-size: 0.9em; /* กำหนดขนาดฟอนต์ของ footer เป็น 0.9em */
 }
 
 @media (max-width: 600px) {
     .movie {
-        width: 100%;
+        width: 100%; /* กำหนดความกว้างของ .movie เป็น 100% เมื่อหน้าจอมีความกว้างน้อยกว่า 600px */
     }
 }

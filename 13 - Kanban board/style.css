@@ -1,267 +1,306 @@
+/* กำหนดตัวแปร CSS สำหรับสีพื้นหลังและสีข้อความ */
 :root {
-  --bg-color: #1a1a1a;
-  --text-color: #f0f0f0;
-  --category-1: #ff6b6b;
-  --category-2: #4ecdc4;
-  --category-3: #45b7d1;
-  --category-4: #f7b731;
-  --category-5: #a55eea;
+  --bg-color: #1a1a1a; /* สีพื้นหลัง */
+  --text-color: #f0f0f0; /* สีข้อความ */
+  --category-1: #ff6b6b; /* สีสำหรับหมวดหมู่ที่ 1 */
+  --category-2: #4ecdc4; /* สีสำหรับหมวดหมู่ที่ 2 */
+  --category-3: #45b7d1; /* สีสำหรับหมวดหมู่ที่ 3 */
+  --category-4: #f7b731; /* สีสำหรับหมวดหมู่ที่ 4 */
+  --category-5: #a55eea; /* สีสำหรับหมวดหมู่ที่ 5 */
 }
 
+/* กำหนดสไตล์สำหรับ body ของเอกสาร */
 body {
-  margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  overflow-y: hidden;
+  margin: 0; /* ไม่มีระยะขอบ */
+  background-color: var(--bg-color); /* ใช้สีพื้นหลังที่กำหนด */
+  color: var(--text-color); /* ใช้สีข้อความที่กำหนด */
+  font-family: Arial, sans-serif; /* กำหนดฟอนต์ */
+  overflow-y: hidden; /* ปิดการเลื่อนในแนวตั้ง */
 }
 
+/* กำหนดสไตล์สำหรับ h1 */
 h1 {
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px; /* ระยะห่างระหว่างตัวอักษร */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* เงาของข้อความ */
 }
 
+/* กำหนดสไตล์สำหรับชื่อหลัก */
 .main-title {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 10px;
+    text-align: center; /* จัดกลางข้อความ */
+    font-size: 3rem; /* ขนาดฟอนต์ */
+    margin-bottom: 10px; /* ระยะขอบด้านล่าง */
 }
 
+/* กำหนดสไตล์สำหรับ container ของการลาก */
 .drag-container {
-  margin: 20px;
+  margin: 20px; /* ระยะขอบรอบๆ */
 }
 
+/* กำหนดสไตล์สำหรับรายการที่ลาก */
 .drag-list {
-  display: flex;
-  align-items: flex-start;
+  display: flex; /* ใช้ flexbox */
+  align-items: flex-start; /* จัดแนวให้เริ่มต้นที่ด้านบน */
 }
 
+/* กำหนดสไตล์สำหรับคอลัมน์การลาก */
 .drag-column {
-  flex: 1;
-  margin: 0 10px;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  overflow-x: hidden;
+  flex: 1; /* ขยายให้เต็มพื้นที่ */
+  margin: 0 10px; /* ระยะขอบด้านซ้ายและขวา */
+  position: relative; /* กำหนดตำแหน่งแบบสัมพัทธ์ */
+  background-color: rgba(255, 255, 255, 0.1); /* สีพื้นหลังโปร่งใส */
+  border-radius: 10px; /* มุมโค้ง */
+  overflow-x: hidden; /* ปิดการเลื่อนในแนวนอน */
 }
 
+/* กำหนดสไตล์สำหรับ header */
 .header {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  border-radius: 10px;
-  padding: 10px;
+  display: flex; /* ใช้ flexbox */
+  justify-content: center; /* จัดกลาง */
+  margin: 10px; /* ระยะขอบรอบๆ */
+  border-radius: 10px; /* มุมโค้ง */
+  padding: 10px; /* ระยะห่างภายใน */
 }
 
+/* กำหนดสไตล์สำหรับ h1 ใน header */
 .header h1 {
-  font-size: 1.25rem;
-  margin: 0;
+  font-size: 1.25rem; /* ขนาดฟอนต์ */
+  margin: 0; /* ไม่มีระยะขอบ */
 }
 
+/* กำหนดสีพื้นหลังสำหรับ header ของคอลัมน์ backlog */
 .backlog-column .header {
-  background-color: var(--category-1);
+  background-color: var(--category-1); /* ใช้สีที่กำหนด */
 }
+/* กำหนดสีพื้นหลังสำหรับ header ของคอลัมน์ progress */
 .progress-column .header {
-  background-color: var(--category-2);
+  background-color: var(--category-2); /* ใช้สีที่กำหนด */
 }
+/* กำหนดสีพื้นหลังสำหรับ header ของคอลัมน์ complete */
 .complete-column .header {
-  background-color: var(--category-3);
+  background-color: var(--category-3); /* ใช้สีที่กำหนด */
 }
+/* กำหนดสีพื้นหลังสำหรับ header ของคอลัมน์ reject */
 .reject-column .header {
-  background-color: var(--category-4);
+  background-color: var(--category-4); /* ใช้สีที่กำหนด */
 }
 
+/* กำหนดสีพื้นหลังสำหรับ header ของคอลัมน์ new items */
 .new-items-column .header {
-  background-color: var(--category-5);
+  background-color: var(--category-5); /* ใช้สีที่กำหนด */
 }
 
+/* กำหนดสไตล์สำหรับ scroll ที่กำหนดเอง */
 .custom-scroll {
-  overflow-y: auto;
-  max-height: 52vh;
-}
+  overflow-y: auto; /* เปิดการเลื่อนในแนวตั้ง */
+  max-height: 52vh; /* ความสูงสูงสุด */
 
+}
+/* กำหนดสไตล์สำหรับรายการที่ลาก */
 .drag-item-list {
-  min-height: 50px;
-  padding: 10px;
+  min-height: 50px; /* ความสูงขั้นต่ำ */
+  padding: 10px; /* ระยะห่างภายใน */
 }
 
+/* กำหนดสไตล์สำหรับรายการที่ลาก */
 .drag-item {
-  margin: 10px 0;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  line-height: 1.5rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    cursor: move; 
+  margin: 10px 0; /* ระยะขอบด้านบนและล่าง */
+  padding: 15px; /* ระยะห่างภายใน */
+  background-color: rgba(255, 255, 255, 0.1); /* สีพื้นหลังโปร่งใส */
+  border-radius: 10px; /* มุมโค้ง */
+  line-height: 1.5rem; /* ระยะห่างระหว่างบรรทัด */
+  letter-spacing: 1px; /* ระยะห่างระหว่างตัวอักษร */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer */
+  transition: all 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวล */
+  user-select: none; /* ปิดการเลือกข้อความ */
+    -webkit-user-select: none; /* สำหรับเบราว์เซอร์ WebKit */
+    -moz-user-select: none; /* สำหรับเบราว์เซอร์ Firefox */
+    -ms-user-select: none; /* สำหรับเบราว์เซอร์ Internet Explorer */
+    cursor: move; /* เปลี่ยนเคอร์เซอร์เป็น move */
 }
 
+/* กำหนดสไตล์เมื่อเลื่อนเมาส์ไปที่รายการที่ลาก */
 .drag-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px); /* เลื่อนขึ้น 5px */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* เงา */
 }
 
+/* กำหนดสไตล์สำหรับเหตุผลของรายการที่ลาก */
 .drag-item-reason {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #aaa;
+  margin-top: 10px; /* ระยะขอบด้านบน */
+  font-size: 0.9rem; /* ขนาดฟอนต์ */
+  font-style: italic; /* ตัวเอียง */
+  color: #aaa; /* สีข้อความ */
 }
 
 /* Custom scrollbar */
+/* กำหนดความกว้างของ scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 10px; /* ความกว้าง */
 }
 
+/* กำหนดสไตล์สำหรับ track ของ scrollbar */
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1); /* สีพื้นหลัง */
 }
 
+/* กำหนดสไตล์สำหรับ thumb ของ scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3); /* สี thumb */
+  border-radius: 5px; /* มุมโค้ง */
 }
 
+/* กำหนดสไตล์เมื่อเลื่อนเมาส์ไปที่ thumb ของ scrollbar */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5); /* สี thumb เมื่อ hover */
 }
 
 /* ปุ่มเพิ่มรายการใหม่ */
+/* กำหนดสไตล์สำหรับปุ่มเพิ่มรายการใหม่ */
 .add-item-button {
-    position: static; /* Change from fixed to static */
-    display: block;
-    margin: 20px auto; /* Center the button */
-    padding: 15px 20px;
-    background-color: var(--category-3);
-    color: var(--text-color);
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: static; /* เปลี่ยนจาก fixed เป็น static */
+    display: block; /* แสดงเป็น block */
+    margin: 20px auto; /* จัดกลางปุ่ม */
+    padding: 15px 20px; /* ระยะห่างภายใน */
+    background-color: var(--category-3); /* สีพื้นหลัง */
+    color: var(--text-color); /* สีข้อความ */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 50px; /* มุมโค้ง */
+    font-size: 1rem; /* ขนาดฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer */
+    transition: all 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวล */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
 }
 
+/* กำหนดสไตล์เมื่อเลื่อนเมาส์ไปที่ปุ่มเพิ่มรายการใหม่ */
 .add-item-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* เลื่อนขึ้น 3px */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* เงา */
 }
 
 /* Modal Styles */
+/* กำหนดสไตล์สำหรับ modal */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
+    display: none; /* ไม่แสดง modal โดยเริ่มต้น */
+    position: fixed; /* ตำแหน่งคงที่ */
+    z-index: 1000; /* ระดับ z สูงสุด */
+    left: 0; /* ตำแหน่งซ้าย */
+    top: 0; /* ตำแหน่งบน */
+    width: 100%; /* ความกว้าง 100% */
+    height: 100%; /* ความสูง 100% */
+    background-color: rgba(0, 0, 0, 0.7); /* สีพื้นหลังโปร่งใส */
+    backdrop-filter: blur(5px); /* เบลอพื้นหลัง */
 }
 
+/* กำหนดสไตล์สำหรับเนื้อหาของ modal */
 .modal-content {
-    background-color: #2a2a2a;
-    margin: 15% auto;
-    padding: 30px;
-    border: none;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    animation: modalFadeIn 0.3s ease-out;
+    background-color: #2a2a2a; /* สีพื้นหลัง */
+    margin: 15% auto; /* ระยะขอบด้านบนและจัดกลาง */
+    padding: 30px; /* ระยะห่างภายใน */
+    border: none; /* ไม่มีกรอบ */
+    width: 90%; /* ความกว้าง 90% */
+    max-width: 400px; /* ความกว้างสูงสุด 400px */
+    border-radius: 15px; /* มุมโค้ง */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* เงา */
+    animation: modalFadeIn 0.3s ease-out; /* การแสดงผลแบบ fade-in */
 }
 
+/* กำหนด animation สำหรับ modal fade-in */
 @keyframes modalFadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-50px);
+        opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+        transform: translateY(-50px); /* เริ่มต้นที่เลื่อนขึ้น 50px */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* สิ้นสุดที่ความโปร่งใส 1 */
+        transform: translateY(0); /* กลับสู่ตำแหน่งเดิม */
     }
 }
 
+/* กำหนดสไตล์สำหรับ header ของ modal */
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #444;
-    padding-bottom: 15px;
+    display: flex; /* ใช้ flexbox */
+    justify-content: space-between; /* จัดให้มีระยะห่างระหว่าง */
+    align-items: center; /* จัดแนวกลาง */
+    margin-bottom: 20px; /* ระยะขอบด้านล่าง */
+    border-bottom: 1px solid #444; /* เส้นขอบด้านล่าง */
+    padding-bottom: 15px; /* ระยะห่างด้านล่าง */
 }
 
+/* กำหนดสไตล์สำหรับ h2 ใน header ของ modal */
 .modal-header h2 {
-    color: #ffffff;
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 600;
+    color: #ffffff; /* สีข้อความ */
+    margin: 0; /* ไม่มีระยะขอบ */
+    font-size: 1.5rem; /* ขนาดฟอนต์ */
+    font-weight: 600; /* น้ำหนักฟอนต์ */
 }
 
+/* กำหนดสไตล์สำหรับปุ่มปิด modal */
 .close {
-    color: #888;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    color: #888; /* สีข้อความ */
+    font-size: 28px; /* ขนาดฟอนต์ */
+    font-weight: bold; /* น้ำหนักฟอนต์หนา */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer */
+    transition: color 0.3s ease; /* การเปลี่ยนแปลงสีที่นุ่มนวล */
 }
 
+/* กำหนดสไตล์เมื่อเลื่อนเมาส์ไปที่ปุ่มปิดหรือเมื่อโฟกัส */
 .close:hover,
 .close:focus {
-    color: #ffffff;
+    color: #ffffff; /* เปลี่ยนสีข้อความเป็นขาว */
 }
 
+/* กำหนดสไตล์สำหรับ input text ใน modal */
 .modal-body input[type="text"] {
-    width: 375px;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #3a3a3a;
-    color: #ffffff;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    width: 375px; /* ความกว้าง */
+    padding: 12px; /* ระยะห่างภายใน */
+    margin-bottom: 20px; /* ระยะขอบด้านล่าง */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 8px; /* มุมโค้ง */
+    background-color: #3a3a3a; /* สีพื้นหลัง */
+    color: #ffffff; /* สีข้อความ */
+    font-size: 1rem; /* ขนาดฟอนต์ */
+    transition: background-color 0.3s ease; /* การเปลี่ยนแปลงสีพื้นหลังที่นุ่มนวล */
 }
 
+/* กำหนดสไตล์เมื่อ input text ถูกโฟกัส */
 .modal-body input[type="text"]:focus {
-    outline: none;
-    background-color: #4a4a4a;
-    box-shadow: 0 0 0 2px rgba(69, 183, 209, 0.5);
+    outline: none; /* ไม่มีเส้นขอบ */
+    background-color: #4a4a4a; /* เปลี่ยนสีพื้นหลัง */
+    box-shadow: 0 0 0 2px rgba(69, 183, 209, 0.5); /* เงา */
 }
 
+/* กำหนดสไตล์สำหรับ footer ของ modal */
 .modal-footer {
-    text-align: right;
+    text-align: right; /* จัดข้อความไปทางขวา */
 }
+/* กำหนดสไตล์สำหรับปุ่มใน footer ของ modal */
 
 .modal-footer button {
-    padding: 12px 24px;
-    background-color: #45b7d1;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 12px 24px; /* ระยะห่างภายใน */
+    background-color: #45b7d1; /* สีพื้นหลัง */
+    color: #ffffff; /* สีข้อความ */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 8px; /* มุมโค้ง */
+    font-size: 1rem; /* ขนาดฟอนต์ */
+    font-weight: 600; /* น้ำหนักฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer */
+    transition: all 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวล */
 }
 
 .modal-footer button:hover {
-    background-color: #3da5b8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* กำหนดสไตล์เมื่อเลื่อนเมาส์ไปที่ปุ่มใน footer ของ modal */
+    background-color: #3da5b8; /* เปลี่ยนสีพื้นหลัง */
+    transform: translateY(-2px); /* เลื่อนขึ้น 2px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
 }
 
+/* กำหนดสไตล์เมื่อปุ่มถูกกด */
 .modal-footer button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0); /* กลับสู่ตำแหน่งเดิม */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เงา */
 }
 
+/* กำหนดสไตล์เมื่อมีการลาก */
 .dragging {
-    opacity: 0.5;
+    opacity: 0.5; /* ความโปร่งใส 50% */
 }

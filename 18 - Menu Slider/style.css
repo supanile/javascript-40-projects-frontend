@@ -1,240 +1,274 @@
 :root {
-    --primary-color: #1a1a2e;
-    --secondary-color: #e94560;
-    --text-color: #f0f0f0;
-    --background-color: #16213e;
-    --card-background: #0f3460;
-    --modal-delay: 0.3s;
+    /* กำหนดตัวแปร CSS สำหรับสีหลักและสีรอง */
+    --primary-color: #1a1a2e; /* สีหลัก */
+    --secondary-color: #e94560; /* สีรอง */
+    --text-color: #f0f0f0; /* สีข้อความ */
+    --background-color: #16213e; /* สีพื้นหลัง */
+    --card-background: #0f3460; /* สีพื้นหลังของการ์ด */
+    --modal-delay: 0.3s; /* เวลาหน่วงสำหรับการแสดง modal */
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* ตั้งค่าขนาดของกล่องให้เป็น border-box และลบ margin, padding */
+    box-sizing: border-box; /* ใช้ border-box สำหรับการคำนวณขนาด */
+    margin: 0; /* ลบ margin */
+    padding: 0; /* ลบ padding */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: transform 0.3s ease;
+    /* ตั้งค่าฟอนต์และสีพื้นหลังสำหรับ body */
+    font-family: 'Kanit', sans-serif; /* ฟอนต์ที่ใช้ */
+    background-color: var(--background-color); /* สีพื้นหลัง */
+    color: var(--text-color); /* สีข้อความ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    transition: transform 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวลเมื่อมีการเปลี่ยนแปลง transform */
 }
 
 nav {
-    background-color: var(--primary-color);
-    border-right: 2px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    z-index: 100;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    /* ตั้งค่าการแสดงผลของ navigation bar */
+    background-color: var(--primary-color); /* สีพื้นหลังของ nav */
+    border-right: 2px solid rgba(255, 255, 255, 0.1); /* เส้นขอบด้านขวา */
+    color: var(--text-color); /* สีข้อความใน nav */
+    position: fixed; /* ตำแหน่งคงที่ */
+    top: 0; /* อยู่ที่ด้านบน */
+    left: 0; /* อยู่ที่ด้านซ้าย */
+    width: 250px; /* ความกว้างของ nav */
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    z-index: 100; /* ระดับการซ้อนทับ */
+    transform: translateX(-100%); /* ซ่อน nav โดยเลื่อนออกไปทางซ้าย */
+    transition: transform 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวลเมื่อมีการเปลี่ยนแปลง transform */
 }
 
 nav .logo {
-    padding: 30px 0;
-    text-align: center;
+    /* ตั้งค่าการแสดงผลของโลโก้ใน nav */
+    padding: 30px 0; /* ระยะห่างด้านบนและล่าง */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
 }
 
 nav .logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid var(--secondary-color);
+    /* ตั้งค่าขนาดและรูปทรงของโลโก้ */
+    width: 100px; /* ความกว้างของโลโก้ */
+    height: 100px; /* ความสูงของโลโก้ */
+    border-radius: 50%; /* ทำให้โลโก้เป็นวงกลม */
+    border: 3px solid var(--secondary-color); /* เส้นขอบของโลโก้ */
 }
 
 nav ul {
-    padding: 0;
-    list-style-type: none;
+    /* ตั้งค่ารายการใน nav */
+    padding: 0; /* ลบ padding */
+    list-style-type: none; /* ลบสัญลักษณ์รายการ */
 }
 
 nav ul li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    /* ตั้งค่ารายการแต่ละรายการใน nav */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* เส้นขอบด้านล่าง */
+    padding: 20px; /* ระยะห่างภายใน */
 }
 
 nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    /* ตั้งค่าลิงก์ในรายการ nav */
+    color: var(--text-color); /* สีข้อความ */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    font-size: 18px; /* ขนาดฟอนต์ */
+    transition: color 0.3s ease; /* การเปลี่ยนแปลงสีที่นุ่มนวล */
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color);
+    /* เปลี่ยนสีเมื่อชี้เมาส์ไปที่ลิงก์ */
+    color: var(--secondary-color); /* สีเมื่อ hover */
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-size: 130%;
-    position: relative;
-    text-align: center;
-    padding: 60px 15px;
+    /* ตั้งค่าการแสดงผลของ header */
+    background-color: var(--primary-color); /* สีพื้นหลังของ header */
+    color: var(--text-color); /* สีข้อความใน header */
+    font-size: 130%; /* ขนาดฟอนต์ */
+    position: relative; /* ตำแหน่งสัมพันธ์ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    padding: 60px 15px; /* ระยะห่างภายใน */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    /* ตั้งค่าหัวข้อหลักใน header */
+    margin: 0; /* ลบ margin */
+    font-size: 2.5em; /* ขนาดฟอนต์ */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
 }
 
 header p {
-    margin: 30px 0;
-    font-size: 1.2em;
+    /* ตั้งค่าข้อความใน header */
+    margin: 30px 0; /* ระยะห่างด้านบนและล่าง */
+    font-size: 1.2em; /* ขนาดฟอนต์ */
 }
 
 button, input[type="submit"] {
-    background-color: var(--secondary-color);
-    font-family: 'Kanit', sans-serif;
-    border: 0;
-    border-radius: 5px;
-    color: var(--text-color);
-    padding: 12px 24px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    /* ตั้งค่าปุ่มและปุ่มส่งข้อมูล */
+    background-color: var(--secondary-color); /* สีพื้นหลัง */
+    font-family: 'Kanit', sans-serif; /* ฟอนต์ที่ใช้ */
+    border: 0; /* ลบเส้นขอบ */
+    border-radius: 5px; /* มุมโค้ง */
+    color: var(--text-color); /* สีข้อความ */
+    padding: 12px 24px; /* ระยะห่างภายใน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    transition: background-color 0.3s ease; /* การเปลี่ยนแปลงสีที่นุ่มนวล */
 }
 
 button:hover, input[type="submit"]:hover {
-    background-color: #d63851;
+    /* เปลี่ยนสีเมื่อ hover บนปุ่ม */
+    background-color: #d63851; /* สีเมื่อ hover */
 }
 
 .toggle {
-    background: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    /* ตั้งค่าปุ่ม toggle */
+    background: rgba(255, 255, 255, 0.1); /* สีพื้นหลัง */
+    position: absolute; /* ตำแหน่งสัมพัทธ์ */
+    top: 20px; /* ระยะห่างจากด้านบน */
+    left: 20px; /* ระยะห่างจากด้านซ้าย */
 }
 
 .create-account {
-    font-family: 'Kanit', sans-serif;
-    padding: 12px 30px;
-    font-weight: bold;
+    /* ตั้งค่าปุ่มสร้างบัญชี */
+    font-family: 'Kanit', sans-serif; /* ฟอนต์ที่ใช้ */
+    padding: 12px 30px; /* ระยะห่างภายใน */
+    font-weight: bold; /* ตัวหนา */
 }
 
 .container {
-    padding: 30px;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 1000px;
+    /* ตั้งค่าภาชนะสำหรับเนื้อหา */
+    padding: 30px; /* ระยะห่างภายใน */
+    margin: 0 auto; /* จัดให้อยู่กลาง */
+    max-width: 100%; /* ความกว้างสูงสุด */
+    width: 1000px; /* ความกว้าง */
 }
 
 body.show-nav {
-    transform: translateX(250px);
+    /* เปลี่ยนแปลง transform ของ body เมื่อ nav แสดง */
+    transform: translateX(250px); /* เลื่อน body ไปทางขวา */
 }
 
 .modal-container {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    /* ตั้งค่าภาชนะสำหรับ modal */
+    display: none; /* ซ่อน modal โดยค่าเริ่มต้น */
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
+    position: fixed; /* ตำแหน่งคงที่ */
+    top: 0; /* อยู่ที่ด้านบน */
+    left: 0; /* อยู่ที่ด้านซ้าย */
+    right: 0; /* อยู่ที่ด้านขวา */
+    bottom: 0; /* อยู่ที่ด้านล่าง */
 }
 
 .modal {
-    background-color: var(--card-background);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    width: 400px;
-    animation: modalOpen var(--modal-delay) ease-out;
+    /* ตั้งค่าการแสดงผลของ modal */
+    background-color: var(--card-background); /* สีพื้นหลังของ modal */
+    border-radius: 10px; /* มุมโค้ง */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* เงา */
+    position: absolute; /* ตำแหน่งสัมพัทธ์ */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกิน */
+    top: 50%; /* อยู่ที่กลางแนวตั้ง */
+    left: 50%; /* อยู่ที่กลางแนวนอน */
+    transform: translate(-50%, -50%); /* เลื่อน modal ให้อยู่กลาง */
+    max-width: 100%; /* ความกว้างสูงสุด */
+    width: 400px; /* ความกว้าง */
+    animation: modalOpen var(--modal-delay) ease-out; /* การแสดงผลแบบอนิเมชัน */
 }
 
 .modal-container.show-modal {
-    display: block;
+    /* แสดง modal เมื่อมีคลาส show-modal */
+    display: block; /* แสดง modal */
 }
 
 .modal-header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 20px;
+    /* ตั้งค่าหัวข้อใน modal */
+    background-color: var(--primary-color); /* สีพื้นหลัง */
+    color: var(--text-color); /* สีข้อความ */
+    padding: 20px; /* ระยะห่างภายใน */
 }
 
 .modal-header h3 {
-    margin: 0;
-    font-size: 1.5em;
+    /* ตั้งค่าหัวข้อย่อยใน modal */
+    margin: 0; /* ลบ margin */
+    font-size: 1.5em; /* ขนาดฟอนต์ */
 }
 
 .modal-content {
-    padding: 30px;
+    /* ตั้งค่าคอนเทนต์ใน modal */
+    padding: 30px; /* ระยะห่างภายใน */
 }
 
 .modal-form div {
-    margin: 20px 0;
+    /* ตั้งค่าภายในฟอร์มใน modal */
+    margin: 20px 0; /* ระยะห่างด้านบนและล่าง */
 }
 
 .modal-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    /* ตั้งค่าป้ายชื่อในฟอร์ม */
+    display: block; /* แสดงเป็นบล็อก */
+    margin-bottom: 8px; /* ระยะห่างด้านล่าง */
+    font-weight: bold; /* ตัวหนา */
 }
 
 .modal-form .form-input {
-    padding: 12px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--text-color);
-    border-radius: 5px;
+    /* ตั้งค่าฟิลด์อินพุตในฟอร์ม */
+    padding: 12px; /* ระยะห่างภายใน */
+    width: 100%; /* ความกว้างเต็ม */
+    background-color: rgba(255, 255, 255, 0.1); /* สีพื้นหลัง */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* เส้นขอบ */
+    color: var(--text-color); /* สีข้อความ */
+    border-radius: 5px; /* มุมโค้ง */
 }
 
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    font-size: 25px;
-    color: var(--text-color);
+    /* ตั้งค่าปุ่มปิดใน modal */
+    position: absolute; /* ตำแหน่งสัมพัทธ์ */
+    top: 10px; /* ระยะห่างจากด้านบน */
+    right: 10px; /* ระยะห่างจากด้านขวา */
+    background-color: transparent; /* ไม่มีสีพื้นหลัง */
+    font-size: 25px; /* ขนาดฟอนต์ */
+    color: var(--text-color); /* สีข้อความ */
 }
 
 @keyframes modalOpen {
+    /* กำหนดอนิเมชันสำหรับการเปิด modal */
     from {
-        opacity: 0;
-        transform: translate(-50%, -60%);
+        opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+        transform: translate(-50%, -60%); /* เริ่มต้นที่เลื่อนขึ้น */
     }
     to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
+        opacity: 1; /* สิ้นสุดที่ความโปร่งใส 1 */
+        transform: translate(-50%, -50%); /* สิ้นสุดที่กลาง */
     }
 }
 
-/* Additional styles for better dark theme */
+/* สไตล์เพิ่มเติมสำหรับธีมมืด */
 .container h2 {
-    color: var(--secondary-color);
-    margin-bottom: 20px;
+    /* ตั้งค่าหัวข้อใน container */
+    color: var(--secondary-color); /* สีข้อความ */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
 }
 
 .container p {
-    margin-bottom: 20px;
+    /* ตั้งค่าข้อความใน container */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
 }
 
-/* Responsive design */
+/* การออกแบบที่ตอบสนอง */
 @media (max-width: 768px) {
+    /* ตั้งค่าการออกแบบสำหรับหน้าจอที่มีความกว้างน้อยกว่า 768px */
     nav {
-        width: 200px;
+        width: 200px; /* ความกว้างของ nav */
     }
     
     body.show-nav {
-        transform: translateX(200px);
+        /* เปลี่ยนแปลง transform ของ body เมื่อ nav แสดง */
+        transform: translateX(200px); /* เลื่อน body ไปทางขวา */
     }
     
     header {
-        padding: 40px 15px;
+        padding: 40px 15px; /* ระยะห่างภายใน */
     }
     
     header h1 {
-        font-size: 2em;
+        font-size: 2em; /* ขนาดฟอนต์ */
     }
 }

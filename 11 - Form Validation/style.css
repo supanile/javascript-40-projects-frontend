@@ -1,124 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap'); 
 
 * {
     font-family: 'Kanit', sans-serif;
-    box-sizing: border-box;
+    box-sizing: border-box; /* กำหนดให้การคำนวณขนาดขององค์ประกอบรวม padding และ border */
 }
 
 body {
-    background-color: #f0f2f5;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+    background-color: #f0f2f5; /* กำหนดสีพื้นหลังของ body */
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* กำหนดภาพพื้นหลังเป็น gradient */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงองค์ประกอบ */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวนอนให้อยู่กลาง */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำให้เต็มหน้าจอ */
+    margin: 0; /* ลบ margin ของ body */
 }
 
 .container {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    max-width: 90%;
-    overflow: hidden;
+    background-color: #fff; /* กำหนดสีพื้นหลังของ container เป็นสีขาว */
+    border-radius: 15px; /* ทำมุมของ container ให้กลมมน */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ container */
+    width: 400px; /* กำหนดความกว้างของ container */
+    max-width: 90%; /* กำหนดความกว้างสูงสุดไม่เกิน 90% ของหน้าจอ */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ container */
 }
 
 .form {
-    padding: 40px;
+    padding: 40px; /* กำหนด padding ภายใน form */
 }
 
 h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
+    color: #333; /* กำหนดสีของหัวข้อ h2 */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-bottom: 30px; /* กำหนด margin ด้านล่างให้กับ h2 */
+    font-weight: 600; /* กำหนดน้ำหนักตัวอักษรให้หนา */
 }
 
 .form-control {
-    margin-bottom: 25px;
-    position: relative;
+    margin-bottom: 25px; /* กำหนด margin ด้านล่างให้กับแต่ละ form-control */
+    position: relative; /* กำหนดตำแหน่งให้เป็น relative เพื่อใช้กับตำแหน่งของลูกหลาน */
 }
 
 .form-control label {
-    color: #555;
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 400;
+    color: #555; /* กำหนดสีของ label */
+    display: block; /* แสดง label เป็น block */
+    margin-bottom: 8px; /* กำหนด margin ด้านล่างให้กับ label */
+    font-weight: 400; /* กำหนดน้ำหนักตัวอักษรให้ปกติ */
 }
 
 .form-control input {
-    border: 2px solid #f0f0f0;
-    border-radius: 8px;
-    display: block;
-    width: 100%;
-    padding: 12px;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    border: 2px solid #f0f0f0; /* กำหนดกรอบให้กับ input */
+    border-radius: 8px; /* ทำมุมของ input ให้กลมมน */
+    display: block; /* แสดง input เป็น block */
+    width: 100%; /* กำหนดความกว้างของ input ให้เต็ม */
+    padding: 12px; /* กำหนด padding ภายใน input */
+    font-size: 14px; /* กำหนดขนาดตัวอักษรของ input */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบง่ายเมื่อมีการเปลี่ยนแปลง */
 }
 
 .form-control input:focus {
-    outline: none;
-    border-color: #3498db;
+    outline: none; /* ลบเส้นขอบเมื่อ input ถูกเลือก */
+    border-color: #3498db; /* เปลี่ยนสีกรอบเมื่อ input ถูกเลือก */
 }
 
 .form-control.success input {
-    border-color: #2ecc71;
+    border-color: #2ecc71; /* เปลี่ยนสีกรอบเป็นสีเขียวเมื่อ validation สำเร็จ */
 }
 
 .form-control.error input {
-    border-color: #e74c3c;
+    border-color: #e74c3c; /* เปลี่ยนสีกรอบเป็นสีแดงเมื่อ validation ล้มเหลว */
 }
 
 .form-control i {
-    position: absolute;
-    top: 40px;
-    right: 10px;
-    visibility: hidden;
+    position: absolute; /* กำหนดตำแหน่งให้เป็น absolute */
+    top: 40px; /* กำหนดตำแหน่งด้านบน */
+    right: 10px; /* กำหนดตำแหน่งด้านขวา */
+    visibility: hidden; /* ซ่อนไอคอนเริ่มต้น */
 }
 
 .form-control.success i.fa-check-circle {
-    color: #2ecc71;
-    visibility: visible;
+    color: #2ecc71; /* เปลี่ยนสีไอคอนเป็นสีเขียวเมื่อ validation สำเร็จ */
+    visibility: visible; /* แสดงไอคอนเมื่อ validation สำเร็จ */
 }
 
 .form-control.error i.fa-exclamation-circle {
-    color: #e74c3c;
-    visibility: visible;
+    color: #e74c3c; /* เปลี่ยนสีไอคอนเป็นสีแดงเมื่อ validation ล้มเหลว */
+    visibility: visible; /* แสดงไอคอนเมื่อ validation ล้มเหลว */
 }
 
 .form-control small {
-    color: #e74c3c;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    visibility: hidden;
+    color: #e74c3c; /* กำหนดสีของข้อความเล็ก */
+    position: absolute; /* กำหนดตำแหน่งให้เป็น absolute */
+    bottom: -20px; /* กำหนดตำแหน่งด้านล่าง */
+    left: 0; /* กำหนดตำแหน่งด้านซ้าย */
+    visibility: hidden; /* ซ่อนข้อความเล็กเริ่มต้น */
 }
 
 .form-control.error small {
-    visibility: visible;
+    visibility: visible; /* แสดงข้อความเล็กเมื่อ validation ล้มเหลว */
 }
 
 .form button {
-    cursor: pointer;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    display: block;
-    font-size: 16px;
-    padding: 15px;
-    margin-top: 30px;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ปุ่ม */
+    background-color: #3498db; /* กำหนดสีพื้นหลังของปุ่ม */
+    color: #fff; /* กำหนดสีตัวอักษรของปุ่มเป็นสีขาว */
+    border: none; /* ลบกรอบของปุ่ม */
+    border-radius: 8px; /* ทำมุมของปุ่มให้กลมมน */
+    display: block; /* แสดงปุ่มเป็น block */
+    font-size: 16px; /* กำหนดขนาดตัวอักษรของปุ่ม */
+    padding: 15px; /* กำหนด padding ภายในปุ่ม */
+    margin-top: 30px; /* กำหนด margin ด้านบนให้กับปุ่ม */
+    width: 100%; /* กำหนดความกว้างของปุ่มให้เต็ม */
+    transition: background-color 0.3s ease; /* กำหนดการเปลี่ยนแปลงสีพื้นหลังให้เรียบง่าย */
 }
 
 .form button:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อชี้ไปที่ปุ่ม */
 }
 
 @media screen and (max-width: 480px) {
     .form {
-        padding: 30px;
+        padding: 30px; /* ลด padding ของ form เมื่อหน้าจอมีความกว้างน้อยกว่า 480px */
     }
 }

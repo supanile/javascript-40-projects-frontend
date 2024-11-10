@@ -1,88 +1,101 @@
+/* กำหนดตัวแปร CSS สำหรับสีหลักและสีรอง */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --background-color: #f4f4f4;
-    --text-color: #333;
+    --primary-color: #3498db; /* สีหลัก */
+    --secondary-color: #2c3e50; /* สีรอง */
+    --background-color: #f4f4f4; /* สีพื้นหลัง */
+    --text-color: #333; /* สีข้อความ */
 }
 
+/* กำหนดให้ box-sizing เป็น border-box เพื่อให้การคำนวณขนาดของ element รวม padding และ border */
 html {
     box-sizing: border-box;
 }
 
+/* กำหนดค่าพื้นฐานสำหรับ body */
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    margin: 0; /* ไม่มี margin */
+    font-family: 'Poppins', sans-serif; /* กำหนดฟอนต์ */
+    background-color: var(--background-color); /* ใช้สีพื้นหลังจากตัวแปร */
+    color: var(--text-color); /* ใช้สีข้อความจากตัวแปร */
 }
 
+/* กำหนดสไตล์สำหรับ header */
 header {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--primary-color); /* ใช้สีพื้นหลังจากตัวแปร */
+    color: white; /* กำหนดสีข้อความเป็นสีขาว */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    padding: 2rem 0; /* กำหนด padding ด้านบนและล่าง */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* เพิ่มเงาให้กับ header */
 }
 
+/* กำหนดสไตล์สำหรับ h1 */
 h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    font-weight: 600;
+    margin: 0; /* ไม่มี margin */
+    font-size: 2.5rem; /* ขนาดฟอนต์ */
+    letter-spacing: 2px; /* ระยะห่างระหว่างตัวอักษร */
+    font-weight: 600; /* น้ำหนักฟอนต์ */
 }
 
+/* กำหนดสไตล์สำหรับ paragraph ใน header */
 header p {
-    margin: 0.5rem 0 0;
-    font-weight: 300;
-    opacity: 0.8;
+    margin: 0.5rem 0 0; /* กำหนด margin ด้านบน */
+    font-weight: 300; /* น้ำหนักฟอนต์ */
+    opacity: 0.8; /* ความโปร่งใส */
 }
 
+/* กำหนดสไตล์สำหรับ container ของรูปภาพ */
 .img-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    columns: 3;
-    column-gap: 1rem;
-    padding: 0 1rem;
+    max-width: 1200px; /* ขนาดสูงสุดของ container */
+    margin: 2rem auto; /* กำหนด margin ด้านบนและล่าง และจัดกลาง */
+    columns: 3; /* แบ่งคอลัมน์เป็น 3 คอลัมน์ */
+    column-gap: 1rem; /* ระยะห่างระหว่างคอลัมน์ */
+    padding: 0 1rem; /* กำหนด padding ด้านซ้ายและขวา */
 }
 
+/* กำหนดสไตล์สำหรับรูปภาพใน container */
 .img-container img {
-    width: 100%;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    width: 100%; /* กำหนดให้รูปภาพมีความกว้าง 100% ของ container */
+    margin-bottom: 1rem; /* กำหนด margin ด้านล่าง */
+    border-radius: 5px; /* มุมของรูปภาพจะโค้ง */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* เพิ่มเงาให้กับรูปภาพ */
+    transition: transform 0.3s ease; /* กำหนดการเปลี่ยนแปลงเมื่อ hover */
 }
 
+/* กำหนดสไตล์เมื่อ hover รูปภาพ */
 .img-container img:hover {
-    transform: scale(1.03);
+    transform: scale(1.03); /* ขยายรูปภาพเมื่อ hover */
 }
 
+/* กำหนดสไตล์สำหรับ loader */
 .loader {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid var(--primary-color);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
+    border: 5px solid #f3f3f3; /* กำหนดขอบเป็นสีเทาอ่อน */
+    border-top: 5px solid var(--primary-color); /* ขอบด้านบนเป็นสีหลัก */
+    border-radius: 50%; /* ทำให้ loader เป็นวงกลม */
+    width: 50px; /* กำหนดความกว้าง */
+    height: 50px; /* กำหนดความสูง */
+    animation: spin 1s linear infinite; /* กำหนด animation ให้หมุน */
+    margin: 20px auto; /* กำหนด margin ด้านบนและล่าง และจัดกลาง */
 }
 
+/* กำหนด animation สำหรับการหมุน */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); } /* เริ่มต้นที่ 0 องศา */
+    100% { transform: rotate(360deg); } /* หมุนครบ 360 องศา */
 }
 
+/* กำหนดสไตล์สำหรับหน้าจอที่มีความกว้างไม่เกิน 1024px */
 @media screen and (max-width: 1024px) {
     .img-container {
-        columns: 2;
+        columns: 2; /* แบ่งคอลัมน์เป็น 2 คอลัมน์ */
     }
 }
 
+/* กำหนดสไตล์สำหรับหน้าจอที่มีความกว้างไม่เกิน 600px */
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* ขนาดฟอนต์ของ h1 จะลดลง */
     }
     .img-container {
-        columns: 1;
+        columns: 1; /* แบ่งคอลัมน์เป็น 1 คอลัมน์ */
     }
 }

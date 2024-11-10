@@ -1,122 +1,122 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* กำหนดให้ทุกองค์ประกอบใช้ box-sizing แบบ border-box */
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) เป็น 0 */
+    padding: 0; /* ตั้งค่าการเติม (padding) เป็น 0 */
 }
 
 body {
-    width: 100vw;
-    min-height: 100vh;
-    font-family: 'Kanit', sans-serif;
-    font-size: 1.5em;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100vw; /* กำหนดความกว้างของ body เป็น 100% ของ viewport width */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body เป็น 100% ของ viewport height */
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์ที่ใช้ใน body */
+    font-size: 1.5em; /* กำหนดขนาดฟอนต์เป็น 1.5 เท่าของขนาดฟอนต์พื้นฐาน */
+    background-color: #1a1a1a; /* กำหนดสีพื้นหลังเป็นสีเทาเข้ม */
+    color: #ffffff; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงองค์ประกอบภายใน */
+    flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งองค์ประกอบให้อยู่กลางแนวนอน */
 }
 
 .header {
-    background: linear-gradient(45deg, #FF512F, #DD2476);
-    width: 100%;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
+    background: linear-gradient(45deg, #FF512F, #DD2476); /* กำหนดพื้นหลังเป็น gradient */
+    width: 100%; /* กำหนดความกว้างของ header เป็น 100% */
+    padding: 1.5rem; /* กำหนดการเติมภายใน (padding) เป็น 1.5rem */
+    text-align: center; /* จัดตำแหน่งข้อความให้อยู่กลาง */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ header */
+    position: relative; /* กำหนดตำแหน่งเป็น relative เพื่อให้สามารถใช้ตำแหน่ง absolute ภายในได้ */
 }
 
 .title {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-weight: 600; /* กำหนดน้ำหนักฟอนต์ให้หนาขึ้น */
+    margin-bottom: 0.5rem; /* กำหนดระยะขอบด้านล่างเป็น 0.5rem */
 }
 
 .subtitle {
-    font-size: 0.8em;
-    opacity: 0.9;
+    font-size: 0.8em; /* กำหนดขนาดฟอนต์เป็น 0.8 เท่าของขนาดฟอนต์พื้นฐาน */
+    opacity: 0.9; /* กำหนดความโปร่งใสให้กับ subtitle */
 }
 
 .container {
-    width: 90%;
-    max-width: 800px;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    width: 90%; /* กำหนดความกว้างของ container เป็น 90% */
+    max-width: 800px; /* กำหนดความกว้างสูงสุดเป็น 800px */
+    margin: 2rem auto; /* กำหนดระยะขอบด้านบนและด้านล่างเป็น 2rem และจัดกลางในแนวนอน */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงองค์ประกอบภายใน */
+    flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งองค์ประกอบให้อยู่กลางแนวนอน */
+    gap: 2rem; /* กำหนดระยะห่างระหว่างองค์ประกอบเป็น 2rem */
 }
 
 .message {
-    width: 100%;
-    min-height: 200px;
-    background-color: #2d2d2d;
-    border-radius: 12px;
-    padding: 1.5rem;
-    line-height: 1.6;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* กำหนดความกว้างของ message เป็น 100% */
+    min-height: 200px; /* กำหนดความสูงขั้นต่ำเป็น 200px */
+    background-color: #2d2d2d; /* กำหนดสีพื้นหลังเป็นสีเทาเข้ม */
+    border-radius: 12px; /* กำหนดมุมโค้งให้กับ message */
+    padding: 1.5rem; /* กำหนดการเติมภายใน (padding) เป็น 1.5rem */
+    line-height: 1.6; /* กำหนดระยะห่างระหว่างบรรทัด */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ message */
 }
 
 .controls {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงองค์ประกอบภายใน */
+    gap: 1rem; /* กำหนดระยะห่างระหว่างองค์ประกอบเป็น 1rem */
+    flex-wrap: wrap; /* อนุญาตให้องค์ประกอบห่อหุ้มเมื่อพื้นที่ไม่พอ */
+    justify-content: center; /* จัดตำแหน่งองค์ประกอบให้อยู่กลาง */
 }
 
 .control {
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.2rem; /* กำหนดขนาดฟอนต์เป็น 1.2 เท่าของขนาดฟอนต์พื้นฐาน */
+    padding: 1rem 2.5rem; /* กำหนดการเติมภายใน (padding) เป็น 1rem ด้านบนและล่าง และ 2.5rem ด้านซ้ายและขวา */
+    border-radius: 50px; /* กำหนดมุมโค้งให้กับ control */
+    border: none; /* ไม่ให้มีกรอบ */
+    outline: none; /* ไม่ให้มีเส้นขอบเมื่อถูกเลือก */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ไปที่ control */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบง่ายใน 0.3 วินาที */
+    font-weight: 600; /* กำหนดน้ำหนักฟอนต์ให้หนาขึ้น */
+    text-transform: uppercase; /* เปลี่ยนข้อความให้เป็นตัวพิมพ์ใหญ่ทั้งหมด */
+    letter-spacing: 1px; /* กำหนดระยะห่างระหว่างตัวอักษร */
 }
 
 .record {
-    background: linear-gradient(45deg, #FF512F, #DD2476);
-    color: white;
-    box-shadow: 0 4px 15px rgba(221, 36, 118, 0.3);
+    background: linear-gradient(45deg, #FF512F, #DD2476); /* กำหนดพื้นหลังเป็น gradient สำหรับปุ่มบันทึก */
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    box-shadow: 0 4px 15px rgba(221, 36, 118, 0.3); /* เพิ่มเงาให้กับปุ่มบันทึก */
 }
 
 .pause {
-    background: linear-gradient(45deg, #2196F3, #4CAF50);
-    color: white;
-    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    background: linear-gradient(45deg, #2196F3, #4CAF50); /* กำหนดพื้นหลังเป็น gradient สำหรับปุ่มหยุด */
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3); /* เพิ่มเงาให้กับปุ่มหยุด */
 }
 
 .lang-switch {
-    background: linear-gradient(45deg, #8E2DE2, #4A00E0);
-    color: white;
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-    box-shadow: 0 4px 15px rgba(142, 45, 226, 0.3);
+    background: linear-gradient(45deg, #8E2DE2, #4A00E0); /* กำหนดพื้นหลังเป็น gradient สำหรับปุ่มเปลี่ยนภาษา */
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    font-size: 1rem; /* กำหนดขนาดฟอนต์เป็น 1rem */
+    padding: 0.8rem 1.5rem; /* กำหนดการเติมภายใน (padding) เป็น 0.8rem ด้านบนและล่าง และ 1.5rem ด้านซ้ายและขวา */
+    box-shadow: 0 4px 15px rgba(142, 45, 226, 0.3); /* เพิ่มเงาให้กับปุ่มเปลี่ยนภาษา */
 }
 
 .clear-text {
-    background: linear-gradient(45deg, #FF416C, #FF4B2B);
-    color: white;
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+    background: linear-gradient(45deg, #FF416C, #FF4B2B); /* กำหนดพื้นหลังเป็น gradient สำหรับปุ่มลบข้อความ */
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    font-size: 1rem; /* กำหนดขนาดฟอนต์เป็น 1rem */
+    padding: 0.8rem 1.5rem; /* กำหนดการเติมภายใน (padding) เป็น 0.8rem ด้านบนและล่าง และ 1.5rem ด้านซ้ายและขวา */
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3); /* เพิ่มเงาให้กับปุ่มลบข้อความ */
 }
 
 .control:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* เมื่อชี้ไปที่ control จะเลื่อนขึ้น 2px */
 }
 
 .control:active {
-    transform: scale(0.98) translateY(0);
+    transform: scale(0.98) translateY(0); /* เมื่อคลิก control จะย่อขนาดลง 98% */
 }
 
 .current-lang {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8em;
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute เพื่อให้สามารถวางตำแหน่งได้อย่างอิสระ */
+    top: 1rem; /* กำหนดระยะห่างจากด้านบนเป็น 1rem */
+    right: 1rem; /* กำหนดระยะห่างจากด้านขวาเป็น 1rem */
+    background: rgba(0, 0, 0, 0.2); /* กำหนดพื้นหลังเป็นสีดำโปร่งใส */
+    padding: 0.3rem 0.8rem; /* กำหนดการเติมภายใน (padding) เป็น 0.3rem ด้านบนและล่าง และ 0.8rem ด้านซ้ายและขวา */
+    border-radius: 20px; /* กำหนดมุมโค้งให้กับ current-lang */
+    font-size: 0.8em; /* กำหนดขนาดฟอนต์เป็น 0.8 เท่าของขนาดฟอนต์พื้นฐาน */
 }

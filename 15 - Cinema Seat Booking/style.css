@@ -1,128 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap'); 
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* ตั้งค่า box-sizing ให้เป็น border-box เพื่อให้การคำนวณขนาดของ element รวม padding และ border */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background-color: #1a202c;
-    color: #e2e8f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+    font-family: 'Kanit', sans-serif; /* กำหนดแบบอักษรของ body เป็น Kanit */
+    background-color: #1a202c; /* กำหนดสีพื้นหลังของ body */
+    color: #e2e8f0; /* กำหนดสีตัวอักษร */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง layout */
+    flex-direction: column; /* จัดเรียง flex items ในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่ง items ให้อยู่กลางแนวนอน */
+    justify-content: center; /* จัดตำแหน่ง items ให้อยู่กลางแนวตั้ง */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มหน้าจอ */
+    margin: 0; /* ลบ margin ของ body */
 }
 
 .movie-container {
-    margin: 20px 0;
+    margin: 20px 0; /* กำหนด margin ด้านบนและล่างให้กับ movie-container */
 }
 
 .movie-container select {
-    background-color: #2d3748;
-    color: #e2e8f0;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 8px 15px;
-    appearance: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #2d3748; /* กำหนดสีพื้นหลังของ select */
+    color: #e2e8f0; /* กำหนดสีตัวอักษรใน select */
+    border: none; /* ลบเส้นขอบของ select */
+    border-radius: 5px; /* กำหนดความโค้งของมุมให้กับ select */
+    font-size: 14px; /* กำหนดขนาดตัวอักษรใน select */
+    padding: 8px 15px; /* กำหนด padding ด้านในของ select */
+    appearance: none; /* ลบการแสดงผลเริ่มต้นของ select */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    transition: background-color 0.3s ease; /* เพิ่ม transition สำหรับการเปลี่ยนสีพื้นหลัง */
 }
 
 .movie-container select:hover {
-    background-color: #4a5568;
+    background-color: #4a5568; /* เปลี่ยนสีพื้นหลังเมื่อ hover บน select */
 }
 
 .seat {
-    background-color: #4a5568;
-    height: 12px;
-    width: 15px;
-    margin: 3px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    transition: all 0.3s ease-in-out;
+    background-color: #4a5568; /* กำหนดสีพื้นหลังของที่นั่ง */
+    height: 12px; /* กำหนดความสูงของที่นั่ง */
+    width: 15px; /* กำหนดความกว้างของที่นั่ง */
+    margin: 3px; /* กำหนด margin รอบๆ ที่นั่ง */
+    border-top-left-radius: 8px; /* กำหนดความโค้งของมุมซ้ายบน */
+    border-top-right-radius: 8px; /* กำหนดความโค้งของมุมขวาบน */
+    transition: all 0.3s ease-in-out; /* เพิ่ม transition สำหรับการเปลี่ยนแปลงทั้งหมด */
 }
 
 .seat.vip {
-    background-color: #3182ce;
+    background-color: #3182ce; /* กำหนดสีพื้นหลังของที่นั่ง VIP */
 }
 
 .showcase {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px 16px;
-    border-radius: 5px;
-    color: #a0aec0;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1); /* กำหนดสีพื้นหลังของ showcase */
+    padding: 8px 16px; /* กำหนด padding ด้านในของ showcase */
+    border-radius: 5px; /* กำหนดความโค้งของมุมให้กับ showcase */
+    color: #a0aec0; /* กำหนดสีตัวอักษรใน showcase */
+    list-style-type: none; /* ลบสัญลักษณ์ของรายการใน list */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงรายการ */
+    justify-content: space-between; /* จัดเรียงรายการให้มีระยะห่างเท่าๆ กัน */
+    margin-bottom: 20px; /* กำหนด margin ด้านล่างให้กับ showcase */
 }
 
 .showcase li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงรายการใน showcase */
+    align-items: center; /* จัดตำแหน่ง items ให้อยู่กลางแนวตั้ง */
+    justify-content: center; /* จัดตำแหน่ง items ให้อยู่กลางแนวนอน */
+    margin: 0 10px; /* กำหนด margin ซ้ายขวาให้กับรายการ */
 }
 
 .showcase li small {
-    margin-left: 5px;
+    margin-left: 5px; /* กำหนด margin ซ้ายให้กับ small ในรายการ */
 }
 
 .row {
-    display: flex;
-    align-items: center;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงแถว */
+    align-items: center; /* จัดตำแหน่ง items ให้อยู่กลางแนวตั้ง */
 }
 
 .row-label {
-    color: #a0aec0;
-    margin: 0 10px;
-    font-size: 12px;
+    color: #a0aec0; /* กำหนดสีตัวอักษรของ label ในแถว */
+    margin: 0 10px; /* กำหนด margin ซ้ายขวาให้กับ label */
+    font-size: 12px; /* กำหนดขนาดตัวอักษรของ label */
 }
 
 .seat.selected {
-    background-color: #48bb78;
+    background-color: #48bb78; /* กำหนดสีพื้นหลังของที่นั่งที่ถูกเลือก */
 }
 
 .seat.occupied {
-    background-color: #e53e3e;
+    background-color: #e53e3e; /* กำหนดสีพื้นหลังของที่นั่งที่ถูกจอง */
 }
 
 .seat:not(.occupied):hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    background-color: #68d391;
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover บนที่นั่งที่ว่าง */
+    transform: scale(1.2); /* ขยายขนาดที่นั่งเมื่อ hover */
+    background-color: #68d391; /* เปลี่ยนสีพื้นหลังเมื่อ hover บนที่นั่งที่ว่าง */
 }
 
 .screen {
-    background-color: #e2e8f0;
-    height: 70px;
-    width: 100%;
-    margin: 15px 0;
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
-    transform: rotateX(-45deg);
-    transition: all 0.3s ease;
+    background-color: #e2e8f0; /* กำหนดสีพื้นหลังของจอภาพ */
+    height: 70px; /* กำหนดความสูงของจอภาพ */
+    width: 100%; /* กำหนดความกว้างของจอภาพให้เต็มพื้นที่ */
+    margin: 15px 0; /* กำหนด margin ด้านบนและล่างให้กับจอภาพ */
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7); /* เพิ่มเงาให้กับจอภาพ */
+    transform: rotateX(-45deg); /* หมุนจอภาพในแนวแกน X */
+    transition: all 0.3s ease; /* เพิ่ม transition สำหรับการเปลี่ยนแปลงทั้งหมด */
 }
 
 .container {
-    perspective: 1000px;
-    margin-bottom: 30px;
+    perspective: 1000px; /* กำหนดมุมมอง 3D ให้กับ container */
+    margin-bottom: 30px; /* กำหนด margin ด้านล่างให้กับ container */
 }
 
 .seat-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง layout ของที่นั่ง */
+    flex-direction: column; /* จัดเรียงที่นั่งในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งที่นั่งให้อยู่กลางแนวนอน */
 }
 
 p.text {
-    margin: 5px 0;
+    margin: 5px 0; /* กำหนด margin ด้านบนและล่างให้กับข้อความ */
 }
 
 p.text span {
-    color: #48bb78;
-    font-weight: bold;
+    color: #48bb78; /* กำหนดสีตัวอักษรของ span ในข้อความ */
+    font-weight: bold; /* กำหนดให้ตัวอักษรใน span หนา */
 }

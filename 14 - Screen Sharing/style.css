@@ -1,96 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap'); 
 
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #2196F3;
-    --background-color: #f0f0f0;
-    --text-color: #333;
+    --primary-color: #4CAF50; /* กำหนดสีหลัก */
+    --secondary-color: #2196F3; /* กำหนดสีรอง */
+    --background-color: #f0f0f0; /* กำหนดสีพื้นหลัง */
+    --text-color: #333; /* กำหนดสีข้อความ */
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* ตั้งค่าการคำนวณขนาดของกล่องให้รวม padding และ border */
+    margin: 0; /* ลบ margin ของทุกองค์ประกอบ */
+    padding: 0; /* ลบ padding ของทุกองค์ประกอบ */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: 'Kanit', sans-serif; /* กำหนดแบบอักษรให้กับ body */
+    background-color: var(--background-color); /* ตั้งค่าสีพื้นหลังจากตัวแปรที่กำหนด */
+    color: var(--text-color); /* ตั้งค่าสีข้อความจากตัวแปรที่กำหนด */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงองค์ประกอบ */
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center; /* จัดกลางแนวตั้ง */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำให้เต็มหน้าจอ */
 }
 
 .container {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
-    width: 90%;
-    max-width: 800px;
+    background-color: white; /* ตั้งค่าสีพื้นหลังของ container เป็นสีขาว */
+    border-radius: 20px; /* ทำมุมของ container ให้กลม */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ container */
+    padding: 2rem; /* กำหนด padding ภายใน container */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    width: 90%; /* กำหนดความกว้างของ container เป็น 90% */
+    max-width: 800px; /* กำหนดความกว้างสูงสุดของ container */
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    font-size: 2.5rem; /* กำหนดขนาดตัวอักษรของ h1 */
+    margin-bottom: 1.5rem; /* กำหนดระยะห่างด้านล่างของ h1 */
+    color: var(--primary-color); /* ตั้งค่าสีของ h1 จากตัวแปรที่กำหนด */
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงปุ่ม */
+    justify-content: center; /* จัดกลางแนวนอน */
+    gap: 1rem; /* กำหนดระยะห่างระหว่างปุ่ม */
+    margin-top: 2rem; /* กำหนดระยะห่างด้านบนของ button-container */
 }
 
 .btn {
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.1s;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+    border: none; /* ลบเส้นขอบของปุ่ม */
+    border-radius: 10px; /* ทำมุมของปุ่มให้กลม */
+    padding: 1rem 2rem; /* กำหนด padding ภายในปุ่ม */
+    font-size: 1.2rem; /* กำหนดขนาดตัวอักษรของปุ่ม */
+    font-weight: bold; /* ทำให้ตัวอักษรของปุ่มหนา */
+    text-transform: uppercase; /* เปลี่ยนตัวอักษรให้เป็นตัวพิมพ์ใหญ่ */
+    transition: background-color 0.3s, transform 0.1s; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการโต้ตอบ */
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* ยกปุ่มขึ้นเมื่อชี้ไปที่ปุ่ม */
 }
 
 .btn:active {
-    transform: translateY(-1px);
+    transform: translateY(-1px); /* ลดระดับปุ่มเมื่อถูกคลิก */
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color); /* ตั้งค่าสีพื้นหลังของปุ่มหลัก */
+    color: white; /* ตั้งค่าสีข้อความของปุ่มหลักเป็นสีขาว */
 }
 
 .btn-primary:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* เปลี่ยนสีพื้นหลังของปุ่มหลักเมื่อชี้ไปที่ปุ่ม */
 }
 
 .btn-secondary {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--secondary-color); /* ตั้งค่าสีพื้นหลังของปุ่มรอง */
+    color: white; /* ตั้งค่าสีข้อความของปุ่มรองเป็นสีขาว */
 }
 
 .btn-secondary:hover {
-    background-color: #1e88e5;
+    background-color: #1e88e5; /* เปลี่ยนสีพื้นหลังของปุ่มรองเมื่อชี้ไปที่ปุ่ม */
 }
 
 .hidden {
-    display: none;
+    display: none; /* ซ่อนองค์ประกอบที่มีคลาส hidden */
 }
 
 #video {
-    width: 100%;
-    max-height: 400px;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    object-fit: contain;
+    width: 100%; /* กำหนดความกว้างของวิดีโอให้เต็มพื้นที่ */
+    max-height: 400px; /* กำหนดความสูงสูงสุดของวิดีโอ */
+    border-radius: 10px; /* ทำมุมของวิดีโอให้กลม */
+    margin-bottom: 1.5rem; /* กำหนดระยะห่างด้านล่างของวิดีโอ */
+    object-fit: contain; /* ปรับขนาดวิดีโอให้พอดีกับกรอบ */
 }
