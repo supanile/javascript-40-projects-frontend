@@ -1,87 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap'); /* นำเข้าแบบอักษร Kanit จาก Google Fonts */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* ตั้งค่าให้ทุกองค์ประกอบใช้ box-sizing แบบ border-box */
+    margin: 0; /* ตั้งค่าระยะขอบด้านนอกเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะขอบด้านในเป็น 0 */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background-image: url('https://source.unsplash.com/featured/?newyear,fireworks');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    padding: 20px;
+    font-family: 'Kanit', sans-serif; /* กำหนดแบบอักษรของ body เป็น Kanit */
+    background-image: url('https://source.unsplash.com/featured/?newyear,fireworks'); /* ตั้งค่าภาพพื้นหลัง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพพื้นหลังซ้ำ */
+    background-size: cover; /* ให้ภาพพื้นหลังครอบคลุมทั้งพื้นที่ */
+    background-position: center; /* จัดตำแหน่งภาพพื้นหลังให้อยู่กลาง */
+    height: 100vh; /* กำหนดความสูงของ body เป็น 100% ของความสูงหน้าจอ */
+    color: #fff; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งองค์ประกอบให้อยู่กลางแนวนอน */
+    justify-content: center; /* จัดตำแหน่งองค์ประกอบให้อยู่กลางแนวตั้ง */
+    text-align: center; /* จัดตำแหน่งข้อความให้อยู่กลาง */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขต */
+    padding: 20px; /* กำหนดระยะขอบด้านในเป็น 20px */
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6); /* กำหนดสีพื้นหลังของ container เป็นสีดำโปร่งใส */
+    padding: 30px; /* กำหนดระยะขอบด้านในเป็น 30px */
+    border-radius: 15px; /* ทำมุมของ container ให้โค้งมน */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กับ container */
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 4rem;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700; /* กำหนดน้ำหนักตัวอักษรเป็น 700 (หนา) */
+    font-size: 4rem; /* กำหนดขนาดตัวอักษรเป็น 4rem */
+    margin-bottom: 40px; /* กำหนดระยะขอบด้านล่างเป็น 40px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้กับข้อความ h1 */
 }
 
 .countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงองค์ประกอบ */
+    justify-content: center; /* จัดตำแหน่งองค์ประกอบให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดตำแหน่งองค์ประกอบให้อยู่กลางแนวตั้ง */
+    flex-wrap: wrap; /* อนุญาตให้องค์ประกอบห่อหุ้มเมื่อพื้นที่ไม่พอ */
 }
 
 .time {
-    margin: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 15px;
-    min-width: 100px;
-    transition: all 0.3s ease;
+    margin: 15px; /* กำหนดระยะขอบด้านนอกเป็น 15px */
+    background-color: rgba(255, 255, 255, 0.1); /* กำหนดสีพื้นหลังเป็นสีขาวโปร่งใส */
+    border-radius: 10px; /* ทำมุมของ time ให้โค้งมน */
+    padding: 15px; /* กำหนดระยะขอบด้านในเป็น 15px */
+    min-width: 100px; /* กำหนดความกว้างขั้นต่ำเป็น 100px */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวลเมื่อมีการเปลี่ยนแปลง */
 }
 
 .time:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05); /* ขยายขนาดเมื่อชี้เมาส์ไปที่ time */
+    background-color: rgba(255, 255, 255, 0.2); /* เปลี่ยนสีพื้นหลังเมื่อชี้เมาส์ไปที่ time */
 }
 
 .time h2 {
-    font-size: 3rem;
-    margin-bottom: 5px;
+    font-size: 3rem; /* กำหนดขนาดตัวอักษรของ h2 เป็น 3rem */
+    margin-bottom: 5px; /* กำหนดระยะขอบด้านล่างเป็น 5px */
 }
 
 .time small {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* กำหนดขนาดตัวอักษรของ small เป็น 1.2rem */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* ตั้งค่าการตอบสนองสำหรับหน้าจอที่มีความกว้างสูงสุด 768px */
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* กำหนดขนาดตัวอักษรของ h1 เป็น 2.5rem */
     }
 
     .time {
-        margin: 10px;
-        min-width: 80px;
+        margin: 10px; /* กำหนดระยะขอบด้านนอกเป็น 10px */
+        min-width: 80px; /* กำหนดความกว้างขั้นต่ำเป็น 80px */
     }
 
     .time h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* กำหนดขนาดตัวอักษรของ h2 เป็น 2rem */
     }
 
     .time small {
-        font-size: 1rem;
+        font-size: 1rem; /* กำหนดขนาดตัวอักษรของ small เป็น 1rem */
     }
 }

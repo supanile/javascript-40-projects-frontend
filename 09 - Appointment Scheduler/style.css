@@ -1,155 +1,175 @@
 :root {
-    --primary-color: #00b4d8;
-    --background-color: #0d1117;
-    --surface-color: #161b22;
-    --text-color: #c9d1d9;
-    --border-color: #30363d;
-    --hover-color: #0090aa;
+    /* กำหนดตัวแปร CSS สำหรับสีหลักและพื้นหลัง */
+    --primary-color: #00b4d8; /* สีหลัก */
+    --background-color: #0d1117; /* สีพื้นหลัง */
+    --surface-color: #161b22; /* สีพื้นผิว */
+    --text-color: #c9d1d9; /* สีข้อความ */
+    --border-color: #30363d; /* สีขอบ */
+    --hover-color: #0090aa; /* สีเมื่อชี้เมาส์ */
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* ตั้งค่าพื้นฐานสำหรับทุกองค์ประกอบ */
+    box-sizing: border-box; /* ทำให้การคำนวณขนาดรวมถึง padding และ border */
+    margin: 0; /* ลบ margin เริ่มต้น */
+    padding: 0; /* ลบ padding เริ่มต้น */
 }
 
 html {
-    background-color: var(--background-color);
-    min-height: 100vh;
+    /* ตั้งค่าพื้นหลังและความสูงขั้นต่ำของหน้า */
+    background-color: var(--background-color); /* ใช้สีพื้นหลังที่กำหนด */
+    min-height: 100vh; /* ความสูงขั้นต่ำของหน้าเป็น 100% ของ viewport */
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-color);
+    /* ตั้งค่ารูปแบบของ body */
+    margin: 0; /* ลบ margin เริ่มต้น */
+    min-height: 100vh; /* ความสูงขั้นต่ำของ body เป็น 100% ของ viewport */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงองค์ประกอบ */
+    align-items: center; /* จัดแนวองค์ประกอบในแนวตั้ง */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* กำหนดฟอนต์ */
+    color: var(--text-color); /* ใช้สีข้อความที่กำหนด */
 }
 
 .container {
-    width: 100%;
-    max-width: 680px;
-    min-height: 380px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 15px;
-    background: var(--surface-color);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
+    /* ตั้งค่าคอนเทนเนอร์หลัก */
+    width: 100%; /* ความกว้าง 100% */
+    max-width: 680px; /* ความกว้างสูงสุด 680px */
+    min-height: 380px; /* ความสูงขั้นต่ำ 380px */
+    margin: 0 auto; /* จัดกลางในแนวนอน */
+    padding: 2rem; /* เพิ่ม padding รอบๆ */
+    border-radius: 15px; /* มุมโค้ง 15px */
+    background: var(--surface-color); /* ใช้สีพื้นผิวที่กำหนด */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดกลางในแนวนอน */
 }
 
 .input-container {
-    width: 100%;
-    max-width: 480px;
+    /* ตั้งค่าคอนเทนเนอร์สำหรับ input */
+    width: 100%; /* ความกว้าง 100% */
+    max-width: 480px; /* ความกว้างสูงสุด 480px */
 }
 
 h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
+    /* ตั้งค่าหัวข้อหลัก */
+    font-size: 2rem; /* ขนาดฟอนต์ 2rem */
+    text-align: center; /* จัดกลางข้อความ */
+    margin-bottom: 2rem; /* เพิ่ม margin ด้านล่าง */
+    color: var(--primary-color); /* ใช้สีหลักที่กำหนด */
 }
 
 .form {
-    width: 100%;
+    /* ตั้งค่าฟอร์ม */
+    width: 100%; /* ความกว้าง 100% */
 }
 
 label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+    /* ตั้งค่าป้ายชื่อ */
+    display: block; /* แสดงเป็นบล็อก */
+    font-weight: 500; /* น้ำหนักฟอนต์ 500 */
+    margin-bottom: 0.5rem; /* เพิ่ม margin ด้านล่าง */
+    color: var(--text-color); /* ใช้สีข้อความที่กำหนด */
 }
 
 input {
-    width: 100%;
-    margin-bottom: 1.5rem;
-    padding: 12px;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    background: var(--background-color);
-    color: var(--text-color);
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    /* ตั้งค่าฟิลด์ input */
+    width: 100%; /* ความกว้าง 100% */
+    margin-bottom: 1.5rem; /* เพิ่ม margin ด้านล่าง */
+    padding: 12px; /* เพิ่ม padding รอบๆ */
+    border: 2px solid var(--border-color); /* ขอบ 2px ใช้สีขอบที่กำหนด */
+    border-radius: 8px; /* มุมโค้ง 8px */
+    background: var(--background-color); /* ใช้สีพื้นหลังที่กำหนด */
+    color: var(--text-color); /* ใช้สีข้อความที่กำหนด */
+    font-size: 1rem; /* ขนาดฟอนต์ 1rem */
+    transition: border-color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีขอบเมื่อโฟกัส */
 }
 
 input:focus {
-    border-color: var(--primary-color);
-    outline: none;
+    /* ตั้งค่าฟิลด์ input เมื่อมีการโฟกัส */
+    border-color: var(--primary-color); /* เปลี่ยนสีขอบเป็นสีหลัก */
+    outline: none; /* ลบ outline เริ่มต้น */
 }
 
 button {
-    width: 100%;
-    height: 48px;
-    border-radius: 24px;
-    border: none;
-    background: var(--primary-color);
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    /* ตั้งค่าปุ่ม */
+    width: 100%; /* ความกว้าง 100% */
+    height: 48px; /* ความสูง 48px */
+    border-radius: 24px; /* มุมโค้ง 24px */
+    border: none; /* ลบขอบ */
+    background: var(--primary-color); /* ใช้สีหลักที่กำหนด */
+    color: white; /* สีข้อความเป็นสีขาว */
+    font-weight: bold; /* น้ำหนักฟอนต์เป็นตัวหนา */
+    font-size: 1rem; /* ขนาดฟอนต์ 1rem */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer */
+    transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังเมื่อชี้เมาส์ */
 }
 
 button:hover {
-    background: var(--hover-color);
+    /* ตั้งค่าปุ่มเมื่อชี้เมาส์ */
+    background: var(--hover-color); /* เปลี่ยนสีพื้นหลังเป็นสีเมื่อชี้เมาส์ */
 }
 
 ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style-type: none;
-    padding: 0;
-    margin: 2rem 0;
+    /* ตั้งค่ารายการ unordered list */
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดกลางในแนวนอน */
+    flex-wrap: wrap; /* อนุญาตให้ wrap เมื่อพื้นที่ไม่พอ */
+    gap: 1rem; /* เพิ่มช่องว่างระหว่างรายการ */
+    list-style-type: none; /* ลบสัญลักษณ์รายการ */
+    padding: 0; /* ลบ padding เริ่มต้น */
+    margin: 2rem 0; /* เพิ่ม margin ด้านบนและล่าง */
 }
 
 li {
-    text-align: center;
-    font-size: 1.2rem;
-    min-width: 100px;
-    padding: 1rem;
-    background: var(--background-color);
-    border-radius: 10px;
+    /* ตั้งค่ารายการใน ul */
+    text-align: center; /* จัดกลางข้อความ */
+    font-size: 1.2rem; /* ขนาดฟอนต์ 1.2rem */
+    min-width: 100px; /* ความกว้างขั้นต่ำ 100px */
+    padding: 1rem; /* เพิ่ม padding รอบๆ */
+    background: var(--background-color); /* ใช้สีพื้นหลังที่กำหนด */
+    border-radius: 10px; /* มุมโค้ง 10px */
 }
 
 li span {
-    display: block;
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    /* ตั้งค่าข้อความใน li */
+    display: block; /* แสดงเป็นบล็อก */
+    font-size: 3rem; /* ขนาดฟอนต์ 3rem */
+    font-weight: bold; /* น้ำหนักฟอนต์เป็นตัวหนา */
+    color: var(--primary-color); /* ใช้สีหลักที่กำหนด */
+    margin-bottom: 0.5rem; /* เพิ่ม margin ด้านล่าง */
 }
 
 .complete {
-    text-align: center;
+    /* ตั้งค่าภาพรวมของการเสร็จสิ้น */
+    text-align: center; /* จัดกลางข้อความ */
 }
 
 .complete-title {
-    margin-bottom: 1rem;
+    /* ตั้งค่าชื่อการเสร็จสิ้น */
+    margin-bottom: 1rem; /* เพิ่ม margin ด้านล่าง */
 }
 
 .complete-info {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--text-color);
+    /* ตั้งค่าข้อมูลการเสร็จสิ้น */
+    font-size: 1.2rem; /* ขนาดฟอนต์ 1.2rem */
+    margin-bottom: 2rem; /* เพิ่ม margin ด้านล่าง */
+    color: var(--text-color); /* ใช้สีข้อความที่กำหนด */
 }
 
 @media (max-width: 580px) {
+    /* ตั้งค่าการตอบสนองสำหรับหน้าจอที่มีความกว้างสูงสุด 580px */
     .container {
-        margin: 1rem;
-        padding: 1rem;
+        margin: 1rem; /* เพิ่ม margin รอบๆ */
+        padding: 1rem; /* เพิ่ม padding รอบๆ */
     }
     
     li {
-        min-width: 80px;
-        font-size: 1rem;
+        min-width: 80px; /* ความกว้างขั้นต่ำ 80px */
+        font-size: 1rem; /* ขนาดฟอนต์ 1rem */
     }
     
     li span {
-        font-size: 2rem;
+        font-size: 2rem; /* ขนาดฟอนต์ 2rem */
     }
 }
