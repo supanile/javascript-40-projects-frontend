@@ -1,116 +1,116 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* กำหนดให้ทุก element ใช้ box-sizing แบบ border-box */
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) เป็น 0 */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) เป็น 0 */
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: 'Kanit', sans-serif; 
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียง element ภายใน body */
+    align-items: center; /* จัดแนวแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนวนอนให้อยู่กลาง */
+    height: 100vh; /* กำหนดความสูงของ body เป็น 100% ของ viewport height */
+    background-color: #f0f0f0; /* ตั้งค่าสีพื้นหลังเป็นสีเทาอ่อน */
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์เป็น 'Kanit' */
 }
 
 .carousel {
-    width: 100%;
-    max-width: 1200px;
-    height: 80vh;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
+    width: 100%; /* กำหนดความกว้างของ carousel เป็น 100% */
+    max-width: 1200px; /* กำหนดความกว้างสูงสุดเป็น 1200px */
+    height: 80vh; /* กำหนดความสูงเป็น 80% ของ viewport height */
+    background-color: white; /* ตั้งค่าสีพื้นหลังเป็นสีขาว */
+    border-radius: 20px; /* ทำมุมของกล่องให้โค้งมน 20px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับกล่อง */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของกล่อง */
+    position: relative; /* กำหนดตำแหน่งเป็น relative เพื่อใช้กับตำแหน่ง absolute ของลูกภายใน */
 }
 
 .image-container {
-    width: 300%;
-    height: 100%;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    width: 300%; /* กำหนดความกว้างของ container ของภาพเป็น 300% */
+    height: 100%; /* กำหนดความสูงเป็น 100% */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงภาพ */
+    transition: transform 0.5s ease-in-out; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการเปลี่ยนแปลง transform */
 }
 
 img {
-    width: 33.33%;
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
+    width: 33.33%; /* กำหนดความกว้างของภาพเป็น 33.33% ของ container */
+    height: 100%; /* กำหนดความสูงเป็น 100% */
+    object-fit: cover; /* ทำให้ภาพเต็มพื้นที่โดยไม่ทำให้ภาพผิดสัดส่วน */
+    flex-shrink: 0; /* ป้องกันไม่ให้ภาพหดตัว */
 }
 
 .button-container {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute เพื่อให้สามารถวางตำแหน่งได้ตามต้องการ */
+    bottom: 20px; /* วางปุ่มที่ด้านล่าง 20px */
+    left: 0; /* วางปุ่มที่ด้านซ้ายสุด */
+    right: 0; /* วางปุ่มที่ด้านขวาสุด */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่ม */
+    justify-content: space-between; /* จัดเรียงปุ่มให้ห่างกัน */
+    padding: 0 20px; /* เพิ่มระยะภายในด้านซ้ายและขวา 20px */
 }
 
 .btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-family: 'Kanit', sans-serif; 
-    font-weight: 300;
+    background-color: #4CAF50; /* ตั้งค่าสีพื้นหลังของปุ่มเป็นสีเขียว */
+    color: white; /* ตั้งค่าสีตัวอักษรเป็นสีขาว */
+    border: none; /* ไม่ให้มีกรอบ */
+    padding: 12px 24px; /* เพิ่มระยะภายใน 12px ด้านบน-ล่าง และ 24px ด้านซ้าย-ขวา */
+    font-size: 16px; /* กำหนดขนาดตัวอักษรเป็น 16px */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ที่ปุ่ม */
+    border-radius: 8px; /* ทำมุมของปุ่มให้โค้งมน 8px */
+    transition: background-color 0.3s, transform 0.2s; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการเปลี่ยนแปลงสีพื้นหลังและการแปลงรูป */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับปุ่ม */
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์เป็น 'Kanit' */
+    font-weight: 300; /* กำหนดน้ำหนักฟอนต์เป็น 300 */
 }
 
 .btn:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
+    background-color: #45a049; /* เปลี่ยนสีพื้นหลังเมื่อชี้ที่ปุ่ม */
+    transform: translateY(-2px); /* ยกปุ่มขึ้น 2px เมื่อชี้ */
 }
 
 .btn:active {
-    transform: translateY(0);
+    transform: translateY(0); /* คืนค่าตำแหน่งปุ่มเมื่อคลิก */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* กำหนดสไตล์สำหรับหน้าจอที่มีความกว้างน้อยกว่า 768px */
     .carousel {
-        height: 60vh;
-        width: 95%;
+        height: 60vh; /* ลดความสูงของ carousel เป็น 60vh */
+        width: 95%; /* กำหนดความกว้างเป็น 95% */
     }
 
     .btn {
-        font-size: 14px;
-        padding: 10px 20px;
+        font-size: 14px; /* ลดขนาดตัวอักษรของปุ่มเป็น 14px */
+        padding: 10px 20px; /* ลดระยะภายในของปุ่ม */
     }
 
     .button-container {
-        bottom: 70px;
+        bottom: 70px; /* ย้ายปุ่มขึ้นไป 70px จากด้านล่าง */
     }
 
     .dots-container {
-        bottom: 10px;
+        bottom: 10px; /* วางจุดที่ด้านล่าง 10px */
     }
 }
 
 .dots-container {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute */
+    bottom: 20px; /* วางจุดที่ด้านล่าง 20px */
+    left: 50%; /* วางจุดที่กลางแนวนอน */
+    transform: translateX(-50%); /* ปรับตำแหน่งให้จุดอยู่กลาง */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงจุด */
+    justify-content: center; /* จัดเรียงจุดให้อยู่กลาง */
+    padding: 10px 0; /* เพิ่มระยะภายในด้านบนและล่าง 10px */
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 10px; /* กำหนดความกว้างของจุดเป็น 10px */
+    height: 10px; /* กำหนดความสูงของจุดเป็น 10px */
+    background-color: rgba(255, 255, 255, 0.5); /* ตั้งค่าสีพื้นหลังของจุดเป็นสีขาวโปร่งใส */
+    border-radius: 50%; /* ทำให้จุดเป็นวงกลม */
+    margin: 0 5px; /* เพิ่มระยะห่างระหว่างจุด */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ที่จุด */
+    transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังเมื่อมีการเปลี่ยนแปลง */
 }
 
 .dot.active {
-    background-color: white;
+    background-color: white; /* เปลี่ยนสีพื้นหลังของจุดที่ active เป็นสีขาว */
 }

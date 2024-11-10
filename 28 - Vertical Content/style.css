@@ -1,153 +1,153 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) ของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะห่างภายใน (padding) ของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* ตั้งค่าการคำนวณขนาดขององค์ประกอบให้รวม padding และ border */
 }
 
 body {
-    height: 100vh;
-    font-family: 'Kanit', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    height: 100vh; /* กำหนดความสูงของ body ให้เต็มหน้าจอ */
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์ที่ใช้ใน body */
+    -webkit-font-smoothing: antialiased; /* ปรับการแสดงผลฟอนต์ให้เรียบเนียนใน WebKit */
+    -moz-osx-font-smoothing: grayscale; /* ปรับการแสดงผลฟอนต์ให้เรียบเนียนใน Firefox บน macOS */
 }
 
 .slider-container {
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    position: relative; /* ตั้งค่าตำแหน่งของ slider-container เป็น relative เพื่อให้ลูกหลานสามารถใช้ตำแหน่ง absolute ได้ */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ slider-container */
+    width: 100vw; /* กำหนดความกว้างของ slider-container ให้เต็มหน้าจอ */
+    height: 100vh; /* กำหนดความสูงของ slider-container ให้เต็มหน้าจอ */
 }
 
 .left-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
+    position: absolute; /* ตั้งค่าตำแหน่งของ left-content เป็น absolute */
+    top: 0; /* ตั้งค่าตำแหน่งด้านบนเป็น 0 */
+    left: 0; /* ตั้งค่าตำแหน่งด้านซ้ายเป็น 0 */
+    width: 35%; /* กำหนดความกว้างของ left-content เป็น 35% ของ slider-container */
+    height: 100%; /* กำหนดความสูงของ left-content ให้เต็ม slider-container */
+    transition: transform 0.5s ease-in-out; /* กำหนดการเปลี่ยนแปลงตำแหน่งด้วยการเคลื่อนไหวที่นุ่มนวล */
 }
 
 .left-content .slide {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    height: 100%; /* กำหนดความสูงของ slide ให้เต็ม left-content */
+    width: 100%; /* กำหนดความกว้างของ slide ให้เต็ม left-content */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงเนื้อหาภายใน slide */
+    flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งเนื้อหาให้อยู่กลางในแนวนอน */
+    justify-content: center; /* จัดตำแหน่งเนื้อหาให้อยู่กลางในแนวตั้ง */
+    color: #fff; /* กำหนดสีของข้อความเป็นสีขาว */
+    text-align: center; /* จัดตำแหน่งข้อความให้อยู่กลาง */
+    padding: 20px; /* กำหนดระยะห่างภายใน (padding) เป็น 20px */
 }
 
-.left-content .slide:nth-child(1) { background-color: #1a1a1a; }
-.left-content .slide:nth-child(2) { background-color: #8b0000; }
-.left-content .slide:nth-child(3) { background-color: #006400; }
-.left-content .slide:nth-child(4) { background-color: #008b8b; }
+.left-content .slide:nth-child(1) { background-color: #1a1a1a; } /* กำหนดสีพื้นหลังของ slide แรก */
+.left-content .slide:nth-child(2) { background-color: #8b0000; } /* กำหนดสีพื้นหลังของ slide ที่สอง */
+.left-content .slide:nth-child(3) { background-color: #006400; } /* กำหนดสีพื้นหลังของ slide ที่สาม */
+.left-content .slide:nth-child(4) { background-color: #008b8b; } /* กำหนดสีพื้นหลังของ slide ที่สี่ */
 
 .left-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    transform: translateY(-20px);
-    opacity: 0.9;
-    font-weight: 500;
-    letter-spacing: -0.5px;
+    font-size: 2.5rem; /* กำหนดขนาดฟอนต์ของ h1 */
+    margin-bottom: 1rem; /* กำหนดระยะห่างด้านล่างของ h1 */
+    transform: translateY(-20px); /* ย้าย h1 ขึ้นไป 20px */
+    opacity: 0.9; /* กำหนดความโปร่งใสของ h1 */
+    font-weight: 500; /* กำหนดน้ำหนักฟอนต์ของ h1 */
+    letter-spacing: -0.5px; /* กำหนดระยะห่างระหว่างตัวอักษร */
 }
 
 .left-content p {
-    max-width: 80%;
-    line-height: 1.6;
-    opacity: 0.8;
-    font-weight: 300;
-    font-size: 1.1rem;
+    max-width: 80%; /* กำหนดความกว้างสูงสุดของ p เป็น 80% */
+    line-height: 1.6; /* กำหนดระยะห่างระหว่างบรรทัด */
+    opacity: 0.8; /* กำหนดความโปร่งใสของ p */
+    font-weight: 300; /* กำหนดน้ำหนักฟอนต์ของ p */
+    font-size: 1.1rem; /* กำหนดขนาดฟอนต์ของ p */
 }
 
 .right-content {
-    position: absolute;
-    top: 0;
-    left: 35%;
-    width: 65%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
+    position: absolute; /* ตั้งค่าตำแหน่งของ right-content เป็น absolute */
+    top: 0; /* ตั้งค่าตำแหน่งด้านบนเป็น 0 */
+    left: 35%; /* ตั้งค่าตำแหน่งด้านซ้ายเป็น 35% */
+    width: 65%; /* กำหนดความกว้างของ right-content เป็น 65% ของ slider-container */
+    height: 100%; /* กำหนดความสูงของ right-content ให้เต็ม slider-container */
+    transition: transform 0.5s ease-in-out; /* กำหนดการเปลี่ยนแปลงตำแหน่งด้วยการเคลื่อนไหวที่นุ่มนวล */
 }
 
 .right-content .slide {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100%; /* กำหนดความกว้างของ slide ให้เต็ม right-content */
+    height: 100%; /* กำหนดความสูงของ slide ให้เต็ม right-content */
+    background-size: cover; /* ปรับขนาดพื้นหลังให้เต็มพื้นที่ */
+    background-position: center; /* จัดตำแหน่งพื้นหลังให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้พื้นหลังซ้ำ */
 }
 
 .action-buttons {
-    position: absolute;
-    left: 35%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-    display: flex;
-    gap: 10px;
+    position: absolute; /* ตั้งค่าตำแหน่งของ action-buttons เป็น absolute */
+    left: 35%; /* ตั้งค่าตำแหน่งด้านซ้ายเป็น 35% */
+    top: 50%; /* ตั้งค่าตำแหน่งด้านบนเป็น 50% */
+    transform: translateY(-50%); /* ย้าย action-buttons ขึ้นไปครึ่งหนึ่งของความสูง */
+    z-index: 100; /* กำหนด z-index เพื่อให้ action-buttons อยู่เหนือองค์ประกอบอื่น */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่ม */
+    gap: 10px; /* กำหนดระยะห่างระหว่างปุ่ม */
 }
 
 .action-buttons button {
-    background-color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: white; /* กำหนดสีพื้นหลังของปุ่มเป็นสีขาว */
+    border: none; /* ไม่ให้มีกรอบรอบปุ่ม */
+    width: 40px; /* กำหนดความกว้างของปุ่ม */
+    height: 40px; /* กำหนดความสูงของปุ่ม */
+    border-radius: 50%; /* ทำให้ปุ่มเป็นรูปวงกลม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงเนื้อหาภายในปุ่ม */
+    align-items: center; /* จัดตำแหน่งเนื้อหาให้อยู่กลางในแนวนอน */
+    justify-content: center; /* จัดตำแหน่งเนื้อหาให้อยู่กลางในแนวตั้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* กำหนดเงาให้กับปุ่ม */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* กำหนดการเปลี่ยนแปลงเมื่อมีการโต้ตอบ */
 }
 
 .action-buttons button:hover {
-    transform: scale(1.1);
-    background-color: #f8f8f8;
+    transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อชี้ไปที่มัน */
+    background-color: #f8f8f8; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อชี้ไปที่มัน */
 }
 
 .action-buttons svg {
-    width: 20px;
-    height: 20px;
+    width: 20px; /* กำหนดความกว้างของ svg */
+    height: 20px; /* กำหนดความสูงของ svg */
 }
 
 @media (max-width: 768px) {
     .left-content {
-        width: 100%;
-        height: 35%;
+        width: 100%; /* กำหนดความกว้างของ left-content เป็น 100% เมื่อหน้าจอเล็กกว่า 768px */
+        height: 35%; /* กำหนดความสูงของ left-content เป็น 35% */
     }
     
     .right-content {
-        top: 35%;
-        left: 0;
-        width: 100%;
-        height: 65%;
+        top: 35%; /* ตั้งค่าตำแหน่งด้านบนของ right-content เป็น 35% */
+        left: 0; /* ตั้งค่าตำแหน่งด้านซ้ายของ right-content เป็น 0 */
+        width: 100%; /* กำหนดความกว้างของ right-content เป็น 100% */
+        height: 65%; /* กำหนดความสูงของ right-content เป็น 65% */
     }
     
     .action-buttons {
-        left: 50%;
-        top: 35%;
-        transform: translate(-50%, -50%);
+        left: 50%; /* ตั้งค่าตำแหน่งด้านซ้ายของ action-buttons เป็น 50% */
+        top: 35%; /* ตั้งค่าตำแหน่งด้านบนของ action-buttons เป็น 35% */
+        transform: translate(-50%, -50%); /* ย้าย action-buttons ให้อยู่กลาง */
     }
 
     .left-content h1 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem; /* กำหนดขนาดฟอนต์ของ h1 เป็น 2rem เมื่อหน้าจอเล็กกว่า 768px */
+        margin-bottom: 0.5rem; /* กำหนดระยะห่างด้านล่างของ h1 */
     }
 
     .left-content p {
-        font-size: 1rem;
-        max-width: 90%;
+        font-size: 1rem; /* กำหนดขนาดฟอนต์ของ p เป็น 1rem เมื่อหน้าจอเล็กกว่า 768px */
+        max-width: 90%; /* กำหนดความกว้างสูงสุดของ p เป็น 90% */
     }
 }
 
 @media (max-width: 480px) {
     .left-content h1 {
-        font-size: 1.75rem;
+        font-size: 1.75rem; /* กำหนดขนาดฟอนต์ของ h1 เป็น 1.75rem เมื่อหน้าจอเล็กกว่า 480px */
     }
 
     .left-content p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* กำหนดขนาดฟอนต์ของ p เป็น 0.9rem เมื่อหน้าจอเล็กกว่า 480px */
     }
 }

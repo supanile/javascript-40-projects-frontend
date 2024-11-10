@@ -1,273 +1,273 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* กำหนดให้ทุกองค์ประกอบใช้ box-sizing แบบ border-box */
+    margin: 0; /* ตั้งค่าระยะขอบด้านนอกเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะขอบด้านในเป็น 0 */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: #333;
-    padding: 20px 0;
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์ของ body เป็น 'Kanit' */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* กำหนดพื้นหลังเป็นการไล่สี */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงองค์ประกอบ */
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center; /* จัดกลางแนวตั้ง */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำเป็น 100% ของ viewport */
+    color: #333; /* กำหนดสีตัวอักษร */
+    padding: 20px 0; /* กำหนดระยะขอบด้านบนและล่าง */
 }
 
 .quiz-container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
+    background-color: #ffffff; /* กำหนดพื้นหลังของ container เป็นสีขาว */
+    border-radius: 10px; /* ทำมุมของ container ให้กลมมน */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ container */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขต */
+    width: 90%; /* กำหนดความกว้างเป็น 90% */
+    max-width: 600px; /* กำหนดความกว้างสูงสุดเป็น 600px */
+    margin: auto; /* จัดกลาง container */
 }
 
 h1 {
-    text-align: center;
-    color: #4a4a4a;
-    padding: 20px 0;
-    font-size: 28px;
+    text-align: center; /* จัดข้อความใน h1 ให้อยู่กลาง */
+    color: #4a4a4a; /* กำหนดสีข้อความ */
+    padding: 20px 0; /* กำหนดระยะขอบด้านบนและล่าง */
+    font-size: 28px; /* กำหนดขนาดฟอนต์ */
 }
 
 #quiz {
-    padding: 20px;
+    padding: 20px; /* กำหนดระยะขอบด้านใน */
 }
 
 h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 22px; /* กำหนดขนาดฟอนต์ */
+    margin-bottom: 20px; /* กำหนดระยะขอบด้านล่าง */
+    text-align: center; /* จัดข้อความใน h2 ให้อยู่กลาง */
 }
 
 .choices {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: grid; /* ใช้ grid layout สำหรับจัดเรียงตัวเลือก */
+    grid-template-columns: 1fr 1fr; /* กำหนดให้มี 2 คอลัมน์ */
+    gap: 10px; /* กำหนดระยะห่างระหว่างตัวเลือก */
 }
 
 .choice {
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background-color: #f8f9fa; /* กำหนดพื้นหลังของตัวเลือก */
+    border: 1px solid #ddd; /* กำหนดเส้นขอบ */
+    border-radius: 5px; /* ทำมุมของตัวเลือกให้กลมมน */
+    padding: 10px; /* กำหนดระยะขอบด้านใน */
+    font-size: 16px; /* กำหนดขนาดฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ตัวเลือก */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้เรียบ */
 }
 
 .choice:hover, .choice:focus {
-    background-color: #e9ecef;
-    outline: none;
+    background-color: #e9ecef; /* เปลี่ยนพื้นหลังเมื่อชี้หรือโฟกัส */
+    outline: none; /* ไม่แสดงเส้นขอบเมื่อมีการโฟกัส */
 }
 
 .choice.selected {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /* เปลี่ยนพื้นหลังเมื่อเลือกตัวเลือก */
+    color: white; /* เปลี่ยนสีข้อความเป็นขาว */
 }
 
 #submit, #restart {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-    border-radius: 5px;
+    background-color: #4CAF50; /* กำหนดพื้นหลังของปุ่มเป็นสีเขียว */
+    color: white; /* กำหนดสีข้อความเป็นขาว */
+    border: none; /* ไม่แสดงเส้นขอบ */
+    padding: 10px 20px; /* กำหนดระยะขอบด้านใน */
+    font-size: 18px; /* กำหนดขนาดฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+    display: block; /* แสดงปุ่มเป็น block */
+    width: 100%; /* กำหนดความกว้างเป็น 100% */
+    transition: background-color 0.3s ease; /* กำหนดการเปลี่ยนแปลงพื้นหลังให้เรียบ */
+    margin-top: 20px; /* กำหนดระยะขอบด้านบน */
+    border-radius: 5px; /* ทำมุมของปุ่มให้กลมมน */
 }
 
 #submit:hover, #restart:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* เปลี่ยนพื้นหลังเมื่อชี้ไปที่ปุ่ม */
 }
 
 #restart {
-    background-color: #3498db;
+    background-color: #3498db; /* กำหนดพื้นหลังของปุ่ม restart เป็นสีน้ำเงิน */
 }
 
 #restart:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* เปลี่ยนพื้นหลังเมื่อชี้ไปที่ปุ่ม restart */
 }
 
 .progress {
-    height: 5px;
-    background-color: #f0f0f0;
-    margin-top: 20px;
+    height: 5px; /* กำหนดความสูงของ progress bar */
+    background-color: #f0f0f0; /* กำหนดพื้นหลังของ progress bar */
+    margin-top: 20px; /* กำหนดระยะขอบด้านบน */
 }
 
 .progress-bar {
-    height: 100%;
-    background-color: #4CAF50;
-    width: 0%;
-    transition: width 0.5s ease-in-out;
+    height: 100%; /* กำหนดความสูงให้เต็ม */
+    background-color: #4CAF50; /* กำหนดพื้นหลังของ progress bar เป็นสีเขียว */
+    width: 0%; /* กำหนดความกว้างเริ่มต้นเป็น 0% */
+    transition: width 0.5s ease-in-out; /* กำหนดการเปลี่ยนแปลงความกว้างให้เรียบ */
 }
 
 .navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 10px;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงปุ่มนำทาง */
+    justify-content: space-between; /* จัดเรียงปุ่มให้ห่างกัน */
+    margin-top: 20px; /* กำหนดระยะขอบด้านบน */
+    gap: 10px; /* กำหนดระยะห่างระหว่างปุ่ม */
 }
 
 .navigation-buttons button {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    flex: 1;
-    transition: background-color 0.3s ease;
+    background-color: #6c757d; /* กำหนดพื้นหลังของปุ่มเป็นสีเทา */
+    color: white; /* กำหนดสีข้อความเป็นขาว */
+    border: none; /* ไม่แสดงเส้นขอบ */
+    padding: 10px 20px; /* กำหนดระยะขอบด้านใน */
+    font-size: 16px; /* กำหนดขนาดฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+    border-radius: 5px; /* ทำมุมของปุ่มให้กลมมน */
+    flex: 1; /* ให้ปุ่มขยายเต็มพื้นที่ */
+    transition: background-color 0.3s ease; /* กำหนดการเปลี่ยนแปลงพื้นหลังให้เรียบ */
 }
 
 .navigation-buttons button:hover:not(:disabled) {
-    background-color: #5a6268;
+    background-color: #5a6268; /* เปลี่ยนพื้นหลังเมื่อชี้ไปที่ปุ่ม */
 }
 
 .navigation-buttons button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+    background-color: #cccccc; /* กำหนดพื้นหลังของปุ่มที่ถูกปิดการใช้งาน */
+    cursor: not-allowed; /* เปลี่ยนเคอร์เซอร์เมื่อปุ่มถูกปิดการใช้งาน */
 }
 
 /* สไตล์สำหรับส่วนแสดงผลคะแนนและเฉลย */
 #results {
-    padding: 20px;
+    padding: 20px; /* กำหนดระยะขอบด้านใน */
 }
 
 #results h2 {
-    color: #2d3748;
-    margin-bottom: 30px;
-    font-size: 24px;
-    text-align: center;
+    color: #2d3748; /* กำหนดสีข้อความ */
+    margin-bottom: 30px; /* กำหนดระยะขอบด้านล่าง */
+    font-size: 24px; /* กำหนดขนาดฟอนต์ */
+    text-align: center; /* จัดข้อความใน h2 ให้อยู่กลาง */
 }
 
 #results h3 {
-    color: #4a5568;
-    margin: 20px 0;
-    font-size: 20px;
+    color: #4a5568; /* กำหนดสีข้อความ */
+    margin: 20px 0; /* กำหนดระยะขอบด้านบนและล่าง */
+    font-size: 20px; /* กำหนดขนาดฟอนต์ */
 }
 
 .review-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* กำหนดระยะขอบด้านล่าง */
+    padding: 15px; /* กำหนดระยะขอบด้านใน */
+    border-radius: 8px; /* ทำมุมของ item ให้กลมมน */
+    border-left: 4px solid; /* กำหนดเส้นขอบด้านซ้าย */
+    background-color: #fff; /* กำหนดพื้นหลังเป็นสีขาว */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ item */
 }
 
 .review-item.correct {
-    background-color: #f0fff4;
-    border-left-color: #48bb78;
+    background-color: #f0fff4; /* กำหนดพื้นหลังของ item ที่ถูกต้อง */
+    border-left-color: #48bb78; /* กำหนดสีเส้นขอบด้านซ้าย */
 }
 
 .review-item.wrong {
-    background-color: #fff5f5;
-    border-left-color: #f56565;
+    background-color: #fff5f5; /* กำหนดพื้นหลังของ item ที่ผิด */
+    border-left-color: #f56565; /* กำหนดสีเส้นขอบด้านซ้าย */
 }
 
 .review-item h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #2d3748;
+    font-size: 18px; /* กำหนดขนาดฟอนต์ */
+    margin-bottom: 10px; /* กำหนดระยะขอบด้านล่าง */
+    color: #2d3748; /* กำหนดสีข้อความ */
 }
 
 .result-detail {
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 1.5;
+    margin-top: 10px; /* กำหนดระยะขอบด้านบน */
+    font-size: 16px; /* กำหนดขนาดฟอนต์ */
+    line-height: 1.5; /* กำหนดระยะห่างระหว่างบรรทัด */
 }
 
 .text-success {
-    color: #48bb78;
-    font-weight: bold;
+    color: #48bb78; /* กำหนดสีข้อความสำหรับข้อความสำเร็จ */
+    font-weight: bold; /* ทำให้ข้อความหนา */
 }
 
 .text-danger {
-    color: #f56565;
-    font-weight: bold;
+    color: #f56565; /* กำหนดสีข้อความสำหรับข้อความผิดพลาด */
+    font-weight: bold; /* ทำให้ข้อความหนา */
 }
 
 .hide {
-    display: none;
+    display: none; /* ซ่อนองค์ประกอบ */
 }
 
 @media (max-width: 500px) {
     .choices {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* เปลี่ยนให้มี 1 คอลัมน์เมื่อหน้าจอเล็ก */
     }
     
     body {
-        padding: 10px;
+        padding: 10px; /* กำหนดระยะขอบด้านในของ body */
     }
     
     #results {
-        padding: 15px;
+        padding: 15px; /* กำหนดระยะขอบด้านในของผลลัพธ์ */
     }
     
     .review-item {
-        padding: 12px;
+        padding: 12px; /* กำหนดระยะขอบด้านในของ item */
     }
     
     h1 {
-        font-size: 24px;
+        font-size: 24px; /* กำหนดขนาดฟอนต์ของ h1 */
     }
     
     h2 {
-        font-size: 20px;
+        font-size: 20px; /* กำหนดขนาดฟอนต์ของ h2 */
     }
 }
 
 /* เพิ่มสไตล์ใหม่ต่อท้ายไฟล์ CSS เดิม */
 
 .question-counter {
-    text-align: center;
-    color: #666;
-    margin-bottom: 10px;
-    font-size: 16px;
+    text-align: center; /* จัดข้อความใน counter ให้อยู่กลาง */
+    color: #666; /* กำหนดสีข้อความ */
+    margin-bottom: 10px; /* กำหนดระยะขอบด้านล่าง */
+    font-size: 16px; /* กำหนดขนาดฟอนต์ */
 }
 
 .score-summary {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    text-align: center;
+    background-color: #f8f9fa; /* กำหนดพื้นหลังของสรุปคะแนน */
+    padding: 20px; /* กำหนดระยะขอบด้านใน */
+    border-radius: 8px; /* ทำมุมของสรุปคะแนนให้กลมมน */
+    margin-bottom: 30px; /* กำหนดระยะขอบด้านล่าง */
+    text-align: center; /* จัดข้อความในสรุปคะแนนให้อยู่กลาง */
 }
 
 .score-summary p {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 10px 0; /* กำหนดระยะขอบด้านบนและล่าง */
+    font-size: 18px; /* กำหนดขนาดฟอนต์ */
 }
 
 .grade {
-    font-weight: bold;
-    padding: 3px 8px;
-    border-radius: 4px;
+    font-weight: bold; /* ทำให้ข้อความหนา */
+    padding: 3px 8px; /* กำหนดระยะขอบด้านใน */
+    border-radius: 4px; /* ทำมุมของเกรดให้กลมมน */
 }
 
 .grade.ดีเยี่ยม {
-    background-color: #48bb78;
-    color: white;
+    background-color: #48bb78; /* กำหนดพื้นหลังของเกรดดีเยี่ยม */
+    color: white; /* กำหนดสีข้อความเป็นขาว */
 }
 
 .grade.ดี {
-    background-color: #4299e1;
-    color: white;
+    background-color: #4299e1; /* กำหนดพื้นหลังของเกรดดี */
+    color: white; /* กำหนดสีข้อความเป็นขาว */
 }
 
 .grade.ปานกลาง {
-    background-color: #ecc94b;
-    color: black;
+    background-color: #ecc94b; /* กำหนดพื้นหลังของเกรดปานกลาง */
+    color: black; /* กำหนดสีข้อความเป็นดำ */
 }
 
 .grade.ควรปรับปรุง {
-    background-color: #f56565;
-    color: white;
+    background-color: #f56565; /* กำหนดพื้นหลังของเกรดควรปรับปรุง */
+    color: white; /* กำหนดสีข้อความเป็นขาว */
 }

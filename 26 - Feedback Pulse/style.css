@@ -1,125 +1,125 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* กำหนดให้ทุก element ใช้ box-sizing แบบ border-box เพื่อให้การคำนวณขนาดรวมของ padding และ border */
+    margin: 0; /* ตั้งค่า margin ของทุก element เป็น 0 */
+    padding: 0; /* ตั้งค่า padding ของทุก element เป็น 0 */
 }
 
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Kanit, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* กำหนดพื้นหลังเป็น gradient จากสี #f5f7fa ไปยัง #c3cfe2 */
+    display: flex; /* ใช้ flexbox เพื่อจัดการ layout */
+    align-items: center; /* จัดแนว item ในแนวตั้งให้อยู่กลาง */
+    justify-content: center; /* จัดแนว item ในแนวนอนให้อยู่กลาง */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มหน้าจอ */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Kanit, sans-serif; /* กำหนด font-family สำหรับ body */
 }
 
 .container {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    animation: fadeIn 0.5s ease-out;
+    background: white; /* กำหนดพื้นหลังของ container เป็นสีขาว */
+    border-radius: 20px; /* ทำมุมของ container ให้กลมมน */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ container */
+    padding: 2rem; /* กำหนด padding ภายใน container */
+    max-width: 500px; /* กำหนดความกว้างสูงสุดของ container */
+    width: 90%; /* กำหนดความกว้างของ container เป็น 90% ของพื้นที่ที่มีอยู่ */
+    text-align: center; /* จัดข้อความใน container ให้อยู่กลาง */
+    animation: fadeIn 0.5s ease-out; /* เพิ่ม animation fadeIn ให้กับ container */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); } /* เริ่มต้นที่ความโปร่งใส 0 และเลื่อนลง 20px */
+    to { opacity: 1; transform: translateY(0); } /* สิ้นสุดที่ความโปร่งใส 1 และอยู่ที่ตำแหน่งเดิม */
 }
 
 .title {
-    color: #1a1a1a;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    color: #1a1a1a; /* กำหนดสีของ title */
+    font-size: 1.5rem; /* กำหนดขนาดฟอนต์ของ title */
+    margin-bottom: 0.5rem; /* กำหนด margin ด้านล่างของ title */
 }
 
 .subtitle {
-    color: #666;
-    margin-bottom: 2rem;
+    color: #666; /* กำหนดสีของ subtitle */
+    margin-bottom: 2rem; /* กำหนด margin ด้านล่างของ subtitle */
 }
 
 .ratings-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    display: flex; /* ใช้ flexbox เพื่อจัดการ layout ของ ratings */
+    justify-content: space-around; /* จัดแนว item ในแนวนอนให้มีระยะห่างเท่าๆ กัน */
+    gap: 1rem; /* กำหนดระยะห่างระหว่าง item */
+    margin-bottom: 2rem; /* กำหนด margin ด้านล่างของ ratings-container */
 }
 
 .rating {
-    flex: 1;
-    padding: 1rem;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    flex: 1; /* ให้ rating แต่ละอันมีขนาดเท่ากัน */
+    padding: 1rem; /* กำหนด padding ภายใน rating */
+    border-radius: 12px; /* ทำมุมของ rating ให้กลมมน */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    transition: all 0.3s ease; /* เพิ่ม transition สำหรับการเปลี่ยนแปลง */
 }
 
 .rating:hover {
-    background: #f8f9fa;
-    transform: translateY(-3px);
+    background: #f8f9fa; /* เปลี่ยนพื้นหลังเมื่อ hover */
+    transform: translateY(-3px); /* เลื่อน rating ขึ้น 3px เมื่อ hover */
 }
 
 .rating.active {
-    background: #e3f2fd;
-    transform: translateY(-3px);
+    background: #e3f2fd; /* กำหนดพื้นหลังของ rating ที่ active */
+    transform: translateY(-3px); /* เลื่อน rating ขึ้น 3px เมื่อ active */
 }
 
 .rating-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem; /* กำหนดขนาดฟอนต์ของ rating icon */
+    margin-bottom: 0.5rem; /* กำหนด margin ด้านล่างของ rating icon */
 }
 
 .rating-text {
-    color: #666;
-    font-size: 0.9rem;
+    color: #666; /* กำหนดสีของ rating text */
+    font-size: 0.9rem; /* กำหนดขนาดฟอนต์ของ rating text */
 }
 
 .btn {
-    background: #2196f3;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
+    background: #2196f3; /* กำหนดพื้นหลังของปุ่มเป็นสีน้ำเงิน */
+    color: white; /* กำหนดสีของข้อความในปุ่มเป็นสีขาว */
+    border: none; /* ไม่ให้มี border */
+    padding: 1rem 2rem; /* กำหนด padding ภายในปุ่ม */
+    border-radius: 10px; /* ทำมุมของปุ่มให้กลมมน */
+    font-size: 1rem; /* กำหนดขนาดฟอนต์ของปุ่ม */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    transition: all 0.3s ease; /* เพิ่ม transition สำหรับการเปลี่ยนแปลง */
+    font-weight: 500; /* กำหนดน้ำหนักฟอนต์ของปุ่ม */
 }
 
 .btn:hover {
-    background: #1976d2;
-    transform: translateY(-2px);
+    background: #1976d2; /* เปลี่ยนพื้นหลังของปุ่มเมื่อ hover */
+    transform: translateY(-2px); /* เลื่อนปุ่มขึ้น 2px เมื่อ hover */
 }
 
 .btn:active {
-    transform: translateY(0);
+    transform: translateY(0); /* คืนค่าตำแหน่งปุ่มเมื่อถูกคลิก */
 }
 
 /* Completion state */
 .completion-message {
-    padding: 2rem;
+    padding: 2rem; /* กำหนด padding ภายใน completion message */
 }
 
 .completion-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: pulse 2s infinite;
+    font-size: 3rem; /* กำหนดขนาดฟอนต์ของ completion icon */
+    margin-bottom: 1rem; /* กำหนด margin ด้านล่างของ completion icon */
+    animation: pulse 2s infinite; /* เพิ่ม animation pulse ให้กับ completion icon */
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1); } /* เริ่มต้นที่ขนาดปกติ */
+    50% { transform: scale(1.1); } /* ขยายขนาดขึ้น 10% */
+    100% { transform: scale(1); } /* คืนค่าขนาดกลับเป็นปกติ */
 }
 
 /* Responsive design */
 @media (max-width: 480px) {
     .ratings-container {
-        flex-direction: column;
+        flex-direction: column; /* เปลี่ยน layout ของ ratings-container เป็นแนวตั้งเมื่อหน้าจอเล็กกว่า 480px */
     }
     
     .rating {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem; /* กำหนด margin ด้านล่างของ rating ในแนวตั้ง */
     }
 }

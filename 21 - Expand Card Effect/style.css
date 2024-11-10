@@ -1,131 +1,131 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* กำหนดให้ทุก element ใช้ box-sizing แบบ border-box */
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) เป็น 0 สำหรับทุก element */
+    padding: 0; /* ตั้งค่าระยะภายใน (padding) เป็น 0 สำหรับทุก element */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์ของ body เป็น 'Kanit' */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body เป็น 100% ของ viewport height */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); /* กำหนดพื้นหลังเป็น gradient */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง element */
+    justify-content: center; /* จัดเรียง element ให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดเรียง element ให้อยู่กลางแนวตั้ง */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ body */
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem;
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+    position: fixed; /* กำหนดให้ header อยู่ในตำแหน่งคงที่ */
+    top: 0; /* ตั้งให้ header อยู่ที่ด้านบนสุด */
+    left: 0; /* ตั้งให้ header อยู่ที่ด้านซ้ายสุด */
+    right: 0; /* ตั้งให้ header อยู่ที่ด้านขวาสุด */
+    padding: 2rem; /* กำหนดระยะภายใน (padding) เป็น 2rem */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    color: white; /* กำหนดสีข้อความเป็นสีขาว */
+    font-size: 2rem; /* กำหนดขนาดฟอนต์เป็น 2rem */
+    font-weight: 500; /* กำหนดน้ำหนักฟอนต์เป็น 500 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กับข้อความ */
+    z-index: 100; /* กำหนด z-index เพื่อให้ header อยู่เหนือ element อื่น */
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%); /* กำหนดพื้นหลังเป็น gradient */
 }
 
 .container {
-    display: flex;
-    width: 90vw;
-    max-width: 1400px;
-    gap: 1rem;
-    padding: 2rem;
-    margin-top: 4rem;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง item ภายใน container */
+    width: 90vw; /* กำหนดความกว้างของ container เป็น 90% ของ viewport width */
+    max-width: 1400px; /* กำหนดความกว้างสูงสุดของ container เป็น 1400px */
+    gap: 1rem; /* กำหนดระยะห่างระหว่าง item เป็น 1rem */
+    padding: 2rem; /* กำหนดระยะภายใน (padding) เป็น 2rem */
+    margin-top: 4rem; /* กำหนดระยะขอบด้านบน (margin-top) เป็น 4rem */
 }
 
 .item {
-    position: relative;
-    height: 75vh;
-    border-radius: 2rem;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 0;
-    overflow: hidden;
-    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.8);
+    position: relative; /* กำหนดให้ item มีตำแหน่งสัมพันธ์กับ parent */
+    height: 75vh; /* กำหนดความสูงของ item เป็น 75% ของ viewport height */
+    border-radius: 2rem; /* กำหนดมุมโค้งของ item เป็น 2rem */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    flex: 0.5; /* กำหนด item ให้มีขนาดยืดหยุ่น */
+    margin: 0; /* ตั้งค่าระยะขอบ (margin) เป็น 0 */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของ item */
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); /* กำหนดการเปลี่ยนแปลงให้มีการเคลื่อนไหว */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กับ item */
+    background-size: cover; /* กำหนดให้ภาพพื้นหลังครอบคลุมพื้นที่ทั้งหมด */
+    background-position: center; /* กำหนดให้ภาพพื้นหลังอยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพพื้นหลังซ้ำ */
+    filter: brightness(0.8); /* ลดความสว่างของ item */
 }
 
 .item::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    content: ''; /* สร้าง pseudo-element ก่อน item */
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute */
+    bottom: 0; /* ตั้งให้อยู่ที่ด้านล่างสุด */
+    left: 0; /* ตั้งให้อยู่ที่ด้านซ้ายสุด */
+    right: 0; /* ตั้งให้อยู่ที่ด้านขวาสุด */
+    height: 50%; /* กำหนดความสูงเป็น 50% ของ item */
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); /* กำหนดพื้นหลังเป็น gradient */
+    opacity: 0; /* ตั้งค่า opacity เป็น 0 (ซ่อน) */
+    transition: opacity 0.3s ease; /* กำหนดการเปลี่ยนแปลง opacity */
 }
 
 .item:hover {
-    filter: brightness(1);
+    filter: brightness(1); /* เพิ่มความสว่างเมื่อ hover */
 }
 
 .item.active {
-    flex: 4;
-    filter: brightness(1);
+    flex: 4; /* ขยาย item ที่ active ให้มีขนาดใหญ่ขึ้น */
+    filter: brightness(1); /* เพิ่มความสว่างของ item ที่ active */
 }
 
 .item.active::before {
-    opacity: 1;
+    opacity: 1; /* แสดง pseudo-element เมื่อ item active */
 }
 
 .item h3 {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute; /* กำหนดตำแหน่งของ h3 เป็น absolute */
+    bottom: 2rem; /* ตั้งให้ h3 อยู่ห่างจากด้านล่าง 2rem */
+    left: 2rem; /* ตั้งให้ h3 อยู่ห่างจากด้านซ้าย 2rem */
+    color: white; /* กำหนดสีข้อความเป็นสีขาว */
+    font-size: 1.8rem; /* กำหนดขนาดฟอนต์เป็น 1.8rem */
+    font-weight: 500; /* กำหนดน้ำหนักฟอนต์เป็น 500 */
+    opacity: 0; /* ตั้งค่า opacity เป็น 0 (ซ่อน) */
+    transform: translateY(20px); /* เลื่อน h3 ลง 20px */
+    transition: all 0.3s ease; /* กำหนดการเปลี่ยนแปลงให้มีการเคลื่อนไหว */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้กับข้อความ */
 }
 
 .item.active h3 {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* แสดง h3 เมื่อ item active */
+    transform: translateY(0); /* คืนค่า h3 กลับสู่ตำแหน่งเดิม */
 }
 
 @media (max-width: 768px) {
     .container {
-        gap: 0.5rem;
-        padding: 1rem;
+        gap: 0.5rem; /* ลดระยะห่างระหว่าง item เป็น 0.5rem */
+        padding: 1rem; /* ลดระยะภายใน (padding) เป็น 1rem */
     }
 
     .item {
-        border-radius: 1.5rem;
+        border-radius: 1.5rem; /* ลดมุมโค้งของ item เป็น 1.5rem */
     }
 
     .item:nth-of-type(6),
     .item:nth-of-type(7) {
-        display: none;
+        display: none; /* ซ่อน item ที่ 6 และ 7 */
     }
 
     .item h3 {
-        font-size: 1.4rem;
-        bottom: 1.5rem;
-        left: 1.5rem;
+        font-size: 1.4rem; /* ลดขนาดฟอนต์ของ h3 เป็น 1.4rem */
+        bottom: 1.5rem; /* ตั้งให้ h3 อยู่ห่างจากด้านล่าง 1.5rem */
+        left: 1.5rem; /* ตั้งให้ h3 อยู่ห่างจากด้านซ้าย 1.5rem */
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        font-size: 1.5rem;
-        padding: 1rem;
+        font-size: 1.5rem; /* ลดขนาดฟอนต์ของ header เป็น 1.5rem */
+        padding: 1rem; /* ลดระยะภายใน (padding) เป็น 1rem */
     }
 
     .container {
-        margin-top: 3rem;
+        margin-top: 3rem; /* ลดระยะขอบด้านบน (margin-top) เป็น 3rem */
     }
 }

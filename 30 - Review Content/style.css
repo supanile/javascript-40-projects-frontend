@@ -1,218 +1,218 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;  /* กำหนดให้ทุก element ใช้ box-sizing แบบ border-box */
+    margin: 0;  /* ตั้งค่าระยะขอบ (margin) เป็น 0 */
+    padding: 0;  /* ตั้งค่าระยะห่างภายใน (padding) เป็น 0 */
 }
 
 body {
-    background-color: #0f172a;  /* สีพื้นหลังเข้ม */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Kanit', sans-serif;
-    color: #e2e8f0;
+    background-color: #0f172a;  /* กำหนดสีพื้นหลังให้เข้ม */
+    display: flex;  /* ใช้ flexbox เพื่อจัดเรียง layout */
+    align-items: center;  /* จัดแนวแนวตั้งให้อยู่กลาง */
+    justify-content: center;  /* จัดแนวนอนให้อยู่กลาง */
+    height: 100vh;  /* กำหนดความสูงให้เต็มหน้าจอ */
+    overflow: hidden;  /* ซ่อนเนื้อหาที่เกินขอบเขต */
+    font-family: 'Kanit', sans-serif;  /* กำหนดฟอนต์ที่ใช้ */
+    color: #e2e8f0;  /* กำหนดสีตัวอักษร */
 }
 
 .container {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);  /* gradient สีเข้ม */
-    color: #e2e8f0;
-    border-radius: 24px;
-    padding: 50px 80px;
-    max-width: 768px;
-    width: 90%;
-    position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);  /* กำหนดพื้นหลังเป็น gradient สีเข้ม */
+    color: #e2e8f0;  /* กำหนดสีตัวอักษร */
+    border-radius: 24px;  /* ทำมุมของกล่องให้โค้งมน */
+    padding: 50px 80px;  /* กำหนดระยะห่างภายในกล่อง */
+    max-width: 768px;  /* กำหนดความกว้างสูงสุดของกล่อง */
+    width: 90%;  /* กำหนดความกว้างของกล่องเป็น 90% ของพื้นที่ */
+    position: relative;  /* กำหนดตำแหน่งเป็น relative เพื่อใช้กับตำแหน่ง absolute ภายใน */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);  /* เพิ่มเงาให้กับกล่อง */
+    border: 1px solid rgba(255, 255, 255, 0.1);  /* กำหนดขอบให้กับกล่อง */
 }
 
 .progress-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 100%;
-    border-radius: 4px;
+    position: absolute;  /* กำหนดตำแหน่งเป็น absolute เพื่อให้สามารถวางซ้อนทับได้ */
+    top: 0;  /* วางที่ด้านบนสุด */
+    left: 0;  /* วางที่ด้านซ้ายสุด */
+    height: 4px;  /* กำหนดความสูงของ progress bar */
+    background-color: rgba(255, 255, 255, 0.1);  /* กำหนดสีพื้นหลังของ progress bar */
+    width: 100%;  /* กำหนดความกว้างให้เต็มพื้นที่ */
+    border-radius: 4px;  /* ทำมุมของ progress bar ให้โค้งมน */
 }
 
 .progress-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
-    border-radius: 4px;
-    animation: progress 10s linear infinite;
+    content: '';  /* สร้าง pseudo-element หลัง progress bar */
+    position: absolute;  /* กำหนดตำแหน่งเป็น absolute */
+    top: 0;  /* วางที่ด้านบนสุด */
+    left: 0;  /* วางที่ด้านซ้ายสุด */
+    height: 100%;  /* กำหนดความสูงให้เต็ม progress bar */
+    width: 0;  /* เริ่มต้นความกว้างเป็น 0 */
+    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);  /* กำหนดพื้นหลังเป็น gradient */
+    border-radius: 4px;  /* ทำมุมให้โค้งมน */
+    animation: progress 10s linear infinite;  /* เพิ่ม animation ให้ progress bar */
 }
 
 .review-content {
-    position: relative;
-    padding: 20px 0;
-    min-height: 150px;
+    position: relative;  /* กำหนดตำแหน่งเป็น relative */
+    padding: 20px 0;  /* กำหนดระยะห่างภายใน */
+    min-height: 150px;  /* กำหนดความสูงขั้นต่ำ */
 }
 
 .fa-quote {
-    position: absolute;
-    color: rgba(255, 255, 255, 0.1);
-    font-size: 28px;
+    position: absolute;  /* กำหนดตำแหน่งเป็น absolute */
+    color: rgba(255, 255, 255, 0.1);  /* กำหนดสีให้จาง */
+    font-size: 28px;  /* กำหนดขนาดฟอนต์ */
 }
 
 .fa-quote-left {
-    top: 0;
-    left: -40px;
+    top: 0;  /* วางที่ด้านบนสุด */
+    left: -40px;  /* วางที่ด้านซ้ายห่างจากขอบ 40px */
 }
 
 .fa-quote-right {
-    bottom: 0;
-    right: -40px;
+    bottom: 0;  /* วางที่ด้านล่างสุด */
+    right: -40px;  /* วางที่ด้านขวาห่างจากขอบ 40px */
 }
 
 .review {
-    line-height: 1.8;
-    text-align: center;
-    margin: 20px 0;
-    font-size: 18px;
-    color: #e2e8f0;
-    transition: opacity 0.3s ease;
+    line-height: 1.8;  /* กำหนดระยะห่างระหว่างบรรทัด */
+    text-align: center;  /* จัดข้อความให้อยู่กลาง */
+    margin: 20px 0;  /* กำหนดระยะห่างด้านบนและล่าง */
+    font-size: 18px;  /* กำหนดขนาดฟอนต์ */
+    color: #e2e8f0;  /* กำหนดสีตัวอักษร */
+    transition: opacity 0.3s ease;  /* เพิ่ม transition สำหรับ opacity */
 }
 
 .user {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+    display: flex;  /* ใช้ flexbox เพื่อจัดเรียง layout */
+    align-items: center;  /* จัดแนวแนวตั้งให้อยู่กลาง */
+    justify-content: center;  /* จัดแนวนอนให้อยู่กลาง */
+    margin-top: 30px;  /* กำหนดระยะห่างด้านบน */
 }
 
 .user-image {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    border: 4px solid rgba(59, 130, 246, 0.3);
-    object-fit: cover;
-    transition: all 0.3s ease;
+    width: 75px;  /* กำหนดความกว้างของภาพผู้ใช้ */
+    height: 75px;  /* กำหนดความสูงของภาพผู้ใช้ */
+    border-radius: 50%;  /* ทำให้ภาพเป็นวงกลม */
+    border: 4px solid rgba(59, 130, 246, 0.3);  /* กำหนดขอบให้กับภาพ */
+    object-fit: cover;  /* ปรับขนาดภาพให้พอดีกับกรอบ */
+    transition: all 0.3s ease;  /* เพิ่ม transition สำหรับการเปลี่ยนแปลง */
 }
 
 .user-image:hover {
-    transform: scale(1.05);
-    border-color: rgba(59, 130, 246, 0.5);
+    transform: scale(1.05);  /* ขยายภาพเมื่อ hover */
+    border-color: rgba(59, 130, 246, 0.5);  /* เปลี่ยนสีขอบเมื่อ hover */
 }
 
 .user-details {
-    margin-left: 20px;
-    text-align: left;
+    margin-left: 20px;  /* กำหนดระยะห่างด้านซ้าย */
+    text-align: left;  /* จัดข้อความไปทางซ้าย */
 }
 
 .user-name {
-    font-size: 20px;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #ffffff;
+    font-size: 20px;  /* กำหนดขนาดฟอนต์ */
+    margin-bottom: 6px;  /* กำหนดระยะห่างด้านล่าง */
+    font-weight: 600;  /* กำหนดน้ำหนักฟอนต์ให้หนา */
+    color: #ffffff;  /* กำหนดสีตัวอักษร */
 }
 
 .user-job {
-    font-size: 14px;
-    color: #94a3b8;
-    font-weight: 500;
+    font-size: 14px;  /* กำหนดขนาดฟอนต์ */
+    color: #94a3b8;  /* กำหนดสีตัวอักษร */
+    font-weight: 500;  /* กำหนดน้ำหนักฟอนต์ */
 }
 
 .navigation {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    left: 0;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+    position: absolute;  /* กำหนดตำแหน่งเป็น absolute */
+    top: 50%;  /* วางที่กลางแนวตั้ง */
+    transform: translateY(-50%);  /* ปรับตำแหน่งให้ตรงกลาง */
+    width: 100%;  /* กำหนดความกว้างให้เต็มพื้นที่ */
+    left: 0;  /* วางที่ด้านซ้ายสุด */
+    padding: 0 20px;  /* กำหนดระยะห่างภายใน */
+    display: flex;  /* ใช้ flexbox เพื่อจัดเรียง layout */
+    justify-content: space-between;  /* จัดให้มีระยะห่างระหว่างปุ่ม */
 }
 
 .nav-btn {
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    color: #e2e8f0;
-    padding: 12px;
-    border-radius: 50%;
-    cursor: poKanit;
-    transition: all 0.3s ease;
+    background: rgba(59, 130, 246, 0.1);  /* กำหนดสีพื้นหลังของปุ่ม */
+    border: 1px solid rgba(59, 130, 246, 0.2);  /* กำหนดขอบให้กับปุ่ม */
+    color: #e2e8f0;  /* กำหนดสีตัวอักษร */
+    padding: 12px;  /* กำหนดระยะห่างภายใน */
+    border-radius: 50%;  /* ทำให้ปุ่มเป็นวงกลม */
+    cursor: poKanit;  /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    transition: all 0.3s ease;  /* เพิ่ม transition สำหรับการเปลี่ยนแปลง */
 }
 
 .nav-btn:hover {
-    background: rgba(59, 130, 246, 0.2);
-    transform: scale(1.1);
+    background: rgba(59, 130, 246, 0.2);  /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(1.1);  /* ขยายปุ่มเมื่อ hover */
 }
 
 .indicators {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
+    position: absolute;  /* กำหนดตำแหน่งเป็น absolute */
+    bottom: 25px;  /* วางที่ด้านล่างห่างจากขอบ 25px */
+    left: 50%;  /* วางที่กลางแนวนอน */
+    transform: translateX(-50%);  /* ปรับตำแหน่งให้ตรงกลาง */
+    display: flex;  /* ใช้ flexbox เพื่อจัดเรียง layout */
+    gap: 8px;  /* กำหนดระยะห่างระหว่าง indicator */
 }
 
 .indicator {
-    width: 8px;
-    height: 8px;
-    background: rgba(59, 130, 246, 0.2);
-    border-radius: 50%;
-    cursor: poKanit;
-    transition: all 0.3s ease;
+    width: 8px;  /* กำหนดความกว้างของ indicator */
+    height: 8px;  /* กำหนดความสูงของ indicator */
+    background: rgba(59, 130, 246, 0.2);  /* กำหนดสีพื้นหลังของ indicator */
+    border-radius: 50%;  /* ทำให้ indicator เป็นวงกลม */
+    cursor: poKanit;  /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    transition: all 0.3s ease;  /* เพิ่ม transition สำหรับการเปลี่ยนแปลง */
 }
 
 .indicator:hover {
-    background: rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.4);  /* เปลี่ยนสีพื้นหลังเมื่อ hover */
 }
 
 .indicator.active {
-    width: 24px;
-    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
-    border-radius: 4px;
+    width: 24px;  /* กำหนดความกว้างของ indicator ที่ active */
+    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);  /* กำหนดพื้นหลังเป็น gradient */
+    border-radius: 4px;  /* ทำมุมให้โค้งมน */
 }
 
 @keyframes progress {
     0% {
-        width: 0%;
+        width: 0%;  /* เริ่มต้นความกว้างที่ 0% */
     }
     100% {
-        width: 100%;
+        width: 100%;  /* สิ้นสุดที่ความกว้าง 100% */
     }
 }
 
 /* เพิ่ม Animation */
 .review, .user-image {
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.5s ease;  /* เพิ่ม animation fadeIn ให้กับ review และ user-image */
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(10px);
+        opacity: 0;  /* เริ่มต้นที่ความโปร่งใส 0 */
+        transform: translateY(10px);  /* เริ่มต้นที่เลื่อนลง 10px */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;  /* สิ้นสุดที่ความโปร่งใส 1 */
+        transform: translateY(0);  /* กลับสู่ตำแหน่งเดิม */
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 30px 40px;
+        padding: 30px 40px;  /* ปรับระยะห่างภายในสำหรับหน้าจอเล็ก */
     }
     
     .fa-quote {
-        font-size: 20px;
+        font-size: 20px;  /* ปรับขนาดฟอนต์สำหรับหน้าจอเล็ก */
     }
     
     .review {
-        font-size: 16px;
+        font-size: 16px;  /* ปรับขนาดฟอนต์สำหรับหน้าจอเล็ก */
     }
     
     .user-image {
-        width: 60px;
-        height: 60px;
+        width: 60px;  /* ปรับความกว้างของภาพผู้ใช้สำหรับหน้าจอเล็ก */
+        height: 60px;  /* ปรับความสูงของภาพผู้ใช้สำหรับหน้าจอเล็ก */
     }
 }

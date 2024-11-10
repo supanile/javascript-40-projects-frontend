@@ -1,146 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');  /* นำเข้า font 'Kanit' จาก Google Fonts */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;  /* ตั้งค่า box-sizing ให้เป็น border-box เพื่อให้ padding และ border รวมอยู่ในขนาดที่กำหนด */
+    margin: 0;  /* ตั้งค่า margin เป็น 0 สำหรับทุก element */
+    padding: 0;  /* ตั้งค่า padding เป็น 0 สำหรับทุก element */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
+    font-family: 'Kanit', sans-serif;  /* กำหนด font-family ของ body เป็น 'Kanit' */
+    background-color: #f5f5f5;  /* กำหนดสีพื้นหลังของ body */
+    color: #333;  /* กำหนดสีตัวอักษร */
+    line-height: 1.6;  /* กำหนดความสูงของบรรทัด */
+    overflow-x: hidden;  /* ปิดการเลื่อนในแนวนอน */
 }
 
 header {
-    text-align: center;
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    color: white;
-    margin-bottom: 2rem;
+    text-align: center;  /* จัดตำแหน่งข้อความใน header ให้อยู่กลาง */
+    padding: 2rem 0;  /* กำหนด padding ด้านบนและล่าง */
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);  /* กำหนดพื้นหลังเป็น gradient */
+    color: white;  /* กำหนดสีตัวอักษรใน header เป็นสีขาว */
+    margin-bottom: 2rem;  /* กำหนด margin ด้านล่าง */
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-size: 2.5rem;  /* กำหนดขนาดตัวอักษรของ h1 */
+    margin-bottom: 0.5rem;  /* กำหนด margin ด้านล่าง */
+    font-weight: 500;  /* กำหนดน้ำหนักตัวอักษร */
 }
 
 header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.1rem;  /* กำหนดขนาดตัวอักษรของ p */
+    opacity: 0.9;  /* กำหนดความโปร่งใสของข้อความ */
 }
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    max-width: 1400px;  /* กำหนดความกว้างสูงสุดของ container */
+    margin: 0 auto;  /* จัดตำแหน่ง container ให้อยู่กลาง */
+    padding: 0 2rem;  /* กำหนด padding ด้านซ้ายและขวา */
 }
 
 .category {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 500px;  /* เพิ่มความสูงจาก 300px เป็น 500px */
-    margin: 3rem 0;  /* เพิ่ม margin ระหว่างแต่ละ category */
-    border-radius: 25px;  /* เพิ่มความโค้งของมุม */
-    overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);  /* เพิ่ม shadow ให้ดูมีมิติมากขึ้น */
-    transform: translateX(300%);
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);  /* เพิ่มเวลา animation */
+    position: relative;  /* ตั้งค่า position เป็น relative เพื่อให้สามารถใช้ position absolute กับลูกได้ */
+    background-size: cover;  /* ตั้งค่าขนาดพื้นหลังให้ครอบคลุม */
+    background-position: center;  /* ตั้งค่าตำแหน่งพื้นหลังให้อยู่กลาง */
+    height: 500px;  /* กำหนดความสูงของ category */
+    margin: 3rem 0;  /* กำหนด margin ด้านบนและล่าง */
+    border-radius: 25px;  /* กำหนดความโค้งของมุม */
+    overflow: hidden;  /* ซ่อนเนื้อหาที่เกินขอบเขต */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);  /* เพิ่มเงาให้ category */
+    transform: translateX(300%);  /* เลื่อน category ออกไปทางขวา */
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);  /* กำหนดการเปลี่ยนแปลงตำแหน่งเมื่อมีการเปลี่ยนแปลง */
 }
 
 .category:nth-of-type(even) {
-    transform: translateX(-300%);
+    transform: translateX(-300%);  /* เลื่อน category ที่เป็นเลขคู่ไปทางซ้าย */
 }
 
 .category.active {
-    transform: translateX(0);
+    transform: translateX(0);  /* คืนตำแหน่ง category ที่ active กลับมา */
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
+    position: absolute;  /* ตั้งค่า position เป็น absolute เพื่อให้ overlay อยู่เหนือ category */
+    top: 0;  /* ตั้งค่าตำแหน่งด้านบนเป็น 0 */
+    left: 0;  /* ตั้งค่าตำแหน่งด้านซ้ายเป็น 0 */
+    width: 100%;  /* กำหนดความกว้างให้เต็มที่ */
+    height: 100%;  /* กำหนดความสูงให้เต็มที่ */
+    background: linear-gradient(  /* กำหนดพื้นหลังเป็น gradient */
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.7)
+        rgba(0, 0, 0, 0.2),  /* สีดำโปร่งใส */
+        rgba(0, 0, 0, 0.7)   /* สีดำเข้ม */
     );
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transition: background-color 0.4s ease;  /* เพิ่มเวลา transition */
+    display: flex;  /* ใช้ flexbox เพื่อจัดการ layout */
+    flex-direction: column;  /* ตั้งค่าทิศทางเป็นแนวตั้ง */
+    justify-content: center;  /* จัดตำแหน่งให้เนื้อหาอยู่กลาง */
+    align-items: center;  /* จัดตำแหน่งให้เนื้อหาอยู่กลางในแนวนอน */
+    color: white;  /* กำหนดสีตัวอักษรใน overlay เป็นสีขาว */
+    transition: background-color 0.4s ease;  /* กำหนดการเปลี่ยนแปลงสีพื้นหลัง */
 }
 
 .category:hover .overlay {
-    background: linear-gradient(
+    background: linear-gradient(  /* เปลี่ยนพื้นหลังเมื่อ hover */
         to bottom,
-        rgba(99, 102, 241, 0.6),
-        rgba(139, 92, 246, 0.8)
+        rgba(99, 102, 241, 0.6),  /* สีฟ้าโปร่งใส */
+        rgba(139, 92, 246, 0.8)   /* สีม่วงโปร่งใส */
     );
 }
 
 .overlay i {
-    font-size: 4rem;  /* เพิ่มขนาดไอคอน */
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
+    font-size: 4rem;  /* กำหนดขนาดไอคอน */
+    margin-bottom: 1.5rem;  /* กำหนด margin ด้านล่าง */
+    opacity: 0;  /* ตั้งค่า opacity เป็น 0 เพื่อให้ซ่อน */
+    transform: translateY(20px);  /* เลื่อนไอคอนลง 20px */
+    transition: all 0.4s ease;  /* กำหนดการเปลี่ยนแปลงทั้งหมด */
 }
 
 .category:hover .overlay i {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;  /* แสดงไอคอนเมื่อ hover */
+    transform: translateY(0);  /* คืนตำแหน่งไอคอนกลับมา */
 }
 
 .overlay h2 {
-    font-size: 3rem;  /* เพิ่มขนาดตัวอักษร */
-    font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    transform: translateY(20px);
-    transition: all 0.4s ease;
+    font-size: 3rem;  /* กำหนดขนาดตัวอักษรของ h2 */
+    font-weight: 500;  /* กำหนดน้ำหนักตัวอักษร */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* เพิ่มเงาให้กับตัวอักษร */
+    transform: translateY(20px);  /* เลื่อน h2 ลง 20px */
+    transition: all 0.4s ease;  /* กำหนดการเปลี่ยนแปลงทั้งหมด */
 }
 
 .category:hover .overlay h2 {
-    transform: translateY(0);
+    transform: translateY(0);  /* คืนตำแหน่ง h2 กลับมาเมื่อ hover */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {  /* ตั้งค่าการตอบสนองสำหรับหน้าจอที่มีความกว้างสูงสุด 768px */
     .category {
-        height: 300px;  /* ปรับขนาดสำหรับมือถือ */
+        height: 300px;  /* ปรับความสูงของ category สำหรับมือถือ */
     }
     
     .overlay h2 {
-        font-size: 2rem;
+        font-size: 2rem;  /* ปรับขนาดตัวอักษรของ h2 สำหรับมือถือ */
     }
     
     .overlay i {
-        font-size: 2.5rem;
+        font-size: 2.5rem;  /* ปรับขนาดไอคอนสำหรับมือถือ */
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {  /* ตั้งค่าการตอบสนองสำหรับหน้าจอที่มีความกว้างขั้นต่ำ 768px */
     .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;  /* เพิ่ม gap ระหว่าง grid */
+        display: grid;  /* ใช้ grid layout สำหรับ container */
+        grid-template-columns: repeat(2, 1fr);  /* กำหนดให้มี 2 คอลัมน์ */
+        gap: 2.5rem;  /* กำหนดระยะห่างระหว่าง grid */
     }
     
     .category {
-        margin: 0;
+        margin: 0;  /* ตั้งค่า margin ของ category เป็น 0 */
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) {  /* ตั้งค่าการตอบสนองสำหรับหน้าจอที่มีความกว้างขั้นต่ำ 1024px */
     .container {
-        grid-template-columns: repeat(2, 1fr);  /* แก้เป็น 2 คอลัมน์เพื่อให้ภาพใหญ่ขึ้น */
-        gap: 3rem;  /* เพิ่ม gap ให้มากขึ้น */
+        grid-template-columns: repeat(2, 1fr);  /* ยังคงมี 2 คอลัมน์เพื่อให้ภาพใหญ่ขึ้น */
+        gap: 3rem;  /* เพิ่มระยะห่างระหว่าง grid */
     }
 }

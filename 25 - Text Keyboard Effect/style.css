@@ -1,138 +1,138 @@
-/* Import Kanit font */
+/* นำเข้า font Kanit จาก Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap');
 
-/* Reset และ Base Styles */
+/* รีเซ็ตค่าเริ่มต้นและสไตล์พื้นฐาน */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* ตั้งค่าระยะขอบเป็น 0 */
+    padding: 0; /* ตั้งค่าระยะห่างภายในเป็น 0 */
+    box-sizing: border-box; /* ใช้ box-sizing แบบ border-box เพื่อให้การคำนวณขนาดกล่องถูกต้อง */
 }
 
 body {
-    min-height: 100vh;
-    font-family: 'Kanit', sans-serif;  /* เปลี่ยนเป็น font Kanit */
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำของ body ให้เต็มหน้าจอ */
+    font-family: 'Kanit', sans-serif;  /* ใช้ font Kanit สำหรับเนื้อหา */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); /* กำหนดพื้นหลังเป็น gradient */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงเนื้อหา */
+    align-items: center; /* จัดแนวเนื้อหาในแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวเนื้อหาในแนวนอนให้ตรงกลาง */
+    color: #fff; /* กำหนดสีตัวอักษรเป็นสีขาว */
 }
 
-/* Container Styles */
+/* สไตล์สำหรับ container */
 .container {
-    width: 100%;
-    padding: 1rem;
+    width: 100%; /* กำหนดความกว้างให้เต็มที่ */
+    padding: 1rem; /* กำหนดระยะห่างภายในเป็น 1rem */
 }
 
-/* Card Styles */
+/* สไตล์สำหรับ card */
 .card {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 600px; /* กำหนดความกว้างสูงสุดของ card */
+    margin: 0 auto; /* จัด card ให้อยู่กลางหน้าจอ */
+    padding: 2rem; /* กำหนดระยะห่างภายในเป็น 2rem */
+    background: rgba(255, 255, 255, 0.1); /* กำหนดพื้นหลังเป็นสีขาวโปร่งใส */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอ */
+    border-radius: 1rem; /* ทำมุมของ card ให้กลมมน */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ card */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* กำหนดขอบให้กับ card */
 }
 
-/* Animated Text Styles */
+/* สไตล์สำหรับข้อความที่เคลื่อนไหว */
 .animated-text {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
-    min-height: 3rem;
-    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Kanit', sans-serif;  /* เพิ่ม font Kanit สำหรับข้อความที่เคลื่อนไหว */
+    font-size: 2rem; /* กำหนดขนาดตัวอักษร */
+    font-weight: bold; /* ทำให้ตัวอักษรหนา */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-bottom: 2rem; /* กำหนดระยะห่างด้านล่างเป็น 2rem */
+    min-height: 3rem; /* กำหนดความสูงขั้นต่ำของข้อความ */
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%); /* กำหนดพื้นหลังเป็น gradient */
+    -webkit-background-clip: text; /* ทำให้พื้นหลังเป็นข้อความ */
+    -webkit-text-fill-color: transparent; /* ทำให้สีของข้อความโปร่งใส */
+    font-family: 'Kanit', sans-serif;  /* ใช้ font Kanit สำหรับข้อความที่เคลื่อนไหว */
 }
 
-/* Speed Control Styles */
+/* สไตล์สำหรับการควบคุมความเร็ว */
 .speed-control {
-    margin-top: 2rem;
+    margin-top: 2rem; /* กำหนดระยะห่างด้านบนเป็น 2rem */
 }
 
 .speed-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียงเนื้อหา */
+    justify-content: space-between; /* จัดเนื้อหาให้ห่างกัน */
+    align-items: center; /* จัดแนวเนื้อหาในแนวตั้งให้ตรงกลาง */
+    margin-bottom: 0.5rem; /* กำหนดระยะห่างด้านล่างเป็น 0.5rem */
 }
 
 .speed-header label {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem; /* กำหนดขนาดตัวอักษร */
+    color: rgba(255, 255, 255, 0.9); /* กำหนดสีตัวอักษรเป็นสีขาวโปร่งใส */
 }
 
 #speed-value {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem; /* กำหนดขนาดตัวอักษร */
+    color: rgba(255, 255, 255, 0.7); /* กำหนดสีตัวอักษรเป็นสีขาวโปร่งใส */
 }
 
-/* Slider Styles */
+/* สไตล์สำหรับ slider */
 .slider-container {
-    width: 100%;
-    padding: 0.5rem 0;
+    width: 100%; /* กำหนดความกว้างให้เต็มที่ */
+    padding: 0.5rem 0; /* กำหนดระยะห่างภายในด้านบนและล่างเป็น 0.5rem */
 }
 
 .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    outline: none;
-    transition: all 0.2s;
+    -webkit-appearance: none; /* ปิดการแสดงผลเริ่มต้นของ slider */
+    width: 100%; /* กำหนดความกว้างให้เต็มที่ */
+    height: 5px; /* กำหนดความสูงของ slider */
+    border-radius: 5px; /* ทำมุมของ slider ให้กลมมน */
+    background: rgba(255, 255, 255, 0.1); /* กำหนดพื้นหลังเป็นสีขาวโปร่งใส */
+    outline: none; /* ปิดการแสดงผลขอบ */
+    transition: all 0.2s; /* กำหนดการเปลี่ยนแปลงให้มีการเคลื่อนไหว */
 }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #4facfe;
-    cursor: pointer;
-    transition: all 0.2s;
+    -webkit-appearance: none; /* ปิดการแสดงผลเริ่มต้นของ thumb */
+    appearance: none; /* ปิดการแสดงผลเริ่มต้นของ thumb */
+    width: 20px; /* กำหนดความกว้างของ thumb */
+    height: 20px; /* กำหนดความสูงของ thumb */
+    border-radius: 50%; /* ทำให้ thumb เป็นวงกลม */
+    background: #4facfe; /* กำหนดสีพื้นหลังของ thumb */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ที่ thumb */
+    transition: all 0.2s; /* กำหนดการเปลี่ยนแปลงให้มีการเคลื่อนไหว */
 }
 
 .slider::-webkit-slider-thumb:hover {
-    transform: scale(1.1);
-    background: #00f2fe;
+    transform: scale(1.1); /* ขยาย thumb ขึ้นเมื่อชี้ */
+    background: #00f2fe; /* เปลี่ยนสีพื้นหลังของ thumb เมื่อชี้ */
 }
 
 .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #4facfe;
-    cursor: pointer;
-    transition: all 0.2s;
-    border: none;
+    width: 20px; /* กำหนดความกว้างของ thumb */
+    height: 20px; /* กำหนดความสูงของ thumb */
+    border-radius: 50%; /* ทำให้ thumb เป็นวงกลม */
+    background: #4facfe; /* กำหนดสีพื้นหลังของ thumb */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อชี้ที่ thumb */
+    transition: all 0.2s; /* กำหนดการเปลี่ยนแปลงให้มีการเคลื่อนไหว */
+    border: none; /* ปิดการแสดงผลขอบ */
 }
 
 .slider::-moz-range-thumb:hover {
-    transform: scale(1.1);
-    background: #00f2fe;
+    transform: scale(1.1); /* ขยาย thumb ขึ้นเมื่อชี้ */
+    background: #00f2fe; /* เปลี่ยนสีพื้นหลังของ thumb เมื่อชี้ */
 }
 
-/* Hint Text */
+/* สไตล์สำหรับข้อความ hint */
 .hint {
-    text-align: center;
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 1rem;
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    font-size: 0.875rem; /* กำหนดขนาดตัวอักษร */
+    color: rgba(255, 255, 255, 0.5); /* กำหนดสีตัวอักษรเป็นสีขาวโปร่งใส */
+    margin-top: 1rem; /* กำหนดระยะห่างด้านบนเป็น 1rem */
 }
 
-/* Responsive Design */
+/* การออกแบบที่ตอบสนอง */
 @media (max-width: 768px) {
     .card {
-        padding: 1.5rem;
+        padding: 1.5rem; /* กำหนดระยะห่างภายในเป็น 1.5rem สำหรับหน้าจอเล็ก */
     }
     
     .animated-text {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* กำหนดขนาดตัวอักษรให้เล็กลงสำหรับข้อความที่เคลื่อนไหว */
     }
 }

@@ -1,142 +1,142 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Prompt', sans-serif;
+    box-sizing: border-box; /* กำหนดให้การคำนวณขนาดของ element รวม padding และ border */
+    margin: 0; /* ลบ margin ของทุก element */
+    padding: 0; /* ลบ padding ของทุก element */
+    font-family: 'Prompt', sans-serif; /* กำหนดฟอนต์ที่ใช้ในเอกสาร */
 }
 
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* กำหนดพื้นหลังเป็น gradient */
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง layout */
+    align-items: center; /* จัดแนวแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวนอนให้ตรงกลาง */
+    height: 100vh; /* กำหนดความสูงของ body ให้เต็มหน้าจอ */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขต */
 }
 
 .card {
-    width: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: white;
+    width: 380px; /* กำหนดความกว้างของการ์ด */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของการ์ด */
+    border-radius: 20px; /* ทำมุมของการ์ดให้โค้ง */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับการ์ด */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* กำหนดการเปลี่ยนแปลงเมื่อมีการ hover */
+    background: white; /* กำหนดพื้นหลังของการ์ดเป็นสีขาว */
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* ยกการ์ดขึ้นเมื่อ hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
 }
 
 .card-header {
-    height: 250px;
-    position: relative;
-    overflow: hidden;
+    height: 250px; /* กำหนดความสูงของ header ของการ์ด */
+    position: relative; /* กำหนดตำแหน่งให้เป็น relative เพื่อใช้กับลูกหลาน */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขต */
 }
 
 .card-header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    width: 100%; /* กำหนดให้ภาพเต็มความกว้างของ header */
+    height: 100%; /* กำหนดให้ภาพเต็มความสูงของ header */
+    object-fit: cover; /* ปรับขนาดภาพให้เต็มพื้นที่โดยไม่ทำให้ภาพผิดสัดส่วน */
+    transition: transform 0.5s ease; /* กำหนดการเปลี่ยนแปลงเมื่อมีการ hover */
 }
 
 .card:hover .card-header img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* ขยายภาพเมื่อ hover ที่การ์ด */
 }
 
 .card-content {
-    padding: 25px;
+    padding: 25px; /* กำหนด padding ให้กับเนื้อหาภายในการ์ด */
 }
 
 .card-title {
-    font-size: 1.5rem;
-    color: #2d3436;
-    margin-bottom: 15px;
-    font-weight: 600;
+    font-size: 1.5rem; /* กำหนดขนาดฟอนต์ของชื่อการ์ด */
+    color: #2d3436; /* กำหนดสีฟอนต์ */
+    margin-bottom: 15px; /* กำหนด margin ด้านล่าง */
+    font-weight: 600; /* กำหนดความหนาของฟอนต์ */
 }
 
 .card-description {
-    color: #636e72;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
+    color: #636e72; /* กำหนดสีฟอนต์ของคำอธิบาย */
+    line-height: 1.6; /* กำหนดระยะห่างระหว่างบรรทัด */
+    margin-bottom: 20px; /* กำหนด margin ด้านล่าง */
+    font-size: 0.95rem; /* กำหนดขนาดฟอนต์ของคำอธิบาย */
 }
 
 .seller {
-    display: flex;
-    align-items: center;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง layout ของผู้ขาย */
+    align-items: center; /* จัดแนวแนวตั้งให้ตรงกลาง */
+    padding-top: 15px; /* กำหนด padding ด้านบน */
+    border-top: 1px solid #eee; /* เพิ่มเส้นขอบด้านบน */
 }
 
 .profile_img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 45px; /* กำหนดความกว้างของภาพโปรไฟล์ */
+    height: 45px; /* กำหนดความสูงของภาพโปรไฟล์ */
+    border-radius: 50%; /* ทำให้ภาพโปรไฟล์เป็นวงกลม */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขต */
+    border: 2px solid #fff; /* เพิ่มเส้นขอบสีขาว */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับภาพโปรไฟล์ */
 }
 
 .profile_img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* กำหนดให้ภาพโปรไฟล์เต็มพื้นที่ */
+    height: 100%; /* กำหนดให้ภาพโปรไฟล์เต็มพื้นที่ */
+    object-fit: cover; /* ปรับขนาดภาพให้เต็มพื้นที่โดยไม่ทำให้ภาพผิดสัดส่วน */
 }
 
 .seller-info {
-    margin-left: 15px;
+    margin-left: 15px; /* กำหนด margin ด้านซ้ายให้กับข้อมูลผู้ขาย */
 }
 
 .seller-info strong {
-    display: block;
-    color: #2d3436;
-    font-size: 1.1rem;
-    margin-bottom: 3px;
+    display: block; /* แสดงข้อมูลผู้ขายในบล็อก */
+    color: #2d3436; /* กำหนดสีฟอนต์ */
+    font-size: 1.1rem; /* กำหนดขนาดฟอนต์ */
+    margin-bottom: 3px; /* กำหนด margin ด้านล่าง */
 }
 
 .seller-info small {
-    color: #00b894;
-    font-weight: 600;
-    font-size: 1.1rem;
+    color: #00b894; /* กำหนดสีฟอนต์ของข้อมูลเล็ก */
+    font-weight: 600; /* กำหนดความหนาของฟอนต์ */
+    font-size: 1.1rem; /* กำหนดขนาดฟอนต์ */
 }
 
 .animated_bg {
-    background: linear-gradient(
+    background: linear-gradient( /* กำหนดพื้นหลังเป็น gradient */
         to right,
         #f6f7f8 0%,
         #edeef1 10%,
         #f6f7f8 20%,
         #f6f7f8 100%
     );
-    background-size: 200% 100%;
-    animation: animatedPlay 1.5s ease-in-out infinite;
+    background-size: 200% 100%; /* กำหนดขนาดพื้นหลัง */
+    animation: animatedPlay 1.5s ease-in-out infinite; /* กำหนด animation ให้กับพื้นหลัง */
 }
 
 .animated_text {
-    border-radius: 6px;
-    display: inline-block;
-    margin: 0;
-    height: 12px;
-    width: 100%;
+    border-radius: 6px; /* ทำมุมของข้อความให้โค้ง */
+    display: inline-block; /* แสดงข้อความในบล็อก */
+    margin: 0; /* ลบ margin */
+    height: 12px; /* กำหนดความสูงของข้อความ */
+    width: 100%; /* กำหนดความกว้างของข้อความ */
 }
 
 @keyframes animatedPlay {
     0% {
-        background-position: 50% 0;
+        background-position: 50% 0; /* กำหนดตำแหน่งพื้นหลังเริ่มต้น */
     }
     100% {
-        background-position: -150% 0;
+        background-position: -150% 0; /* กำหนดตำแหน่งพื้นหลังสุดท้าย */
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        width: 320px;
+        width: 320px; /* กำหนดความกว้างของการ์ดเมื่อหน้าจอเล็กกว่า 480px */
     }
     
     .card-header {
-        height: 200px;
+        height: 200px; /* กำหนดความสูงของ header ของการ์ดเมื่อหน้าจอเล็กกว่า 480px */
     }
 }

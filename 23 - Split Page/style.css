@@ -1,111 +1,126 @@
 :root {
-    --left-color: orangered;
-    --right-color: #28a745;
-    --overlay-color: rgba(0, 0, 0, 0.7);
-    --transition-speed: 1s;
+    /* กำหนดตัวแปร CSS สำหรับสีและความเร็วในการเปลี่ยนแปลง */
+    --left-color: orangered; /* สีสำหรับด้านซ้าย */
+    --right-color: #28a745; /* สีสำหรับด้านขวา */
+    --overlay-color: rgba(0, 0, 0, 0.7); /* สี overlay ที่ใช้ทับเนื้อหา */
+    --transition-speed: 1s; /* ความเร็วในการเปลี่ยนแปลง */
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* กำหนดให้ทุกองค์ประกอบมีการจัดการขนาดและระยะห่าง */
+    box-sizing: border-box; /* รวม padding และ border ในขนาดขององค์ประกอบ */
+    margin: 0; /* ลบ margin ของทุกองค์ประกอบ */
+    padding: 0; /* ลบ padding ของทุกองค์ประกอบ */
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #333;
+    /* กำหนดลักษณะของ body */
+    font-family: 'Kanit', sans-serif; /* กำหนดฟอนต์ */
+    height: 100vh; /* ความสูงของ body เท่ากับความสูงของ viewport */
+    overflow: hidden; /* ปิดการเลื่อน */
+    background-color: #333; /* กำหนดสีพื้นหลัง */
 }
 
 .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #333;  
+    /* กำหนดลักษณะของ container */
+    position: relative; /* กำหนดตำแหน่งเป็น relative เพื่อให้ child สามารถใช้ตำแหน่ง absolute ได้ */
+    width: 100%; /* ความกว้างเต็มที่ */
+    height: 100%; /* ความสูงเต็มที่ */
+    background-color: #333; /* กำหนดสีพื้นหลัง */
 }
 
 .content {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: width var(--transition-speed) ease-in-out;
+    /* กำหนดลักษณะของเนื้อหา */
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute */
+    width: 50%; /* ความกว้าง 50% ของ container */
+    height: 100%; /* ความสูงเต็มที่ */
+    overflow: hidden; /* ปิดการเลื่อน */
+    transition: width var(--transition-speed) ease-in-out; /* กำหนดการเปลี่ยนแปลงความกว้าง */
 }
 
 .content.left {
-    left: 0;
-    background: url("https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+    /* กำหนดลักษณะของเนื้อหาด้านซ้าย */
+    left: 0; /* ตำแหน่งอยู่ที่ด้านซ้าย */
+    background: url("https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover; /* กำหนดภาพพื้นหลัง */
 }
 
 .content.right {
-    right: 0;
-    background: url("https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+    /* กำหนดลักษณะของเนื้อหาด้านขวา */
+    right: 0; /* ตำแหน่งอยู่ที่ด้านขวา */
+    background: url("https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover; /* กำหนดภาพพื้นหลัง */
 }
+
 .content::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--overlay-color);
-    transition: background-color var(--transition-speed);
+    /* สร้าง pseudo-element ก่อนเนื้อหา */
+    content: ''; /* กำหนดให้มีเนื้อหาเป็นค่าว่าง */
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute */
+    width: 100%; /* ความกว้างเต็มที่ */
+    height: 100%; /* ความสูงเต็มที่ */
+    background-color: var(--overlay-color); /* กำหนดสี overlay */
+    transition: background-color var(--transition-speed); /* กำหนดการเปลี่ยนแปลงสี */
 }
 
 h1 {
-    font-size: 4rem;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transition: all var(--transition-speed);
+    /* กำหนดลักษณะของ h1 */
+    font-size: 4rem; /* ขนาดฟอนต์ */
+    color: #fff; /* สีฟอนต์ */
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute */
+    left: 50%; /* ตำแหน่งอยู่ที่กลางซ้าย */
+    top: 20%; /* ตำแหน่งอยู่ที่ 20% จากด้านบน */
+    transform: translateX(-50%); /* ย้ายตำแหน่งไปทางซ้ายครึ่งหนึ่งของความกว้าง */
+    white-space: nowrap; /* ไม่ให้มีการตัดบรรทัด */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* กำหนดเงาให้กับข้อความ */
+    transition: all var(--transition-speed); /* กำหนดการเปลี่ยนแปลงทั้งหมด */
 }
 
 .btn {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    color: #fff;
-    border: 3px solid #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 1.5rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
+    /* กำหนดลักษณะของปุ่ม */
+    position: absolute; /* กำหนดตำแหน่งเป็น absolute */
+    left: 50%; /* ตำแหน่งอยู่ที่กลางซ้าย */
+    top: 40%; /* ตำแหน่งอยู่ที่ 40% จากด้านบน */
+    transform: translateX(-50%); /* ย้ายตำแหน่งไปทางซ้ายครึ่งหนึ่งของความกว้าง */
+    text-decoration: none; /* ไม่ให้มีการขีดเส้นใต้ */
+    color: #fff; /* สีฟอนต์ */
+    border: 3px solid #fff; /* กำหนดขอบให้กับปุ่ม */
+    font-size: 1.2rem; /* ขนาดฟอนต์ */
+    font-weight: bold; /* กำหนดให้ฟอนต์หนา */
+    text-transform: uppercase; /* แปลงข้อความเป็นตัวพิมพ์ใหญ่ */
+    padding: 1.5rem 3rem; /* กำหนด padding */
+    display: flex; /* ใช้ flexbox */
+    align-items: center; /* จัดแนวแนวตั้งให้ตรงกลาง */
+    justify-content: center; /* จัดแนวแนวนอนให้ตรงกลาง */
+    transition: all 0.3s ease-in-out; /* กำหนดการเปลี่ยนแปลงทั้งหมด */
 }
 
 .content.left .btn:hover {
-    background-color: var(--left-color);
-    border-color: var(--left-color);
+    /* กำหนดลักษณะเมื่อเลื่อนเมาส์ไปที่ปุ่มด้านซ้าย */
+    background-color: var(--left-color); /* เปลี่ยนสีพื้นหลัง */
+    border-color: var(--left-color); /* เปลี่ยนสีขอบ */
 }
 
 .content.right .btn:hover {
-    background-color: var(--right-color);
-    border-color: var(--right-color);
+    /* กำหนดลักษณะเมื่อเลื่อนเมาส์ไปที่ปุ่มด้านขวา */
+    background-color: var(--right-color); /* เปลี่ยนสีพื้นหลัง */
+    border-color: var(--right-color); /* เปลี่ยนสีขอบ */
 }
 
-.hover-left .left { width: 75%; }
-.hover-left .right { width: 25%; }
-.hover-right .right { width: 75%; }
-.hover-right .left { width: 25%; }
+.hover-left .left { width: 75%; } /* กำหนดความกว้างของเนื้อหาด้านซ้ายเมื่อ hover */
+.hover-left .right { width: 25%; } /* กำหนดความกว้างของเนื้อหาด้านขวาเมื่อ hover */
+.hover-right .right { width: 75%; } /* กำหนดความกว้างของเนื้อหาด้านขวาเมื่อ hover */
+.hover-right .left { width: 25%; } /* กำหนดความกว้างของเนื้อหาด้านซ้ายเมื่อ hover */
 
-.hover-left .left::before { background-color: rgba(var(--left-color), 0.7); }
-.hover-right .right::before { background-color: rgba(var(--right-color), 0.7); }
+.hover-left .left::before { background-color: rgba(var(--left-color), 0.7); } /* เปลี่ยนสี overlay ของเนื้อหาด้านซ้ายเมื่อ hover */
+.hover-right .right::before { background-color: rgba(var(--right-color), 0.7); } /* เปลี่ยนสี overlay ของเนื้อหาด้านขวาเมื่อ hover */
 
 @media(max-width: 800px) {
-    h1 { font-size: 2rem; }
-    .btn { padding: 1.2rem; font-size: 1rem; }
+    /* กำหนดลักษณะสำหรับหน้าจอที่มีความกว้างน้อยกว่า 800px */
+    h1 { font-size: 2rem; } /* ลดขนาดฟอนต์ของ h1 */
+    .btn { padding: 1.2rem; font-size: 1rem; } /* ลด padding และขนาดฟอนต์ของปุ่ม */
 }
 
 @media(max-height: 700px) {
+    /* กำหนดลักษณะสำหรับหน้าจอที่มีความสูงน้อยกว่า 700px */
     .btn {
-        top: 70%;
+        top: 70%; /* เปลี่ยนตำแหน่งของปุ่มให้สูงขึ้น */
     }
 }
